@@ -15,3 +15,4 @@ arrayToAlign.forEach( el => {
 function resetTitle(){
 title.empty()
 }
+
