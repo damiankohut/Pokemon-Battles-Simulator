@@ -10,3 +10,8 @@ let arrayToAlign = [title];
 arrayToAlign.forEach( el => {
   el.style.textAlign = "center";
 })
+
+//RESET
+function resetTitle(){
+title.empty()
+}
