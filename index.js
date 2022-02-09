@@ -19,7 +19,50 @@ arrayToAlign.forEach( el => {
 function resetTitle(){
 title.empty()
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 7729a29c7b2799f180f928689602fc51a5835240
+characters = [
+  {
+    name: "haunter",
+    type: 'ghost',
+    weakness: ['ghost'],
+    img: {
+      default: ""
+    },
+    hp: {
+      current: 100,
+    },
+    attacks: [
+      {
+        name: "shadow ball",
+        hp: randomNum(40,20),
+        avail: {
+          total: 30,
+          remaining: 30
+        }
+      },
+      {
+        name: "shadow claw",
+        hp: randomNum(60,45),
+        avail: {
+          total: 10,
+          remaining: 10
+        }
+      },
+      {
+        name: "curse",
+        hp: randomNum(75,60),
+        avail: {
+          total: 5,
+          remaining: 5
+        }
+      },
+      {
+        name: "astonish",
+        hp: randomNum(160, 130),
+        avail: {
+          total: 2,
+          remaining: 2
+        }
+      }
+    ]
+  } ]
