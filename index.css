@@ -1,11 +1,13 @@
 #container{
 border: 2px solid black;
-width: 100px;
-height: 100px;
+width: 70vh;
+height: 70vh;
+display: flex;
+justify-content: space-evenly;
 }
 
 #character{
     border: 2px solid black;
-    width: 25px;
-height: 25px;
+    width: 15vh;
+height: 15vh;
 }
