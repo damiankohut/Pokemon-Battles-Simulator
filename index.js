@@ -18,10 +18,7 @@ arrayToAlign.forEach( el => {
 function resetTitle(){
 $(title).empty();
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 13497c7e5c88d9391909b147182f24a64a178c2c
 let haunter = {
   name: "haunter",
   img: {
@@ -47,15 +44,12 @@ let haunter = {
     }
   ]
 };
+let player1Choice = document.getElementById("player1Choice")
 
-document.getElementId(char1).addEventListener("click" , () => {
-  haunterWasChosen()
+document.getElementById("char1").addEventListener("click" , () => {
+  player1Choice.innerText = `You chose ${haunter.name}`
+
 })
-
-function haunterWasChosen(){
-  Player1 = {choice: haunter}
-return `You chose ${haunter.name}`
-}
 
 function damage(){
   
