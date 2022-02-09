@@ -3,3 +3,9 @@ border: 2px solid black;
 width: 100px;
 height: 100px;
 }
+
+#character{
+    border: 2px solid black;
+    width: 25px;
+height: 25px;
+}
