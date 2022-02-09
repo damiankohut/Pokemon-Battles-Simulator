@@ -18,6 +18,10 @@ arrayToAlign.forEach( el => {
 function resetTitle(){
 $(title).empty();
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13497c7e5c88d9391909b147182f24a64a178c2c
 let haunter = {
   name: "haunter",
   img: {
