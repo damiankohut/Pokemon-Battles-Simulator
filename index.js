@@ -26,7 +26,7 @@ $(title).empty();
 let haunter = {
   name: "haunter",
   img: {
-    default: ""
+    default: "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png"
   },
   hp: 100,
   attacks: [
