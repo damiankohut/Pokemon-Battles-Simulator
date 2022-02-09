@@ -19,10 +19,8 @@ function resetTitle(){
 $(title).empty();
 }
 
-<<<<<<< HEAD
 
 
-=======
 let haunter = {
   name: "haunter",
   img: {
@@ -48,4 +46,3 @@ let haunter = {
     }
   ]
 };
->>>>>>> 4f65361f191999be9093b6b8ca1c3b2cc548d170
