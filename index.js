@@ -19,8 +19,11 @@ function resetTitle(){
 $(title).empty();
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fc219e5d0a880a62f3ca4b0d9af8f9a26917660f
 let haunter = {
   name: "haunter",
   img: {
@@ -46,3 +49,16 @@ let haunter = {
     }
   ]
 };
+
+document.getElementId(char1).addEventListener("click" , () => {
+  haunterWasChosen()
+})
+
+function haunterWasChosen(){
+  Player1 = {choice: haunter}
+return `You chose ${haunter.name}`
+}
+
+function damage(){
+  
+}
