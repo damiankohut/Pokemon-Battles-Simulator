@@ -51,6 +51,8 @@ document.getElementById("char1").addEventListener("click" , () => {
 
 })
 
+
+
 function damage(){
   
 }
