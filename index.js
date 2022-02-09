@@ -19,7 +19,4 @@ arrayToAlign.forEach( el => {
 function resetTitle(){
 title.empty()
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 114bedf4b289ace07791b59fca1809cabee262af
