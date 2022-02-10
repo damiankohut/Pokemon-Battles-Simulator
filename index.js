@@ -1,14 +1,10 @@
 //PAGE 1
 
 let currPlayer = 'Player1'
-
 //TITLE
 let title = document.getElementById("title");
-
 //CONTAINER
 let containerPg1 = document.getElementById("middleContainer");
-
-
 //TEXT ALIGN
 let arrayToAlign = [title, containerPg1];
 arrayToAlign.forEach( el => {
@@ -98,7 +94,7 @@ function jigglyPuffSelect() {
   }
 }
 
-const jigglyPuff = new Pokemon('jigglyPuff', 200, false, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png") 
+const jigglyPuff = new Pokemon('Jigglypuff', 200, false, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png") 
 const haunter = new Pokemon('Haunter', 200, false, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png")
 
 let player1Choice = document.getElementById("player1Choice")
