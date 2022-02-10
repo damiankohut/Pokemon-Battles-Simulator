@@ -28,11 +28,11 @@
 
 //PLAYER 2 CHOICE
 //THIS NEEDS TO BE MADE INTO A CLASS OR SOMETHING SIMIALR TO MAKE IT DYNAMIC?
-let player2Choice = document.getElementById("player2Choice")
+// let player2Choice = document.getElementById("player2Choice")
 
-document.getElementById("char2").addEventListener("click" , () => {
-  player2Choice.innerText = `You chose ${jigglypuff.name}`
-})
+// document.getElementById("char2").addEventListener("click" , () => {
+//   player2Choice.innerText = `You chose ${jigglypuff.name}`
+// })
 
 //PAGE 2 GO TO PAGE 3
 let button2 = document.createElement("button");

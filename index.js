@@ -1,5 +1,6 @@
 //PAGE 1
 
+let currPlayer = 'Player1'
 
 //TITLE
 let title = document.getElementById("title");
@@ -58,44 +59,54 @@ class Pokemon {
   }
 }
    
+const player1 = {
+pokemon: null
+}
 
-const jigglyPuff = new Pokemon('JigglyPuff', 200, false, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png") 
+const player2 = {
+pokemon: null
+}
+
+//Box 1: Haunter
+function haunterSelect()  {
+  if (currPlayer === 'Player1') {
+  player1Choice.innerText = `You chose ${haunter.name}`
+  player1.pokemon=haunter
+  player1.player='Player1'
+  player2Choice.innerText = `Choose your Pocket Monster`
+  currPlayer = 'Player2'
+  }
+  if (currPlayer === 'Player2' && player1.pokemon!=haunter) {
+  player2Choice.innerText = `You chose ${haunter.name}`
+  Player2.player='Player2'
+  player2.pokemon=haunter
+  }
+}
+//Box 2: JigglyPuff
+function jigglyPuffSelect() {
+  if (currPlayer === 'Player1') {
+  player1Choice.innerText = `You chose ${jigglyPuff.name}`
+  player1.pokemon=jigglyPuff
+  player1.player='Player1'
+  player2Choice.innerText = `Choose your Pocket Monster`
+  currPlayer='Player2'
+}
+  if (currPlayer === 'Player2' && player1.pokemon!=jigglyPuff) {
+  player2Choice.innerText = `You chose ${jigglyPuff.name}`
+  player2.pokemon=jigglyPuff
+  player2.player='Player2'
+  }
+}
+
+const jigglyPuff = new Pokemon('jigglyPuff', 200, false, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png") 
 const haunter = new Pokemon('Haunter', 200, false, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png")
 
-
-
-
-// let haunter = {
-//   name: "haunter",
-//   img: {
-//     default: "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png"
-//   },
-//   hp: 100,
-//   attacks: [
-//     {
-//       name: "shadow ball",
-//       dmg: 20,
-//     },
-//     {
-//       name: "shadow claw",
-//       dmg: 15,
-//     },
-//     {
-//       name: "curse",
-//       dmg: 5,
-//     },
-//     {
-//       name: "astonish",
-//       dmg: 15,
-//     }
-//   ]
-// };
 let player1Choice = document.getElementById("player1Choice")
+document.getElementById("char1").addEventListener("click", haunterSelect)
 
-document.getElementById("char1").addEventListener("click" , () => {
-  player1Choice.innerText = `You chose ${haunter.name}`
-  
-})
+let player2Choice = document.getElementById("player2Choice")
+document.getElementById("char2").addEventListener("click", jigglyPuffSelect)
+
 
 
   
