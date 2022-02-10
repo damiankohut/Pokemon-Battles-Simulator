@@ -1,4 +1,4 @@
-#container{
+#middleContainer{
 margin: auto;
 border: 2px solid black;
 width: 70vh;
@@ -6,6 +6,25 @@ height: 70vh;
 display: flex;
 justify-content: space-evenly;
 }
+
+/* #leftContainer{
+    margin: auto;
+    border: 2px solid black;
+    width: 70vh;
+    height: 70vh;
+    display: flex;
+    justify-content: left;
+} */
+
+/* #rightContainer{
+margin: auto;
+border: 2px solid black;
+width: 70vh;
+height: 70vh;
+display: flex;
+justify-content: right;
+} */
+
 
 #character{
     border: 2px solid black;

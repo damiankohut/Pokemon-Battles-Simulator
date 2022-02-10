@@ -5,7 +5,7 @@
 let title = document.getElementById("title");
 
 //CONTAINER
-let containerPg1 = document.getElementById("container");
+let containerPg1 = document.getElementById("middleContainer");
 
 
 //TEXT ALIGN
