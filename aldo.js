@@ -3,6 +3,10 @@
 
 let startGame = document.querySelector("#start")
 
+document.getElementById("movesets").style.display = "none";
+document.getElementById("winner-message").style.display = "none";
+
+
 startGame.addEventListener("click", () => {
   document.querySelector("#middleContainer").style.display = "none"
   document.getElementById("page1").style.display = "none";
