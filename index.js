@@ -69,7 +69,7 @@ function haunterSelect()  {
   player1Choice.innerText = `You chose ${haunter.name}`
   player1.pokemon=haunter
   player1.player='Player1'
-  player2Choice.innerText = `Choose your Pocket Monster`
+  player2Choice.innerText = `Player 2 Select`
   currPlayer = 'Player2'
   }
   if (currPlayer === 'Player2' && player1.pokemon!=haunter) {
@@ -84,7 +84,7 @@ function jigglyPuffSelect() {
   player1Choice.innerText = `You chose ${jigglyPuff.name}`
   player1.pokemon=jigglyPuff
   player1.player='Player1'
-  player2Choice.innerText = `Choose your Pocket Monster`
+  player2Choice.innerText = `Player 2 Select`
   currPlayer='Player2'
 }
   if (currPlayer === 'Player2' && player1.pokemon!=jigglyPuff) {
@@ -100,8 +100,10 @@ const haunter = new Pokemon('Haunter', 200, false, "https://archives.bulbagarden
 let player1Choice = document.getElementById("player1Choice")
 document.getElementById("char1").addEventListener("click", haunterSelect)
 
+
 let player2Choice = document.getElementById("player2Choice")
 document.getElementById("char2").addEventListener("click", jigglyPuffSelect)
+
 
 
 
