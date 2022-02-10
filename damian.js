@@ -1,2 +1,4 @@
-document.getElementById("container2").style.display = 'none';
+document.getElementById("movesets").style.display = 'none';
+document.getElementById("winner-message").style.display = 'none';
+
 
