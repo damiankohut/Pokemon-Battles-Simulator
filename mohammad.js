@@ -1,29 +1,29 @@
-//JIGGLYPUFF
-let jigglypuff = {
-  name: "jigglypuff",
-  img: {
-    default: "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png"
-  },
-  hp: 100,
-  attacks: [
-    {
-      name: "drean eater",
-      dmg: 25,
-    },
-    {
-      name: "hyper voice",
-      dmg: 15,
-    },
-    {
-      name: "strength",
-      dmg: 10,
-    },
-    {
-      name: "headbutt",
-      dmg: 5,
-    }
-  ]
-};
+// //JIGGLYPUFF
+// let jigglypuff = {
+//   name: "jigglypuff",
+//   img: {
+//     default: "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png"
+//   },
+//   hp: 100,
+//   attacks: [
+//     {
+//       name: "drean eater",
+//       dmg: 25,
+//     },
+//     {
+//       name: "hyper voice",
+//       dmg: 15,
+//     },
+//     {
+//       name: "strength",
+//       dmg: 10,
+//     },
+//     {
+//       name: "headbutt",
+//       dmg: 5,
+//     }
+//   ]
+// };
 
 
 //PLAYER 2 CHOICE
