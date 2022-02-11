@@ -118,6 +118,10 @@ function haunterSelect()  {
   player2Choice.innerText = `You chose ${haunter.name}`
   Player2.player = 'Player2'
   player2.pokemon = haunter
+  var img = document.createElement('img')
+  img.src = player2.pokemon.icon;
+  document.querySelector("#rightContainer").appendChild(img)
+  currPlayer = null ////Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
 }
 //Box 2: JigglyPuff
@@ -146,10 +150,14 @@ function jigglyPuffSelect() {
   player2Choice.innerText = `You chose ${jigglyPuff.name}`
   player2.pokemon = jigglyPuff
   player2.player = 'Player2'
+  var img = document.createElement('img')
+  img.src = player2.pokemon.icon;
+  document.querySelector("#rightContainer").appendChild(img)
+  currPlayer=null //Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
 }
-const jigglyPuff = new Pokemon('Jigglypuff', 200, false, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png", "https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3")
-const haunter = new Pokemon('Haunter', 200, false, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png")
+const jigglyPuff = new Pokemon('Jigglypuff', 200, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png")
+const haunter = new Pokemon('Haunter', 200, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png")
 let player1Choice = document.getElementById("player1Choice")
 document.getElementById("char1").addEventListener("click", haunterSelect)
 let player2Choice = document.getElementById("player2Choice")
