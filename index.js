@@ -1,5 +1,4 @@
 //PAGE 1
-
 let currPlayer = 'Player1'
 //TITLE
 let title = document.getElementById("title");
@@ -10,7 +9,6 @@ let arrayToAlign = [title, containerPg1];
 arrayToAlign.forEach( el => {
   el.style.textAlign = "center";
 })
-
 class Pokemon {
   constructor(name, hp, icon, player,moveset = []) {
     this.player = player
@@ -20,28 +18,20 @@ class Pokemon {
     moveset = [{
       name: "shadowball",
       dmg: 15
-      
-    }, 
+    },
   {
     name: "shadowclaw",
     dmg: 20
   }]
   }
-  
-
 //Attacks
   // shadowBall(attack,defender){
-    
   //   defender.dmg -= 20
     //If Player 2 is equivalent to opposite type, deal more damage.
   }
-  
-
-   
 const player1 = {
 pokemon: null
 }
-
 const player2 = {
 pokemon: null
 }
@@ -50,8 +40,6 @@ let moveset1 = document.getElementById("moveset1")
 let moveset2 = document.getElementById("moveset2")
 let moveset3 = document.getElementById("moveset3")
 let moveset4 = document.getElementById("moveset4")
-
-
 function gameIsOver() {
 if (health2.value === 0 ) {
 window.alert('Player 1 won');
@@ -66,16 +54,12 @@ else {
     document.getElementById('print')
         .innerHTML = "Player 2 Turn";
 }
-
 }
 }
 //Damians Code -----------------------------------------------
-
 //Battlefield
 function Battlefield(){
-
 }
-
 //Box 1: Haunter
 function haunterSelect()  {
   if (currPlayer === 'Player1') {
@@ -134,10 +118,12 @@ function haunterSelect()  {
   player2Choice.innerText = `You chose ${haunter.name}`
   Player2.player = 'Player2'
   player2.pokemon = haunter
+  var img = document.createElement('img')
+  img.src = player2.pokemon.icon;
+  document.querySelector("#rightContainer").appendChild(img)
+  currPlayer = null ////Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
 }
-
-
 //Box 2: JigglyPuff
 function jigglyPuffSelect() {
   if (currPlayer === 'Player1') {
@@ -196,18 +182,15 @@ function jigglyPuffSelect() {
   player2Choice.innerText = `You chose ${jigglyPuff.name}`
   player2.pokemon = jigglyPuff
   player2.player = 'Player2'
-
+  var img = document.createElement('img')
+  img.src = player2.pokemon.icon;
+  document.querySelector("#rightContainer").appendChild(img)
+  currPlayer=null //Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
 }
-
-const jigglyPuff = new Pokemon('Jigglypuff', 200, false, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png", "https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3")
-const haunter = new Pokemon('Haunter', 200, false, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png")
-
+const jigglyPuff = new Pokemon('Jigglypuff', 200, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png")
+const haunter = new Pokemon('Haunter', 200, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png")
 let player1Choice = document.getElementById("player1Choice")
 document.getElementById("char1").addEventListener("click", haunterSelect)
-
-
 let player2Choice = document.getElementById("player2Choice")
 document.getElementById("char2").addEventListener("click", jigglyPuffSelect)
-
-
