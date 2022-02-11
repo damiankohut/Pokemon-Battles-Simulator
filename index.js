@@ -12,47 +12,30 @@ arrayToAlign.forEach( el => {
 })
 
 class Pokemon {
-  constructor(name, hp, faint = false, icon, player) {
+  constructor(name, hp, icon, player,moveset = []) {
     this.player = player
     this.name = name
     this.hp = hp
-    this.faint = faint
     this.icon = icon
-  }
-//Attacks
-  shadowBall(){
-    name: 'Shadow Ball'
+    moveset = [{
+      name: "shadowball",
+      dmg: 15
+      
+    }, 
+  {
+    name: "shadowclaw",
     dmg: 20
+  }]
+  }
+  
+
+//Attacks
+  shadowBall(attack,defender){
+    
+    defender.dmg -= 20
     //If Player 2 is equivalent to opposite type, deal more damage.
   }
-  shadowClaw(){
-    name: 'Shadow Claw'
-    dmg: 15
-  }
-  curse(){
-    name: 'Curse'
-    dmg: 5
-  }
-  astonish(){
-    name: 'Astonish'
-    dmg: 15
-  }
-  dreamEater(){
-    name: 'Dream Eater'
-    dmg: 25
-  }
-  hyperVoice(){
-    name: 'Hyper Voice'
-    dmg: 15
-  }
-  strength(){
-    name: 'Strength'
-    dmg: 10
-  }
-  headbutt(){
-    name: 'Headbutt'
-    dmg: 5
-  }
+  
 }
    
 const player1 = {
@@ -164,22 +147,7 @@ function jigglyPuffSelect() {
   moveset6.innerText = "astonish"
   moveset7.innerText = "shadowsneak"
   moveset8.innerText = "shadowclaw"
-  document.getElementById("moveset1").addEventListener("click", () =>{
-    shadowball()
-    gameIsOver()
-  })
-  document.getElementById("moveset2").addEventListener("click", () =>{
-    astonish()
-    gameIsOver()
-  })
-  document.getElementById("moveset3").addEventListener("click", () =>{
-    shadowsneak()
-    gameIsOver()
-  })
-  document.getElementById("moveset4").addEventListener("click", () =>{
-    shadowclaw()
-    gameIsOver()
-  })
+  
   //damians code end ============================================
 }
   if (currPlayer === 'Player2' && player1.pokemon!=jigglyPuff) {

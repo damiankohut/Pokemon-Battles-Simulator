@@ -28,3 +28,26 @@ height: 100px;
     width: 15vh;
 height: 15vh;
 }
+
+#player1hp {
+    border: 2px solid green;
+    width:200px;
+    height: 40px;
+    position: absolute;
+    top:800px;
+    left:100px;
+}
+
+#player2hp {
+    border: 2px solid green;
+    width:200px;
+    height: 40px;
+    position: absolute;
+    top:100px;
+    right:50px;
+}
+
+progress[value] {
+    width:100px;
+    height:20px;
+}

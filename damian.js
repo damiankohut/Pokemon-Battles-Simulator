@@ -17,13 +17,14 @@ document.getElementById("winner-message").style.display = 'none';
 // }
 
 
+
 let health2 = document.getElementById("health2")
 let health1 = document.getElementById("health1")
 
 let turnOfPlayer = 1
-function shadowball(){
-        health2.value -= 10;
-        turnOfPlayer = 0  
+function shadowball(attack,defender){
+    health2.value -= 15;
+    turnOfPlayer = 0 
 }
 function astonish(){
     health2.value -= 15;
