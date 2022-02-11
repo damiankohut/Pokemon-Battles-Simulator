@@ -17,27 +17,37 @@ text-align: center;
 margin: auto;
 }
 
-/* #leftContainer{
-    margin: auto;
-    border: 2px solid black;
-    width: 70vh;
-    height: 70vh;
-    display: flex;
-    justify-content: left;
-} */
-
-/* #rightContainer{
-margin: auto;
-border: 2px solid black;
-width: 70vh;
-height: 70vh;
-display: flex;
-justify-content: right;
-} */
-
+#p1-moveset {
+border: 2px solid green;
+width: 200px;
+height: 100px;
+}
 
 #character{
     border: 2px solid black;
     width: 15vh;
 height: 15vh;
+}
+
+#player1hp {
+    border: 2px solid green;
+    width:200px;
+    height: 40px;
+    position: absolute;
+    top:800px;
+    left:100px;
+}
+
+#player2hp {
+    border: 2px solid green;
+    width:200px;
+    height: 40px;
+    position: absolute;
+    top:100px;
+    right:50px;
+}
+
+progress[value] {
+    width:100px;
+    height:20px;
 }
