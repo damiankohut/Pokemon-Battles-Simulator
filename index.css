@@ -17,24 +17,11 @@ text-align: center;
 margin: auto;
 }
 
-/* #leftContainer{
-    margin: auto;
-    border: 2px solid black;
-    width: 70vh;
-    height: 70vh;
-    display: flex;
-    justify-content: left;
-} */
-
-/* #rightContainer{
-margin: auto;
-border: 2px solid black;
-width: 70vh;
-height: 70vh;
-display: flex;
-justify-content: right;
-} */
-
+#p1-moveset {
+border: 2px solid green;
+width: 200px;
+height: 100px;
+}
 
 #character{
     border: 2px solid black;
