@@ -30,13 +30,13 @@ class Pokemon {
   
 
 //Attacks
-  shadowBall(attack,defender){
+  // shadowBall(attack,defender){
     
-    defender.dmg -= 20
+  //   defender.dmg -= 20
     //If Player 2 is equivalent to opposite type, deal more damage.
   }
   
-}
+
    
 const player1 = {
 pokemon: null
@@ -124,7 +124,7 @@ function haunterSelect()  {
   }
   if (currPlayer === 'Player2' && player1.pokemon!=haunter) {
   player2Choice.innerText = `You chose ${haunter.name}`
-  Player2.player= 'Player2'
+  Player2.player = 'Player2'
   player2.pokemon = haunter
   }
 }
