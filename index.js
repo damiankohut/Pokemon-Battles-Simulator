@@ -69,6 +69,12 @@ function haunterSelect()  {
   var img = document.createElement('img')
   img.src = player1.pokemon.icon;
   document.querySelector("#leftContainer").appendChild(img)
+  //display player1 haunter in page2 - code start
+  let haunter1ImgPage2 = document.createElement('img')
+  haunter1ImgPage2.className = "haunter1ImgPage2";
+  haunter1ImgPage2.src = player1.pokemon.icon;
+  document.querySelector("#page2").appendChild(haunter1ImgPage2)
+  //display player1 haunter in page2 - code end
   player2Choice.innerText = `Player 2 Select`
   currPlayer = 'Player2'
   //Damians code================================================
@@ -121,6 +127,12 @@ function haunterSelect()  {
   var img = document.createElement('img')
   img.src = player2.pokemon.icon;
   document.querySelector("#rightContainer").appendChild(img)
+  //display player2 haunter in page2 - code start
+  let haunter2ImgPage2 = document.createElement('img')
+  haunter2ImgPage2.className = "haunter2ImgPage2";
+  haunter2ImgPage2.src = player2.pokemon.icon;
+  document.querySelector("#page2").appendChild(haunter2ImgPage2)
+  //display player2 haunter in page2 - code end
   currPlayer = null ////Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
 }
@@ -133,6 +145,12 @@ function jigglyPuffSelect() {
   var img = document.createElement('img')
   img.src = player1.pokemon.icon;
   document.querySelector("#leftContainer").appendChild(img)
+  //display player1 jigglypuff in page2 - code start
+  let jigglypuff1ImgPage2 = document.createElement('img')
+  jigglypuff1ImgPage2.className = "jigglypuff1ImgPage2";
+  jigglypuff1ImgPage2.src = player1.pokemon.icon;
+  document.querySelector("#page2").appendChild(jigglypuff1ImgPage2)
+  //display player1 jigglypuff in page2 - code end
   player2Choice.innerText = `Player 2 Select`
   currPlayer='Player2'
   //damians code start  ======================================
@@ -185,6 +203,12 @@ function jigglyPuffSelect() {
   var img = document.createElement('img')
   img.src = player2.pokemon.icon;
   document.querySelector("#rightContainer").appendChild(img)
+  //display player2 jigglypuff in page2 - code start
+  let jigglypuff2ImgPage2 = document.createElement('img')
+  jigglypuff2ImgPage2.className = "jigglypuff2ImgPage2";
+  jigglypuff2ImgPage2.src = player2.pokemon.icon;
+  document.querySelector("#page2").appendChild(jigglypuff2ImgPage2)
+  //display player2 jigglypuff in page2 - code end
   currPlayer=null //Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
 }

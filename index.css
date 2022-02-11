@@ -87,3 +87,36 @@ progress[value] {
 width: 200px;
 height:200px;
 }
+
+/* POKEMON DISPLAY IN PAGE 2 */
+
+/* PLAYER 1 HAUNTER */
+.haunter1ImgPage2 {
+    border: 2px dotted purple;
+    position: absolute;
+    top:350px;
+    left:170px;
+  }
+  /* PLAYER 2 HAUNTER */
+  .haunter2ImgPage2 {
+    border: 2px dotted purple;
+    position: absolute;
+    top:150px;
+    right:100px;
+  }
+  
+  /* PLAYER 1 JIGGLYPUFF */
+  .jigglypuff1ImgPage2 {
+    border: 2px dotted purple;
+    position: absolute;
+    top:350px;
+    left:170px;
+  }
+  
+  /* PLAYER 2 JIGGLYPUFF */
+  .jigglypuff2ImgPage2 {
+    border: 2px dotted purple;
+    position: absolute;
+    top:150px;
+    right:100px;
+  }
