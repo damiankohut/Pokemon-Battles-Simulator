@@ -158,7 +158,38 @@ function jigglyPuffSelect() {
   moveset6.innerText = "astonish"
   moveset7.innerText = "shadowsneak"
   moveset8.innerText = "shadowclaw"
-  
+  document.getElementById("moveset1").addEventListener("click", () =>{
+    sing1()
+    gameIsOver()
+  })
+  document.getElementById("moveset2").addEventListener("click", () =>{
+    strength1()
+    gameIsOver()
+  })
+  document.getElementById("moveset3").addEventListener("click", () =>{
+    smack1()
+    gameIsOver()
+  })
+  document.getElementById("moveset4").addEventListener("click", () =>{
+    bonk1()
+    gameIsOver()
+  })
+  document.getElementById("moveset5").addEventListener("click", () =>{
+    shadowball1()
+    gameIsOver()
+  })
+  document.getElementById("moveset6").addEventListener("click", () =>{
+    astonish1()
+    gameIsOver()
+  })
+  document.getElementById("moveset7").addEventListener("click", () =>{
+    shadowneak1()
+    gameIsOver()
+  })
+  document.getElementById("moveset8").addEventListener("click", () =>{
+    shadowclaw1()
+    gameIsOver()
+  })
   //damians code end ============================================
 }
   if (currPlayer === 'Player2' && player1.pokemon!=jigglyPuff) {

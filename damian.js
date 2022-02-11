@@ -55,3 +55,38 @@ function bonk(){
     health1.value -= 24;
     turnOfPlayer = 1
 }
+
+// player1 chose jiggly puff functions
+function shadowball1(){
+    health1.value -= 10;
+    turnOfPlayer = 0 
+}
+function astonish1(){
+    health1.value -= 15;
+    turnOfPlayer = 0
+}
+function shadowsneak1(){
+    health1.value -= 17;
+    turnOfPlayer = 0
+}
+function shadowclaw1(){
+    health1.value -= 20;
+    turnOfPlayer = 0
+}
+
+function sing1 (){
+    health2.value -= 10;
+    turnOfPlayer = 1
+}
+function strength1(){
+    health2.value -= 14;
+    turnOfPlayer = 1
+}
+function smack1(){
+    health2.value -= 16;
+    turnOfPlayer = 1
+}
+function bonk1(){
+    health2.value -= 24;
+    turnOfPlayer = 1
+}

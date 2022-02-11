@@ -17,12 +17,41 @@ text-align: center;
 margin: auto;
 }
 
+#page2 {
+    background-color: black;
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 800px;
+    border: 2px solid black
+}
+#arena {
+width:100%;
+height: 635px;
+}
 #p1-moveset {
+display: inline-block;
+position:absolute;
+bottom: 0px;
 border: 2px solid green;
-width: 200px;
-height: 100px;
+width: 265px;
+height: 160px;
 }
 
+#p2-moveset {
+    position:absolute;
+    bottom: 0px;
+    right:0px;
+    border: 2px solid green;
+    width: 264px;
+    height: 160px;
+    }
+
+.moves {
+    
+    width:130px;
+    height:80px;
+}
 #character{
     border: 2px solid black;
     width: 15vh;
@@ -30,15 +59,17 @@ height: 15vh;
 }
 
 #player1hp {
+    background:whitesmoke;
     border: 2px solid green;
     width:200px;
     height: 40px;
     position: absolute;
-    top:800px;
+    top:300px;
     left:100px;
 }
 
 #player2hp {
+    background: whitesmoke;
     border: 2px solid green;
     width:200px;
     height: 40px;
