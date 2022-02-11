@@ -71,12 +71,20 @@ else {
 }
 //Damians Code -----------------------------------------------
 
+//Battlefield
+function Battlefield(){
+
+}
+
 //Box 1: Haunter
 function haunterSelect()  {
   if (currPlayer === 'Player1') {
   player1Choice.innerText = `You chose ${haunter.name}`
   player1.pokemon=haunter
   player1.player='Player1'
+  var img = document.createElement('img')
+  img.src = player1.pokemon.icon;
+  document.querySelector("#leftContainer").appendChild(img)
   player2Choice.innerText = `Player 2 Select`
   currPlayer = 'Player2'
   //Damians code================================================
@@ -136,6 +144,9 @@ function jigglyPuffSelect() {
   player1Choice.innerText = `You chose ${jigglyPuff.name}`
   player1.pokemon=jigglyPuff
   player1.player='Player1'
+  var img = document.createElement('img')
+  img.src = player1.pokemon.icon;
+  document.querySelector("#leftContainer").appendChild(img)
   player2Choice.innerText = `Player 2 Select`
   currPlayer='Player2'
   //damians code start  ======================================
@@ -158,8 +169,8 @@ function jigglyPuffSelect() {
   }
 }
 
-const jigglyPuff = new Pokemon('Jigglypuff', 200, false, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png") 
-const haunter = new Pokemon('Haunter', 200, false, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png")
+const jigglyPuff = new Pokemon('Jigglypuff', 200, false, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png", "https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3")
+const haunter = new Pokemon('Haunter', 200, false, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png")
 
 let player1Choice = document.getElementById("player1Choice")
 document.getElementById("char1").addEventListener("click", haunterSelect)
