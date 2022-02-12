@@ -90,3 +90,8 @@ function bonk1(){
     health2.value -= 24;
     turnOfPlayer = 1
 }
+
+function restartGame(){
+    health2.value = 200
+    health1.value = 200
+}
