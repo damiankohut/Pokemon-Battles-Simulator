@@ -1,5 +1,15 @@
 //PAGE 1
 let currPlayer = 'Player1'
+
+//keeping track of turns below
+//let player1Turn = true
+
+//PLAYER 1 STARTS FIRST
+document.getElementById("moveset5").disabled = true
+document.getElementById("moveset6").disabled = true
+document.getElementById("moveset7").disabled = true
+document.getElementById("moveset8").disabled = true
+
 //TITLE
 let title = document.getElementById("title");
 //CONTAINER
@@ -88,34 +98,125 @@ function haunterSelect()  {
   moveset8.innerText = "bonk"
   document.getElementById("moveset1").addEventListener("click", () =>{
     shadowball()
+    // while(health1 !== 0)
+    //disable moves - start
+    // if(player1Turn) { //if it's player1's turn keep going with the if
+    // player1Turn = !player1Turn //after click event disable player1's turn
+    document.getElementById("moveset1").disabled = true
+    document.getElementById("moveset2").disabled = true
+    document.getElementById("moveset3").disabled = true
+    document.getElementById("moveset4").disabled = true
+
+    document.getElementById("moveset5").disabled = false
+    document.getElementById("moveset6").disabled = false
+    document.getElementById("moveset7").disabled = false
+    document.getElementById("moveset8").disabled = false
+    //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
     astonish()
+    //disable moves - start
+    document.getElementById("moveset1").disabled = true
+    document.getElementById("moveset2").disabled = true
+    document.getElementById("moveset3").disabled = true
+    document.getElementById("moveset4").disabled = true
+
+    document.getElementById("moveset5").disabled = false
+    document.getElementById("moveset6").disabled = false
+    document.getElementById("moveset7").disabled = false
+    document.getElementById("moveset8").disabled = false
+    //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     shadowsneak()
+    //disable moves - start
+    document.getElementById("moveset1").disabled = true
+    document.getElementById("moveset2").disabled = true
+    document.getElementById("moveset3").disabled = true
+    document.getElementById("moveset4").disabled = true
+
+    document.getElementById("moveset5").disabled = false
+    document.getElementById("moveset6").disabled = false
+    document.getElementById("moveset7").disabled = false
+    document.getElementById("moveset8").disabled = false
+    //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     shadowclaw()
+    //disable moves - start
+    document.getElementById("moveset1").disabled = true
+    document.getElementById("moveset2").disabled = true
+    document.getElementById("moveset3").disabled = true
+    document.getElementById("moveset4").disabled = true
+
+    document.getElementById("moveset5").disabled = false
+    document.getElementById("moveset6").disabled = false
+    document.getElementById("moveset7").disabled = false
+    document.getElementById("moveset8").disabled = false
+    //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     sing()
+    //disable moves - start
+    document.getElementById("moveset5").disabled = true
+    document.getElementById("moveset6").disabled = true
+    document.getElementById("moveset7").disabled = true
+    document.getElementById("moveset8").disabled = true
+
+    document.getElementById("moveset1").disabled = false
+    document.getElementById("moveset2").disabled = false
+    document.getElementById("moveset3").disabled = false
+    document.getElementById("moveset4").disabled = false
+  //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     strength()
+    //disable moves - start
+    document.getElementById("moveset5").disabled = true
+    document.getElementById("moveset6").disabled = true
+    document.getElementById("moveset7").disabled = true
+    document.getElementById("moveset8").disabled = true
+
+    document.getElementById("moveset1").disabled = false
+    document.getElementById("moveset2").disabled = false
+    document.getElementById("moveset3").disabled = false
+    document.getElementById("moveset4").disabled = false
+  //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     smack()
+    //disable moves - start
+    document.getElementById("moveset5").disabled = true
+    document.getElementById("moveset6").disabled = true
+    document.getElementById("moveset7").disabled = true
+    document.getElementById("moveset8").disabled = true
+
+    document.getElementById("moveset1").disabled = false
+    document.getElementById("moveset2").disabled = false
+    document.getElementById("moveset3").disabled = false
+    document.getElementById("moveset4").disabled = false
+  //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     bonk()
+    //disable moves - start
+    document.getElementById("moveset5").disabled = true
+    document.getElementById("moveset6").disabled = true
+    document.getElementById("moveset7").disabled = true
+    document.getElementById("moveset8").disabled = true
+
+    document.getElementById("moveset1").disabled = false
+    document.getElementById("moveset2").disabled = false
+    document.getElementById("moveset3").disabled = false
+    document.getElementById("moveset4").disabled = false
+  //disable moves - end
     gameIsOver()
   })
   //end of damians code===============================================
@@ -164,34 +265,122 @@ function jigglyPuffSelect() {
   moveset8.innerText = "shadowclaw"
   document.getElementById("moveset1").addEventListener("click", () =>{
     sing1()
+    //disable moves - start
+    document.getElementById("moveset1").disabled = true
+    document.getElementById("moveset2").disabled = true
+    document.getElementById("moveset3").disabled = true
+    document.getElementById("moveset4").disabled = true
+
+    document.getElementById("moveset5").disabled = false
+    document.getElementById("moveset6").disabled = false
+    document.getElementById("moveset7").disabled = false
+    document.getElementById("moveset8").disabled = false
+    //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
     strength1()
+    //disable moves - start
+    document.getElementById("moveset1").disabled = true
+    document.getElementById("moveset2").disabled = true
+    document.getElementById("moveset3").disabled = true
+    document.getElementById("moveset4").disabled = true
+
+    document.getElementById("moveset5").disabled = false
+    document.getElementById("moveset6").disabled = false
+    document.getElementById("moveset7").disabled = false
+    document.getElementById("moveset8").disabled = false
+    //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     smack1()
+    //disable moves - start
+    document.getElementById("moveset1").disabled = true
+    document.getElementById("moveset2").disabled = true
+    document.getElementById("moveset3").disabled = true
+    document.getElementById("moveset4").disabled = true
+
+    document.getElementById("moveset5").disabled = false
+    document.getElementById("moveset6").disabled = false
+    document.getElementById("moveset7").disabled = false
+    document.getElementById("moveset8").disabled = false
+    //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     bonk1()
+    //disable moves - start
+    document.getElementById("moveset1").disabled = true
+    document.getElementById("moveset2").disabled = true
+    document.getElementById("moveset3").disabled = true
+    document.getElementById("moveset4").disabled = true
+
+    document.getElementById("moveset5").disabled = false
+    document.getElementById("moveset6").disabled = false
+    document.getElementById("moveset7").disabled = false
+    document.getElementById("moveset8").disabled = false
+    //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     shadowball1()
+    //disable moves - start
+    document.getElementById("moveset5").disabled = true
+    document.getElementById("moveset6").disabled = true
+    document.getElementById("moveset7").disabled = true
+    document.getElementById("moveset8").disabled = true
+
+    document.getElementById("moveset1").disabled = false
+    document.getElementById("moveset2").disabled = false
+    document.getElementById("moveset3").disabled = false
+    document.getElementById("moveset4").disabled = false
+  //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     astonish1()
+    //disable moves - start
+    document.getElementById("moveset5").disabled = true
+    document.getElementById("moveset6").disabled = true
+    document.getElementById("moveset7").disabled = true
+    document.getElementById("moveset8").disabled = true
+
+    document.getElementById("moveset1").disabled = false
+    document.getElementById("moveset2").disabled = false
+    document.getElementById("moveset3").disabled = false
+    document.getElementById("moveset4").disabled = false
+  //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     shadowneak1()
+    //disable moves - start
+    document.getElementById("moveset5").disabled = true
+    document.getElementById("moveset6").disabled = true
+    document.getElementById("moveset7").disabled = true
+    document.getElementById("moveset8").disabled = true
+
+    document.getElementById("moveset1").disabled = false
+    document.getElementById("moveset2").disabled = false
+    document.getElementById("moveset3").disabled = false
+    document.getElementById("moveset4").disabled = false
+  //disable moves - end
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     shadowclaw1()
+    //disable moves - start
+    document.getElementById("moveset5").disabled = true
+    document.getElementById("moveset6").disabled = true
+    document.getElementById("moveset7").disabled = true
+    document.getElementById("moveset8").disabled = true
+
+    document.getElementById("moveset1").disabled = false
+    document.getElementById("moveset2").disabled = false
+    document.getElementById("moveset3").disabled = false
+    document.getElementById("moveset4").disabled = false
+  //disable moves - end
     gameIsOver()
   })
   //damians code end ============================================
