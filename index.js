@@ -20,11 +20,12 @@ arrayToAlign.forEach( el => {
   el.style.textAlign = "center";
 })
 class Pokemon {
-  constructor(name, hp, icon, player,moveset = []) {
+  constructor(name, hp, icon, backIcon, player,moveset = []) {
     this.player = player
     this.name = name
     this.hp = hp
     this.icon = icon
+    this.backIcon = backIcon
     moveset = [{
       name: "shadowball",
       dmg: 15
@@ -82,7 +83,7 @@ function haunterSelect()  {
   //display player1 haunter in page2 - code start
   let haunter1ImgPage2 = document.createElement('img')
   haunter1ImgPage2.className = "haunter1ImgPage2";
-  haunter1ImgPage2.src = player1.pokemon.icon;
+  haunter1ImgPage2.src = player1.pokemon.backIcon;
   document.querySelector("#page2").appendChild(haunter1ImgPage2)
   //display player1 haunter in page2 - code end
   player2Choice.innerText = `Player 2 Select`
@@ -223,7 +224,7 @@ function haunterSelect()  {
   }
   if (currPlayer === 'Player2' && player1.pokemon!=haunter) {
   player2Choice.innerText = `You chose ${haunter.name}`
-  Player2.player = 'Player2'
+  player2.player = 'Player2'
   player2.pokemon = haunter
   var img = document.createElement('img')
   img.src = player2.pokemon.icon;
@@ -249,7 +250,7 @@ function jigglyPuffSelect() {
   //display player1 jigglypuff in page2 - code start
   let jigglypuff1ImgPage2 = document.createElement('img')
   jigglypuff1ImgPage2.className = "jigglypuff1ImgPage2";
-  jigglypuff1ImgPage2.src = player1.pokemon.icon;
+  jigglypuff1ImgPage2.src = player1.pokemon.backIcon;
   document.querySelector("#page2").appendChild(jigglypuff1ImgPage2)
   //display player1 jigglypuff in page2 - code end
   player2Choice.innerText = `Player 2 Select`
@@ -401,8 +402,8 @@ function jigglyPuffSelect() {
   currPlayer=null //Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
 }
-const jigglyPuff = new Pokemon('Jigglypuff', 200, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png")
-const haunter = new Pokemon('Haunter', 200, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png")
+const jigglyPuff = new Pokemon('Jigglypuff', 200, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png", "https://archives.bulbagarden.net/media/upload/1/17/Spr_b_5b_039.png")
+const haunter = new Pokemon('Haunter', 200, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png", "https://archives.bulbagarden.net/media/upload/2/29/Spr_b_5b2_093.png")
 let player1Choice = document.getElementById("player1Choice")
 document.getElementById("char1").addEventListener("click", haunterSelect)
 let player2Choice = document.getElementById("player2Choice")
