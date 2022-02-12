@@ -50,13 +50,23 @@ pokemon: null
 const player2 = {
 pokemon: null
 }
+
+
+
+
 //Damians code --------------------------------------
 let moveset1 = document.getElementById("moveset1")
 let moveset2 = document.getElementById("moveset2")
 let moveset3 = document.getElementById("moveset3")
 let moveset4 = document.getElementById("moveset4")
 
-function endOfBattle() {
+//Invisble Button
+let reset = document.createElement("button")
+document.getElementById("page2").appendChild(reset)
+reset.style.display = "none"
+//reset.disabled=true
+
+ function endOfBattle() {
   document.getElementById("moveset1").disabled = true
   document.getElementById("moveset2").disabled = true
   document.getElementById("moveset3").disabled = true
@@ -65,27 +75,50 @@ function endOfBattle() {
   document.getElementById("moveset6").disabled = true
   document.getElementById("moveset7").disabled = true
   document.getElementById("moveset8").disabled = true
-  let reset = document.createElement("div")
-  document.getElementsById("page2").appendChild(reset)
-  reset.innerHTML="Hello"
   reset.style.display = "block"
+  
 }
 
 
-function gameIsOver() {
+
+function gameIsOver(){
 if (health2.value === 0 ) {
 // let replay = document.createElement("button")
 // replay.className = "replay"
 // replay.innerHTML="Player 1 won. Rematch?"
 // document.getElementsByTagName("body").appendChild(replay)
+reset.style.display="block"
+reset.innerText="Hello"
 endOfBattle()
+reset.addEventListener("click", () => {
+  document.getElementById("page2").style.display = "none"
+  document.getElementById("title").style.display = "inline"
+document.getElementById("page1").style.display = "inline"
+document.getElementById("start").style.display = "inline"
+document.getElementById("reset").style.display = "none"
+currPlayer = "Player1"
+}
+)
+
 
 
 //window.alert('Player 1 won'); 
 //location.reload();
 } else if (health1.value === 0) {
   //window.alert('Player 2 won')
-  endOfBattle()
+reset.style.display="block"
+reset.innerText="Hello"
+endOfBattle()
+reset.addEventListener("click", () => {
+document.getElementById("page2").style.display = "none"
+document.getElementById("title").style.display = "inline"
+document.getElementById("page1").style.display = "inline"
+document.getElementById("start").style.display = "inline"
+document.getElementById("reset").style.display = "none"
+currPlayer = "Player1"
+}
+)
+
   //location.reload();
 } else {
   if (turnOfPlayer == 1) {
