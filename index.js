@@ -1,6 +1,10 @@
 //PAGE 1
 let currPlayer = 'Player1'
 
+// let button = document.createElement("button");
+// document.getElementById("container").appendChild(button);
+
+
 //keeping track of turns below
 //let player1Turn = true
 
@@ -52,13 +56,37 @@ let moveset2 = document.getElementById("moveset2")
 let moveset3 = document.getElementById("moveset3")
 let moveset4 = document.getElementById("moveset4")
 
+function endOfBattle() {
+  document.getElementById("moveset1").disabled = true
+  document.getElementById("moveset2").disabled = true
+  document.getElementById("moveset3").disabled = true
+  document.getElementById("moveset4").disabled = true
+  document.getElementById("moveset5").disabled = true
+  document.getElementById("moveset6").disabled = true
+  document.getElementById("moveset7").disabled = true
+  document.getElementById("moveset8").disabled = true
+  let reset = document.createElement("div")
+  document.getElementsById("page2").appendChild(reset)
+  reset.innerHTML="Hello"
+  reset.style.display = "block"
+}
+
+
 function gameIsOver() {
 if (health2.value === 0 ) {
-window.alert('Player 1 won');
-location.reload();
+// let replay = document.createElement("button")
+// replay.className = "replay"
+// replay.innerHTML="Player 1 won. Rematch?"
+// document.getElementsByTagName("body").appendChild(replay)
+endOfBattle()
+
+
+//window.alert('Player 1 won'); 
+//location.reload();
 } else if (health1.value === 0) {
-  window.alert('Player 2 won')
-  location.reload();
+  //window.alert('Player 2 won')
+  endOfBattle()
+  //location.reload();
 } else {
   if (turnOfPlayer == 1) {
     document.getElementById('print')
@@ -71,6 +99,17 @@ else {
 }
 }
 }
+
+//----------------------------------------
+//Aldo's Dynamic code
+//----------------------------------------
+// function gameIsOver() {
+  
+// }
+
+
+
+
 //Damians Code -----------------------------------------------
 //Battlefield
 function Battlefield(){
@@ -278,3 +317,26 @@ function disableMoves5To8() {
   document.getElementById("moveset3").disabled = false
   document.getElementById("moveset4").disabled = false
 }
+
+
+let startGame = document.querySelector("#startButton")
+
+document.getElementById("movesets").style.display = "none";
+document.getElementById("winner-message").style.display = "none";
+
+
+startGame.addEventListener("click", () => {
+  document.getElementById("page1").style.display = "none";
+  //document.getElementById("startButton").style.display = "none";
+  document.getElementById("start").style.display = "none";
+  document.getElementById("title").style.display = "none";
+  document.getElementById("movesets").style.display = 'block';
+// document.getElementById("winner-message").style.display = 'block';  this is for PAGE 3
+})
+
+//50% there
+// //Make button disabled unless pokemon are chosen
+// if (player1.pokemon === null || player2.pokemon === null) {
+//   document.getElementById("startButton").disabled=true;
+//   } 
+//   else  {document.getElementById("startButton").disabled=false;}
