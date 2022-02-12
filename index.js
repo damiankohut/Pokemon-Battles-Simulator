@@ -54,12 +54,15 @@ let moveset4 = document.getElementById("moveset4")
 function gameIsOver() {
 if (health2.value === 0 ) {
 window.alert('Player 1 won');
+location.reload();
 } else if (health1.value === 0) {
   window.alert('Player 2 won')
+  location.reload();
 } else {
   if (turnOfPlayer == 1) {
     document.getElementById('print')
         .innerHTML = "Player 1 Turn";
+        
 }
 else {
     document.getElementById('print')
