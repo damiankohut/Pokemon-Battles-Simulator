@@ -246,8 +246,8 @@ function jigglyPuffSelect() {
   currPlayer=null //Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
 }
-const jigglyPuff = new Pokemon('Jigglypuff', 200, "https://archives.bulbagarden.net/media/upload/f/fc/Spr_2c_039.png", "https://archives.bulbagarden.net/media/upload/1/17/Spr_b_5b_039.png")
-const haunter = new Pokemon('Haunter', 200, "https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png", "https://archives.bulbagarden.net/media/upload/2/29/Spr_b_5b2_093.png")
+const jigglyPuff = new Pokemon('Jigglypuff', 200, "images/jigglypuff-front-gif.png", "images/jigglypuff-back-gif.png")
+const haunter = new Pokemon('Haunter', 200, "images/haunter-front-gif.png", "images/haunter-back-gif.png")
 let player1Choice = document.getElementById("player1Choice")
 document.getElementById("char1").addEventListener("click", haunterSelect)
 let player2Choice = document.getElementById("player2Choice")
