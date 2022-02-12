@@ -355,7 +355,7 @@ function jigglyPuffSelect() {
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
-    shadowneak1()
+    shadowsneak1()
     //disable moves - start
     document.getElementById("moveset5").disabled = true
     document.getElementById("moveset6").disabled = true
