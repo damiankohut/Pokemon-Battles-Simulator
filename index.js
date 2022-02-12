@@ -51,6 +51,7 @@ let moveset1 = document.getElementById("moveset1")
 let moveset2 = document.getElementById("moveset2")
 let moveset3 = document.getElementById("moveset3")
 let moveset4 = document.getElementById("moveset4")
+
 function gameIsOver() {
 if (health2.value === 0 ) {
 window.alert('Player 1 won');
