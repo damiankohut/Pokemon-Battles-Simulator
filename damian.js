@@ -3,28 +3,39 @@ document.getElementById("winner-message").style.display = 'none';
 
 //---------------------------------------------------------------------------------------------
 
-// if (turnOfPlayer == 1) {
-//     document.getElementById("shadowball")
-//     document.getElementById("astonish")
-//     document.getElementById("shadowsneak")
-//     document.getElementById("shadowclaw")
-//     turnOfPlayer = 0;
-// }
-// else {
-//     document.getElementById("b1")
-//     document.getElementById("b1")
-//     turnOfPlayer = 1;
-// }
 
+let turnOfPlayer = 1
 
 
 let health2 = document.getElementById("health2")
 let health1 = document.getElementById("health1")
 
-let turnOfPlayer = 1
+let bottomRow = document.getElementById("text")
+let megaStats = document.getElementById("stats")
+let megaManHp = document.getElementById("megaManHP")
+let veigHP = document.getElementById("veigHP")
+
+
+
+let unoplayer = 100;
+let dosplayer = 100;
+
 function shadowball(){
-    health2.value -= 10;
+    let hitChance = Math.round(Math.random()*10)
+    if (hitChance <= 9){
+        let dmg = Math.round(Math.random()*10)+10
+    dosplayer -= dmg
+    if (dosplayer < 0){
+        dosplayer = 0
+    }
+    bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/100)*200;
+    veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 0 
+    } else {
+ bottomRow.innerHTML = "you have missed"
+ turnOfPlayer = 0 
+    }
 }
 function astonish(){
     health2.value -= 15;
