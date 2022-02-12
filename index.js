@@ -91,10 +91,10 @@ reset.style.display="block"
 reset.innerText="Hello"
 endOfBattle()
 reset.addEventListener("click", () => {
-  document.getElementById("page2").style.display = "none"
-  document.getElementById("title").style.display = "inline"
-document.getElementById("page1").style.display = "inline"
-document.getElementById("start").style.display = "inline"
+document.getElementById("page2").style.display = "none"
+document.getElementById("title").style.display = "block"
+document.getElementById("page1").style.display = "block"
+document.getElementById("start").style.display = "block"
 document.getElementById("reset").style.display = "none"
 currPlayer = "Player1"
 }
@@ -111,9 +111,9 @@ reset.innerText="Hello"
 endOfBattle()
 reset.addEventListener("click", () => {
 document.getElementById("page2").style.display = "none"
-document.getElementById("title").style.display = "inline"
-document.getElementById("page1").style.display = "inline"
-document.getElementById("start").style.display = "inline"
+document.getElementById("title").style.display = "block"
+document.getElementById("page1").style.display = "block"
+document.getElementById("start").style.display = "block"
 document.getElementById("reset").style.display = "none"
 currPlayer = "Player1"
 }
