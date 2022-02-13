@@ -3,6 +3,7 @@ document.getElementById("page2").style.display="none"
 //1. Broken health bar - Health bar attack damage multiplies each reset
 //CSS Border for Characters: border: 2px dotted purple;
 //2. Build out Pain animation
+//3. Blindspot: Consider a "draw" scenario
 
 //Styling for Selection Screen
 
