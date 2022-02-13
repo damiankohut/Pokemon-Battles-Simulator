@@ -1,6 +1,6 @@
 //PAGE 1
 
-
+document.getElementById("page2").style.display="none"
 let currPlayer = 'Player1'
 document.getElementById("startButton").disabled=true;
 //let turnofPlayer = 0;
