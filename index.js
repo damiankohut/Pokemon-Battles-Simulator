@@ -296,13 +296,13 @@ shadowball2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
   bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + unoplayer + "left"
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
@@ -323,13 +323,13 @@ astonish2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
   bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + unoplayer + "left"
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
@@ -350,13 +350,13 @@ shadowsneak2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
   bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + unoplayer + "left"
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
@@ -377,13 +377,13 @@ shadowclaw2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
   bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + unoplayer + "left"
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
@@ -398,13 +398,13 @@ sing2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
   bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + unoplayer + "left"
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
@@ -425,13 +425,13 @@ strength2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
   bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + unoplayer + "left"
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
@@ -452,13 +452,13 @@ smack2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
   bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + unoplayer + "left"
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
@@ -479,13 +479,13 @@ bonk2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
   bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + unoplayer + "left"
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
