@@ -130,19 +130,35 @@ height:150px;
 /* POKEMON DISPLAY IN PAGE 2 */
 
 /* Grouped into Player 1 and Player 2 Battle Icons for efficiency -- Aldo */
+
+/*Selection Page */
+/*Mirror Left Side Characters on Selection */
+.leftSelectionChar {
+    transform: scaleX(-1);
+    height: 250px;
+    width: 250px;
+}
+
+.rightSelectionChar {
+    height: 250px;
+    width: 250px;
+}
 /* PLAYER 1 BATTLE ICON */
 
 .battleIcons1 {
-    border: 2px dotted purple;
+    transform: scaleX(-1);
     position: absolute;
+    height: 300px;
+    width: 300px;
     top:350px;
-    left:175px;
+    left:150px;
   }
 
   /* PLAYER 2 BATTLE ICON */
 .battleIcons2 {
-    border: 2px dotted purple;
     position: absolute;
+    height: 300px;
+    width: 300px;
     top:150px;
     right:100px;
   }

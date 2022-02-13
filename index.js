@@ -1,8 +1,10 @@
+document.getElementById("page2").style.display="none"
 //Bugs: 
 //1. Broken health bar - Health bar attack damage multiplies each reset
+//CSS Border for Characters: border: 2px dotted purple;
 
 //Styling for Selection Screen
-document.getElementById("page2").style.display="none"
+
 //Character Selection
 let currPlayer = 'Player1' 
 //Start Button Disabled
@@ -264,11 +266,12 @@ function haunterSelect()  {
   //Append Choice to Player Selection
   let p1Icon = document.createElement('img')
   p1Icon.src = player1.pokemon.icon;
+  p1Icon.className = "leftSelectionChar"
   document.querySelector("#leftContainer").appendChild(p1Icon)
   //Display Fighter in Page2
   let fieldFighter1 = document.createElement('img')
   fieldFighter1.className = "battleIcons1";
-  fieldFighter1.src = player1.pokemon.backIcon;
+  fieldFighter1.src = player1.pokemon.icon;
   document.querySelector("#page2").appendChild(fieldFighter1)
   //Player 2 Select Mode
   player2Choice.innerText = `Player 2 Select`
@@ -349,6 +352,7 @@ function haunterSelect()  {
   //Append fighter to selection screen
   var p2Icon = document.createElement('img')
   p2Icon.src = player2.pokemon.icon;
+  p2Icon.className = "rightSelectionChar"
   document.querySelector("#rightContainer").appendChild(p2Icon)
   //Display fighter in Page2
   let fieldFighter2 = document.createElement('img')
@@ -388,12 +392,13 @@ function jigglyPuffSelect() {
   player1.move4=player1.pokemon.bonk
   //Append fighter to selection screen
   var p1Icon = document.createElement('img')
+  p1Icon.className = "leftSelectionChar"
   p1Icon.src = player1.pokemon.icon;
   document.querySelector("#leftContainer").appendChild(p1Icon)
   //Display fighter in page2
   let fieldFighter1 = document.createElement('img')
   fieldFighter1.className = "battleIcons1";
-  fieldFighter1.src = player1.pokemon.backIcon;
+  fieldFighter1.src = player1.pokemon.icon;
   document.querySelector("#page2").appendChild(fieldFighter1)
   //Player 2 selection mode
   player2Choice.innerText = `Player 2 Select`
@@ -463,6 +468,7 @@ function jigglyPuffSelect() {
   //Append fighter to selection screen
   var p2Icon = document.createElement('img')
   p2Icon.src = player2.pokemon.icon;
+  p2Icon.className = "rightSelectionChar"
   document.querySelector("#rightContainer").appendChild(p2Icon)
   //Append fighter to page2
   let fieldFighter2 = document.createElement('img')
@@ -488,7 +494,7 @@ function jigglyPuffSelect() {
     document.getElementById("startButton").disabled=false;}
 }
 //NEW Pokemon instances
-const jigglyPuff = new Pokemon('Jigglypuff', 200, "images/jigglypuff-front-gif.png", "images/jigglypuff-back-gif.png")
+const jigglyPuff = new Pokemon('Jigglypuff', 200, "images/Jiggs.gif", "images/jigglypuff-back-gif.png")
 const haunter = new Pokemon('Haunter', 200, "images/haunter-front-gif.png", "images/haunter-back-gif.png")
 //Event Listeners for player chocie
 let player1Choice = document.getElementById("player1Choice")
@@ -529,6 +535,8 @@ document.getElementById("winner-message").style.display = "none";
 
 //Start Game Button Function
 startGame.addEventListener("click", () => {
+  turnOfPlayer = 1;
+  changeOfTurn() //Resets Turn to Player 1
   resetHealth() //Resets Health
   document.getElementById("startButton").disabled=true;
   reset.style.display = "none"
