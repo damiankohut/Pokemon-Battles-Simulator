@@ -304,6 +304,14 @@ function p1Pain(){
 }
 
 //Animation Work: For Pain
+document.body.addEventListener('animationend', () => {
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+  p1Damage[0].classList.remove("pain")
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+  p2Damage[0].classList.remove("pain")
+}
+)
+
 function p2Pain(){
   let p2Damage = document.getElementsByClassName("battleIcons2")
     p2Damage[0].classList.add("pain")

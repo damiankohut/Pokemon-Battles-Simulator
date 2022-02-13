@@ -28,7 +28,7 @@ justify-content: flex-end;
     animation: shake 0.5s;
   
     /* When the animation is finished, start again */
-    animation-iteration-count: 5;
+    animation-iteration-count: 4;
 }
 
 
