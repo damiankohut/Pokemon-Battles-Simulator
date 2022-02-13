@@ -601,9 +601,11 @@ if (health2.value === 0 ) {
 //reset button
 reset.style.display="block"
 reset.style.position="absolute"
+reset.style.width="40vh"
+reset.style.height="40vh"
 reset.style.top="50vh"
 reset.style.left="50vh"
-reset.innerText=`Player 1 has won! Rematch?`
+reset.innerText="Player 1 has won! Rematch?"
 endOfBattle()
 //event listener for reset button
 reset.addEventListener("click", () => {
@@ -643,6 +645,8 @@ document.getElementById("reset").style.display = "none"
   //window.alert('Player 2 won')
 reset.style.display="block"
 reset.style.position="absolute"
+reset.style.width="40vh"
+reset.style.height="40vh"
 reset.style.top="50vh"
 reset.style.left="50vh"
 reset.innerText="Player 2 has won! Rematch?"
