@@ -1,7 +1,9 @@
 //PAGE 1
 let currPlayer = 'Player1'
 document.getElementById("startButton").disabled=true;
-
+//let turnofPlayer = 0;
+//letPlayer1Attacked = false;
+//letPlayer2Attacked = false;
 
 //Aldo's turn system idea
 // function turnSystem() {
@@ -51,14 +53,7 @@ class Pokemon {
     this.hp = hp
     this.icon = icon
     this.backIcon = backIcon
-    moveset = [{
-      name: "shadowball",
-      dmg: 15
-    },
-  {
-    name: "shadowclaw",
-    dmg: 20
-  }]
+    this.moveset = moveset
   }
 //Attacks
   // shadowBall(attack,defender){
