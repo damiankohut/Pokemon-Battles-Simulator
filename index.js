@@ -682,7 +682,31 @@ function jigglyPuffSelect() {
   //Player 2 selection mode
   player2Choice.innerText = `Player 2 Select`
   currPlayer='Player2'
- 
+
+  //pain function for jigglypuff also
+  //Pain features --->
+function p1Pain(){
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+    p1Damage[0].classList.add("pain")
+    // const animation = document.querySelector('p.animation');
+    // animation.addEventListener('animationend', () => {
+    //   p1Damage[0].classList.remove('active');
+    // });
+}
+
+//Animation Work: For Pain
+document.body.addEventListener('animationend', () => {
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+  p1Damage[0].classList.remove("pain")
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+  p2Damage[0].classList.remove("pain")
+}
+)
+
+function p2Pain(){
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+    p2Damage[0].classList.add("pain")
+}
 
   document.getElementById("moveset1").addEventListener("click", () =>{
     player1.move1()
