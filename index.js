@@ -49,10 +49,13 @@ document.getElementById("winner-message").style.display = 'none';
     // health2.max =200
     let health2 = document.getElementById("health2")
     let health1 = document.getElementById("health1")
+    let megaManHP = document.getElementById("megaManHp")
+    let veigHP = document.getElementById("veigHP")
     player1.hp=player1.pokemon.hp
     player2.hp=player2.pokemon.hp
-    health1.value = player1.hp
-    health2.value = player2.hp
+    unoplayer = player1.hp
+   dosplayer = player2.hp
+veigHPBarWidth = player1.hp
 }
     
 
@@ -118,15 +121,70 @@ class Pokemon {
 //Player 1 Haunter 
 
 //Doesn't affect original healtbar
+
 shadowball(){
   let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 9){
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  if (dosplayer < 0){
+      dosplayer = 0
+  }
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+  veigHP.style.width = veigHPBarWidth + "px"
+  turnOfPlayer = 2
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+astonish(){
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
       let dmg = Math.round(Math.random()*10)+10
   dosplayer -= dmg
   if (dosplayer < 0){
       dosplayer = 0
   }
-  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  bottomRow.innerHTML = "you hit Jigglypuff with"  +  dmg  +  "damage. JigglyPuff now has" + dosplayer + "left"
+let veigHPBarWidth = (dosplayer/100)*200;
+  veigHP.style.width = veigHPBarWidth + "px"
+  turnOfPlayer = 2
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
+}
+shadowsneak(){
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  dosplayer -= dmg
+  if (dosplayer < 0){
+      dosplayer = 0
+  }
+  bottomRow.innerHTML = "you hit Jigglypuff with"  +  dmg  +  "damage. JigglyPuff now has" + dosplayer + "left"
+let veigHPBarWidth = (dosplayer/100)*200;
+  veigHP.style.width = veigHPBarWidth + "px"
+  turnOfPlayer = 2
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
+}
+shadowclaw(){
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  dosplayer -= dmg
+  if (dosplayer < 0){
+      dosplayer = 0
+  }
+  bottomRow.innerHTML = "you hit Jigglypuff with"  +  dmg  +  "damage. JigglyPuff now has" + dosplayer + "left"
 let veigHPBarWidth = (dosplayer/100)*200;
   veigHP.style.width = veigHPBarWidth + "px"
   turnOfPlayer = 2
@@ -136,37 +194,41 @@ turnOfPlayer = 2
   }
 }
 
-astonish(){
-    player2.hp -=15
-    health2.value = player2.hp
-    turnOfPlayer = 2
-    changeOfTurn()
-}
-shadowsneak(){
-  player2.hp -=17
-  health2.value = player2.hp
-    turnOfPlayer = 2
-    changeOfTurn()
-}
-shadowclaw(){
-  player2.hp -=20
-  health2.value = player2.hp
-    turnOfPlayer = 2
-    changeOfTurn()
-}
-
 //Player 1 JigglyPuff 
-sing (){
-  player2.hp -=10
-    health2.value = player2.hp
-  turnOfPlayer = 2
+sing(){
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 4){
+      let dmg = Math.round(Math.random()*10)+30
+  unoplayer -= dmg
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  bottomRow.innerHTML = "you hit Haunter with"  +  dmg  +  "damage. Haunter now has" + dosplayer + "left"
+let megaManHPBarWidth = (dosplayer/100)*200;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
   changeOfTurn()
 }
 strength(){
-  player2.hp -=14
-    health2.value = player2.hp
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  dosplayer -= dmg
+  if (dosplayer < 0){
+      dosplayer = 0
+  }
+  bottomRow.innerHTML = "you hit Jigglypuff with"  +  dmg  +  "damage. JigglyPuff now has" + dosplayer + "left"
+let veigHPBarWidth = (dosplayer/100)*200;
+  veigHP.style.width = veigHPBarWidth + "px"
   turnOfPlayer = 2
-  changeOfTurn()
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
 }
 smack(){
   player2.hp -=16
@@ -209,10 +271,22 @@ shadowclaw2(){
 
 //Player 2 JigglyPuff
 sing2(){
-  player1.hp -=10
-  health1.value = player1.hp
-    turnOfPlayer = 1
-    changeOfTurn()
+  let hitChance = Math.round(Math.random()*8)
+  if (hitChance <= 4){
+      let dmg = Math.round(Math.random()*10)+30
+ player1.hp -=dmg
+  unoplayer -= player1.hp
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  bottomRow.innerHTML = "you hit Haunter with"  +  dmg  +  "damage. Haunter now has" + dosplayer + "left"
+let megaManHPBarWidth = (unoplayer/100)*300;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
 }
 strength2(){
   player1.hp -=14
@@ -640,7 +714,7 @@ function endOfBattle() {
 //Large nested If-Else statement, contains every game ending scenario/reset outcome
 function gameIsOver(){
 
-if (health2.value === 0 ) {
+if (dosplayer === 0 ) {
 // let replay = document.createElement("button")
 // replay.className = "replay"
 // replay.innerHTML="Player 1 won. Rematch?"
@@ -654,6 +728,7 @@ reset.style.height="40vh"
 reset.style.top="50vh"
 reset.style.left="50vh"
 reset.innerText="Player 1 has won! Rematch?"
+
 endOfBattle()
 //event listener for reset button
 reset.addEventListener("click", () => {
@@ -662,6 +737,7 @@ const removeFighter1 = document.getElementsByClassName("battleIcons1");
   while (removeFighter1.length > 0) removeFighter1[0].remove();
   const removeFighter2 = document.getElementsByClassName("battleIcons2");
   while (removeFighter2.length > 0) removeFighter2[0].remove();
+
 //REDISPLAY PAGE1
 document.getElementById("page2").style.display = "none"
 document.getElementById("title").style.display = "block"
@@ -689,7 +765,7 @@ document.getElementById("reset").style.display = "none"
 
 //window.alert('Player 1 won'); 
 //location.reload();
-} else if (health1.value === 0) {
+} else if (unoplayer === 0) {
   //window.alert('Player 2 won')
 reset.style.display="block"
 reset.style.position="absolute"
