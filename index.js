@@ -1,4 +1,6 @@
 //PAGE 1
+
+
 let currPlayer = 'Player1'
 document.getElementById("startButton").disabled=true;
 //let turnofPlayer = 0;
@@ -47,13 +49,21 @@ arrayToAlign.forEach( el => {
   el.style.textAlign = "center";
 })
 class Pokemon {
-  constructor(name, hp, icon, backIcon, player,moveset = []) {
+  constructor(name, hp, icon, backIcon, player,move1, move2, move3, move4) {
     this.player = player
     this.name = name
     this.hp = hp
     this.icon = icon
     this.backIcon = backIcon
-    this.moveset = moveset
+    this.move1 = move1
+    this.move2 = move2
+    this.move3 = move3
+    this.move4 = move4
+  }
+  
+  astonishTest(){
+    health2.value -= 15;
+    turnOfPlayer = 0
   }
 //Attacks
   // shadowBall(attack,defender){
@@ -106,6 +116,7 @@ function haunterSelect()  {
   player1Choice.innerText = `You chose ${haunter.name}`
   player1.pokemon=haunter
   player1.player='Player1'
+ 
   let p1Icon = document.createElement('img')
   p1Icon.src = player1.pokemon.icon;
   document.querySelector("#leftContainer").appendChild(p1Icon)
