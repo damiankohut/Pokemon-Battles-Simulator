@@ -226,15 +226,15 @@ strength(){
       player1.hp -= dmg
   unoplayer -= player1.hp
   bottomRow.innerHTML = "you hit Haunter with"  +  dmg  +  "damage. Haunter now has" + dosplayer + "left"
-  let megaManHPBarWidth = (dosplayer/100)*200;
-    megaManHP.style.width = megaManHPBarWidth + "px"
-    turnOfPlayer = 1
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
   if (unoplayer < 0){
       unoplayer = 0
   }
   } else {
 bottomRow.innerHTML = "you have missed"
-turnOfPlayer = 1
+turnOfPlayer = 2
   }
   changeOfTurn()
 }
@@ -246,15 +246,15 @@ smack(){
       player1.hp -= dmg
   unoplayer -= player1.hp
   bottomRow.innerHTML = "you hit Haunter with"  +  dmg  +  "damage. Haunter now has" + dosplayer + "left"
-  let megaManHPBarWidth = (dosplayer/100)*200;
-    megaManHP.style.width = megaManHPBarWidth + "px"
-    turnOfPlayer = 1
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
   if (unoplayer < 0){
       unoplayer = 0
   }
   } else {
 bottomRow.innerHTML = "you have missed"
-turnOfPlayer = 1
+turnOfPlayer = 2
   }
   changeOfTurn()
 }
@@ -266,15 +266,15 @@ bonk(){
       player1.hp -= dmg
   unoplayer -= player1.hp
   bottomRow.innerHTML = "you hit Haunter with"  +  dmg  +  "damage. Haunter now has" + dosplayer + "left"
-  let megaManHPBarWidth = (dosplayer/100)*200;
-    megaManHP.style.width = megaManHPBarWidth + "px"
-    turnOfPlayer = 1
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
   if (unoplayer < 0){
       unoplayer = 0
   }
   } else {
 bottomRow.innerHTML = "you have missed"
-turnOfPlayer = 1
+turnOfPlayer = 2
   }
   changeOfTurn()
 }
