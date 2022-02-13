@@ -151,33 +151,32 @@ astonish(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
   if (dosplayer < 0){
       dosplayer = 0
-  }
-  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
-let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
-  veigHP.style.width = veigHPBarWidth + "px"
-  turnOfPlayer = 2
-  } else {
+  }} else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 2
   }
   changeOfTurn()
 }
+
 shadowsneak(){
   let hitChance = Math.round(Math.random()*10)
   if (hitChance <= 7){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
   if (dosplayer < 0){
       dosplayer = 0
-  }
-  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
-let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
-  veigHP.style.width = veigHPBarWidth + "px"
-  turnOfPlayer = 2
-  } else {
+  } } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 2
   }
@@ -189,14 +188,13 @@ shadowclaw(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
   if (dosplayer < 0){
       dosplayer = 0
-  }
-  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
-let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
-  veigHP.style.width = veigHPBarWidth + "px"
-  turnOfPlayer = 2
-  } else {
+  } } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 2
   }
@@ -210,13 +208,13 @@ sing(){
       let dmg = Math.round(Math.random()*10)+30
       player1.hp -= dmg
   unoplayer -= player1.hp
+  bottomRow.innerHTML = "you hit Haunter with"  +  dmg  +  "damage. Haunter now has" + dosplayer + "left"
+  let megaManHPBarWidth = (dosplayer/100)*200;
+    megaManHP.style.width = megaManHPBarWidth + "px"
+    turnOfPlayer = 1
   if (unoplayer < 0){
       unoplayer = 0
   }
-  bottomRow.innerHTML = "you hit Haunter with"  +  dmg  +  "damage. Haunter now has" + dosplayer + "left"
-let megaManHPBarWidth = (dosplayer/100)*200;
-  megaManHP.style.width = megaManHPBarWidth + "px"
-  turnOfPlayer = 1
   } else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 1
