@@ -49,13 +49,17 @@ document.getElementById("winner-message").style.display = 'none';
     // health2.max =200
     let health2 = document.getElementById("health2")
     let health1 = document.getElementById("health1")
-    let megaManHP = document.getElementById("megaManHp")
-    let veigHP = document.getElementById("veigHP")
+    // let megaManHP = document.getElementById("megaManHp")
+    // let veigHP = document.getElementById("veigHP")
     player1.hp=player1.pokemon.hp
     player2.hp=player2.pokemon.hp
     unoplayer = player1.hp
    dosplayer = player2.hp
-veigHPBarWidth = player1.hp
+   veigHP.style.width = 200 + "px";
+   megaManHP.style.width = 200 + "px";
+// if (  document.getElementById('print').innerHTML === "Game Over") {
+//   veigHP.style.widthh = 200
+// }
 }
     
 
@@ -128,14 +132,13 @@ shadowball(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
   if (dosplayer < 0){
       dosplayer = 0
-  }
-  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
-let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
-  veigHP.style.width = veigHPBarWidth + "px"
-  turnOfPlayer = 2
-  } else {
+  }} else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 2
   }
@@ -845,6 +848,8 @@ startGame.addEventListener("click", () => {
   resetHealth() //Resets Health
   document.getElementById("startButton").disabled=true;
   reset.style.display = "none"
+  //disable the moves in the begining for player2
+  disableMoves5To8()
   //Removes fighters off battlefield
   let rightContainer = document.querySelector("#rightContainer")
   rightContainer.removeChild(rightContainer.lastElementChild)
@@ -857,15 +862,6 @@ startGame.addEventListener("click", () => {
   document.getElementById("title").style.display = "none";
   document.getElementById("page2").style.display = 'block';
   document.getElementById("movesets").style.display = 'block';
-  //Damian JS - disables movesets
-  document.getElementById("moveset1").disabled = false
-  document.getElementById("moveset2").disabled = false
-  document.getElementById("moveset3").disabled = false
-  document.getElementById("moveset4").disabled = false
-  document.getElementById("moveset5").disabled = false
-  document.getElementById("moveset6").disabled = false
-  document.getElementById("moveset7").disabled = false
-  document.getElementById("moveset8").disabled = false
 // document.getElementById("winner-message").style.display = 'block';  this is for PAGE 3
 })
 
