@@ -1,6 +1,11 @@
 body{
     background-color: #FE5F55;
 }
+footer {
+display: flex;
+justify-content: flex-end;
+}
+
 #page1{
 display: flex;
 justify-content: space-evenly;
