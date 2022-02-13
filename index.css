@@ -129,22 +129,25 @@ height:150px;
 
 /* POKEMON DISPLAY IN PAGE 2 */
 
-/* PLAYER 1 HAUNTER */
-.haunter1ImgPage2 {
+/* Grouped into Player 1 and Player 2 Battle Icons for efficiency -- Aldo */
+/* PLAYER 1 BATTLE ICON */
+
+.battleIcons1 {
     border: 2px dotted purple;
     position: absolute;
     top:350px;
-    left:170px;
+    left:175px;
   }
-  /* PLAYER 2 HAUNTER */
-  .haunter2ImgPage2 {
+
+  /* PLAYER 2 BATTLE ICON */
+.battleIcons2 {
     border: 2px dotted purple;
     position: absolute;
     top:150px;
     right:100px;
   }
   
-  /* PLAYER 1 JIGGLYPUFF */
+  /* PLAYER 1 JIGGLYPUFF
   .jigglypuff1ImgPage2 {
     border: 2px dotted purple;
     position: absolute;
@@ -152,13 +155,13 @@ height:150px;
     left:170px;
   }
   
-  /* PLAYER 2 JIGGLYPUFF */
-  .jigglypuff2ImgPage2 {
+PLAYER 2 JIGGLYPUFF */
+  /* .jigglypuff2ImgPage2 {
     border: 2px dotted purple;
     position: absolute;
     top:150px;
     right:100px;
-  }
+  } */
 
 
   /* MEDIA======================================== */

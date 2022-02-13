@@ -2,6 +2,26 @@
 let currPlayer = 'Player1'
 document.getElementById("startButton").disabled=true;
 
+
+//Aldo's turn system idea
+// function turnSystem() {
+//     if (turnofPlayer === 0) {
+//       document.getElementById("moveset1").disabled = true
+//       document.getElementById("moveset2").disabled = true
+//       document.getElementById("moveset3").disabled = true
+//       document.getElementById("moveset4").disabled = true
+//       if (player1Attacked === true) {turnofPlayer = 1} 
+//     }
+//     else {
+//       document.getElementById("moveset5").disabled = true
+//       document.getElementById("moveset6").disabled = true
+//       document.getElementById("moveset7").disabled = true
+//       document.getElementById("moveset8").disabled = true
+//       if (player2Attacked === true) {turnofPlayer = 0} 
+//     }
+//     }
+//-------------------------------------------------------
+
 // let button = document.createElement("button");
 // document.getElementById("container").appendChild(button);
 
@@ -95,10 +115,10 @@ function haunterSelect()  {
   p1Icon.src = player1.pokemon.icon;
   document.querySelector("#leftContainer").appendChild(p1Icon)
   //display player1 haunter in page2 - code start
-  let haunter1ImgPage2 = document.createElement('img')
-  haunter1ImgPage2.className = "haunter1ImgPage2";
-  haunter1ImgPage2.src = player1.pokemon.backIcon;
-  document.querySelector("#page2").appendChild(haunter1ImgPage2)
+  let fieldFighter1 = document.createElement('img')
+  fieldFighter1.className = "battleIcons1";
+  fieldFighter1.src = player1.pokemon.backIcon;
+  document.querySelector("#page2").appendChild(fieldFighter1)
   //display player1 haunter in page2 - code end
   player2Choice.innerText = `Player 2 Select`
   currPlayer = 'Player2'
@@ -164,10 +184,10 @@ function haunterSelect()  {
   p2Icon.src = player2.pokemon.icon;
   document.querySelector("#rightContainer").appendChild(p2Icon)
   //display player2 haunter in page2 - code start
-  let haunter2ImgPage2 = document.createElement('img')
-  haunter2ImgPage2.className = "haunter2ImgPage2";
-  haunter2ImgPage2.src = player2.pokemon.icon;
-  document.querySelector("#page2").appendChild(haunter2ImgPage2)
+  let fieldFighter2 = document.createElement('img')
+  fieldFighter2.className = "battleIcons2";
+  fieldFighter2.src = player2.pokemon.icon;
+  document.querySelector("#page2").appendChild(fieldFighter2)
   //display player2 haunter in page2 - code end
   currPlayer = null ////Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
@@ -185,10 +205,10 @@ function jigglyPuffSelect() {
   p1Icon.src = player1.pokemon.icon;
   document.querySelector("#leftContainer").appendChild(p1Icon)
   //display player1 jigglypuff in page2 - code start
-  let jigglypuff1ImgPage2 = document.createElement('img')
-  jigglypuff1ImgPage2.className = "jigglypuff1ImgPage2";
-  jigglypuff1ImgPage2.src = player1.pokemon.backIcon;
-  document.querySelector("#page2").appendChild(jigglypuff1ImgPage2)
+  let fieldFighter1 = document.createElement('img')
+  fieldFighter1.className = "battleIcons1";
+  fieldFighter1.src = player1.pokemon.backIcon;
+  document.querySelector("#page2").appendChild(fieldFighter1)
   //display player1 jigglypuff in page2 - code end
   player2Choice.innerText = `Player 2 Select`
   currPlayer='Player2'
@@ -251,10 +271,10 @@ function jigglyPuffSelect() {
   p2Icon.src = player2.pokemon.icon;
   document.querySelector("#rightContainer").appendChild(p2Icon)
   //display player2 jigglypuff in page2 - code start
-  let jigglypuff2ImgPage2 = document.createElement('img')
-  jigglypuff2ImgPage2.className = "jigglypuff2ImgPage2";
-  jigglypuff2ImgPage2.src = player2.pokemon.icon;
-  document.querySelector("#page2").appendChild(jigglypuff2ImgPage2)
+  let fieldFighter2 = document.createElement('img')
+  fieldFighter2.className = "battleIcons2";
+  fieldFighter2.src = player2.pokemon.icon;
+  document.querySelector("#page2").appendChild(fieldFighter2)
   //display player2 jigglypuff in page2 - code end
   currPlayer=null //Sets to null until the next stage of game, prevents appending infinite Pokemon images
   }
@@ -356,25 +376,17 @@ if (health2.value === 0 ) {
 // replay.innerHTML="Player 1 won. Rematch?"
 // document.getElementsByTagName("body").appendChild(replay)
 reset.style.display="block"
-reset.innerText="Hello"
+reset.style.position="absolute"
+reset.style.top="50vh"
+reset.style.left="50vh"
+reset.innerText=`Player 1 has won! Rematch?`
 endOfBattle()
 reset.addEventListener("click", () => {
-// if (document.getElementsByClassName("jigglypuff1ImgPage2")){
-// let elements = document.getElementsByClassName("jigglypuff1ImgPage2");
-// elements[0].remove();
-// }
-// if (document.getElementsByClassName("jigglypuff2ImgPage2")){
-// let elements = document.getElementsByClassName("jigglypuff2ImgPage2");
-// elements[0].remove();
-// }
-// if (document.getElementsByClassName("haunter1ImgPage2")){
-// let elements = document.getElementsByClassName("haunter1ImgPage2");
-// elements[0].remove();
-// }
-// if (document.getElementsByClassName("haunter2ImgPage2")){
-// let elements = document.getElementsByClassName("haunter2ImgPage2");
-// elements[0].remove();
-// }
+const removeFighter1 = document.getElementsByClassName("battleIcons1");
+  while (removeFighter1.length > 0) removeFighter1[0].remove();
+  const removeFighter2 = document.getElementsByClassName("battleIcons2");
+  while (removeFighter2.length > 0) removeFighter2[0].remove();
+
 document.getElementById("page2").style.display = "none"
 document.getElementById("title").style.display = "block"
  document.getElementById("page1").style.display = "flex"
@@ -404,9 +416,17 @@ document.getElementById("reset").style.display = "none"
 } else if (health1.value === 0) {
   //window.alert('Player 2 won')
 reset.style.display="block"
-reset.innerText="Hello"
+reset.style.position="absolute"
+reset.style.top="50vh"
+reset.style.left="50vh"
+reset.innerText="Player 2 has won! Rematch?"
 endOfBattle()
 reset.addEventListener("click", () => {
+  const removeFighter1 = document.getElementsByClassName("battleIcons1");
+  while (removeFighter1.length > 0) removeFighter1[0].remove();
+  const removeFighter2 = document.getElementsByClassName("battleIcons2");
+  while (removeFighter2.length > 0) removeFighter2[0].remove();
+
   // if (document.getElementsByClassName("jigglypuff1ImgPage2")){
   //   let elements = document.getElementsByClassName("jigglypuff1ImgPage2");
   //   elements[0].remove();
