@@ -2,6 +2,7 @@ document.getElementById("page2").style.display="none"
 //Bugs: 
 //1. Broken health bar - Health bar attack damage multiplies each reset
 //CSS Border for Characters: border: 2px dotted purple;
+//2. Build out Pain animation
 
 //Styling for Selection Screen
 
@@ -288,10 +289,27 @@ function haunterSelect()  {
   // moveset7.innerText = "smack"
   // moveset8.innerText = "bonk"
 
+
+  //Pain Function
+
+//Pain features --->
+function p1Pain(){
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+    p1Damage[0].classList.add("pain")
+}
+
+function p2Pain(){
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+    p2Damage[0].classList.add("pain")
+}
   //EVENT LISTENERS FOR ALL MOVES
   document.getElementById("moveset1").addEventListener("click", () =>{
     //shadowball()
     player1.move1()
+    p2Pain()
+    //Animation
+    // p2Damage.forEach(el => {el.classList.add("tookAHit")})
+  
     // while(health1 !== 0)
     // if(player1Turn) { //if it's player1's turn keep going with the if
     // player1Turn = !player1Turn //after click event disable player1's turn
@@ -301,38 +319,45 @@ function haunterSelect()  {
   document.getElementById("moveset2").addEventListener("click", () =>{
     //astonish()
     player1.move2()
+    p2Pain()
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     //shadowsneak()
     player1.move3()
+    p2Pain()
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
+    p2Pain()
    // shadowclaw()
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     player2.move1()
+    p1Pain()
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     player2.move2()
+    p1Pain()
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     player2.move3()
+    p1Pain()
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     player2.move4()
+    p1Pain()
     disableMoves5To8()
     gameIsOver()
   })
@@ -414,41 +439,49 @@ function jigglyPuffSelect() {
   // moveset8.innerText = "shadowclaw"
   document.getElementById("moveset1").addEventListener("click", () =>{
     player1.move1()
+    p2Pain()
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
     player1.move2()
+    p2Pain()
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     player1.move3()
+    p2Pain()
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
+    p2Pain()
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     player2.move1()
+    p1Pain()
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     player2.move2()
+    p1Pain()
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     player2.move3()
+    p1Pain()
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     player2.move4()
+    p1Pain()
     disableMoves5To8()
     gameIsOver()
   })
