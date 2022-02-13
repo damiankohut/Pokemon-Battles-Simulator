@@ -2,6 +2,9 @@ body{
     background-color: #FE5F55;
 }
 footer {
+width: 100%;
+height: 15vh;
+background-color: white;
 display: flex;
 justify-content: flex-end;
 }
