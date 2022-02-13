@@ -49,32 +49,40 @@ arrayToAlign.forEach( el => {
   el.style.textAlign = "center";
 })
 class Pokemon {
-  constructor(name, hp, icon, backIcon, player,move1, move2, move3, move4) {
+  constructor(name, hp, icon, backIcon, player) {
     this.player = player
     this.name = name
     this.hp = hp
     this.icon = icon
     this.backIcon = backIcon
-    this.move1 = move1
-    this.move2 = move2
-    this.move3 = move3
-    this.move4 = move4
   }
-  
-  astonishTest(){
-    health2.value -= 15;
-    turnOfPlayer = 0
-  }
-//Attacks
-  // shadowBall(attack,defender){
-  //   defender.dmg -= 20
-    //If Player 2 is equivalent to opposite type, deal more damage.
-  }
+astonishTest(){
+  health2.value -= 15;
+  turnOfPlayer = 0
+}
+
+//   //Adding all Pokemon attacks as methods to the Pokemon object
+//   function astonish(){
+//     health2.value -= 15;
+//     turnOfPlayer = 0
+// }
+}
+
+
+
 const player1 = {
-pokemon: null
+pokemon: null,
+move1: null,
+move2: null,
+move3: null,
+move4: null
 }
 const player2 = {
-pokemon: null
+pokemon: null,
+move1: null,
+move2: null,
+move3: null,
+move4: null
 }
 
 
@@ -116,6 +124,11 @@ function haunterSelect()  {
   player1Choice.innerText = `You chose ${haunter.name}`
   player1.pokemon=haunter
   player1.player='Player1'
+  //Inheritance of moveset from Pokemon Class
+  player1.move1=player1.pokemon.astonish
+  player1.move2=player1.pokemon.astonish
+  player1.move3=player1.pokemon.astonish
+  player1.move4=player1.pokemon.astonish
  
   let p1Icon = document.createElement('img')
   p1Icon.src = player1.pokemon.icon;
@@ -146,7 +159,7 @@ function haunterSelect()  {
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
-    astonish()
+    //astonish()
     disableMoves1To4()
     gameIsOver()
   })
@@ -186,6 +199,11 @@ function haunterSelect()  {
   player2Choice.innerText = `You chose ${haunter.name}`
   player2.player = 'Player2'
   player2.pokemon = haunter
+  //Inheritance of moveset from Pokemon Class
+  player2.move1=player2.pokemon.astonish
+  player2.move2=player2.pokemon.astonish
+  player2.move3=player2.pokemon.astonish
+  player2.move4=player2.pokemon.astonish
   var p2Icon = document.createElement('img')
   p2Icon.src = player2.pokemon.icon;
   document.querySelector("#rightContainer").appendChild(p2Icon)
@@ -207,6 +225,10 @@ function jigglyPuffSelect() {
   player1Choice.innerText = `You chose ${jigglyPuff.name}`
   player1.pokemon=jigglyPuff
   player1.player='Player1'
+  player1.move1=player1.pokemon.astonish
+  player1.move2=player1.pokemon.astonish
+  player1.move3=player1.pokemon.astonish
+  player1.move4=player1.pokemon.astonish
   var p1Icon = document.createElement('img')
   p1Icon.src = player1.pokemon.icon;
   document.querySelector("#leftContainer").appendChild(p1Icon)
@@ -273,6 +295,10 @@ function jigglyPuffSelect() {
   player2Choice.innerText = `You chose ${jigglyPuff.name}`
   player2.pokemon = jigglyPuff
   player2.player = 'Player2'
+  player2.move1=player2.pokemon.astonish
+  player2.move2=player2.pokemon.astonish
+  player2.move3=player2.pokemon.astonish
+  player2.move4=player2.pokemon.astonish
   var p2Icon = document.createElement('img')
   p2Icon.src = player2.pokemon.icon;
   document.querySelector("#rightContainer").appendChild(p2Icon)
