@@ -47,10 +47,8 @@ document.getElementById("winner-message").style.display = 'none';
   function resetHealth(){
     // health1.max = 200
     // health2.max =200
-    let health2 = document.getElementById("health2")
-    let health1 = document.getElementById("health1")
-    // let megaManHP = document.getElementById("megaManHp")
-    // let veigHP = document.getElementById("veigHP")
+    // let health2 = document.getElementById("health2")
+    // let health1 = document.getElementById("health1")
     player1.hp=player1.pokemon.hp
     player2.hp=player2.pokemon.hp
     unoplayer = player1.hp
@@ -204,20 +202,19 @@ turnOfPlayer = 2
 //Player 1 JigglyPuff 
 sing(){
   let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 4){
-      let dmg = Math.round(Math.random()*10)+30
-      player1.hp -= dmg
-  unoplayer -= player1.hp
-  bottomRow.innerHTML = "you hit Haunter with"  +  dmg  +  "damage. Haunter now has" + dosplayer + "left"
-  let megaManHPBarWidth = (dosplayer/100)*200;
-    megaManHP.style.width = megaManHPBarWidth + "px"
-    turnOfPlayer = 1
-  if (unoplayer < 0){
-      unoplayer = 0
-  }
-  } else {
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
 bottomRow.innerHTML = "you have missed"
-turnOfPlayer = 1
+turnOfPlayer = 2
   }
   changeOfTurn()
 }
@@ -541,18 +538,6 @@ function haunterSelect()  {
   player2Choice.innerText = `Player 2 Select`
   currPlayer = 'Player2'
 
-  
-  //Damians code================================================
-  // moveset1.innerText = "ShadowBall"
-  // moveset2.innerText = "astonish"
-  // moveset3.innerText = "shadowsneak"
-  // moveset4.innerText = "shadowclaw"
-  // moveset5.innerText = "sing"
-  // moveset6.innerText = "strength"
-  // moveset7.innerText = "smack"
-  // moveset8.innerText = "bonk"
-
-
   //Pain Function
 
 //Pain features --->
@@ -580,15 +565,9 @@ function p2Pain(){
 }
   //EVENT LISTENERS FOR ALL MOVES
   document.getElementById("moveset1").addEventListener("click", () =>{
-    //shadowball()
+  
     player1.move1()
     p2Pain()
-    //Animation
-    // p2Damage.forEach(el => {el.classList.add("tookAHit")})
-  
-    // while(health1 !== 0)
-    // if(player1Turn) { //if it's player1's turn keep going with the if
-    // player1Turn = !player1Turn //after click event disable player1's turn
     disableMoves1To4()
     gameIsOver()
   })
@@ -609,7 +588,6 @@ function p2Pain(){
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
     p2Pain()
-   // shadowclaw()
     disableMoves1To4()
     gameIsOver()
   })
@@ -704,15 +682,8 @@ function jigglyPuffSelect() {
   //Player 2 selection mode
   player2Choice.innerText = `Player 2 Select`
   currPlayer='Player2'
-  //damians code start  ======================================
-  // moveset1.innerText = "sing"
-  // moveset2.innerText = "strength"
-  // moveset3.innerText = "smack"
-  // moveset4.innerText = "bonk"
-  // moveset5.innerText = "ShadowBall"
-  // moveset6.innerText = "astonish"
-  // moveset7.innerText = "shadowsneak"
-  // moveset8.innerText = "shadowclaw"
+ 
+
   document.getElementById("moveset1").addEventListener("click", () =>{
     player1.move1()
     p2Pain()
@@ -844,7 +815,7 @@ document.getElementById("winner-message").style.display = "none";
 
 //Start Game Button Function
 startGame.addEventListener("click", () => {
-  turnOfPlayer = 1;
+  turnOfPlayer = 1
   changeOfTurn() //Resets Turn to Player 1
   resetHealth() //Resets Health
   document.getElementById("startButton").disabled=true;
