@@ -296,8 +296,13 @@ function haunterSelect()  {
 function p1Pain(){
   let p1Damage = document.getElementsByClassName("battleIcons1")
     p1Damage[0].classList.add("pain")
+    // const animation = document.querySelector('p.animation');
+    // animation.addEventListener('animationend', () => {
+    //   p1Damage[0].classList.remove('active');
+    // });
 }
 
+//Animation Work: For Pain
 function p2Pain(){
   let p2Damage = document.getElementsByClassName("battleIcons2")
     p2Damage[0].classList.add("pain")
