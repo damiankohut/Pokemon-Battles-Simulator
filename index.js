@@ -13,10 +13,13 @@ let currPlayer = 'Player1'
 document.getElementById("startButton").disabled=true;
 
 
+
+
 //PAGE 1
 //Empty Player 1 Object--Dependent on Pokemon Class
 const player1 = {
   pokemon: null,
+  trainer: 'Player 1',
   move1: null,
   move2: null,
   move3: null,
@@ -26,12 +29,27 @@ const player1 = {
 //Empty Player 2 Object--Dependent on Pokemon Class
   const player2 = {
   pokemon: null,
+  trainer: 'Player 2',
   move1: null,
   move2: null,
   move3: null,
   move4: null,
   hp: null
   }
+
+
+  //Trainer Names
+const trainer1 = document.getElementById('trainer1');
+const trainer2= document.getElementById('trainer2');
+trainer1.addEventListener('submit', trainer1Name())
+trainer2.addEventListener('submit', trainer2Name())
+
+function trainer1Name(){
+
+}
+function trainer2Name(){
+
+}
 
 
 //Do not initially display movesets or winner message
@@ -255,7 +273,7 @@ reset.style.display = "none"
 //Box 1: Haunter
 function haunterSelect()  {
   if (currPlayer === 'Player1') {
-  player1Choice.innerText = `You chose ${haunter.name}`
+  player1Choice.innerText = `${player1.trainer} chose ${haunter.name}`
   //Starter properties for player 1 object
   player1.pokemon=haunter
   player1.player='Player1'
@@ -378,7 +396,7 @@ function p2Pain(){
   //end of damians code===============================================
   }
   if (currPlayer === 'Player2' && player1.pokemon!=haunter) {
-  player2Choice.innerText = `You chose ${haunter.name}`
+  player2Choice.innerText = `${player2.trainer} ${haunter.name}`
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = haunter
@@ -420,7 +438,7 @@ function p2Pain(){
 function jigglyPuffSelect() {
   if (currPlayer === 'Player1') {
   //Starter proprties for player 1 object
-  player1Choice.innerText = `You chose ${jigglyPuff.name}`
+  player1Choice.innerText = `${player1.trainer} chose ${jigglyPuff.name}`
   player1.pokemon=jigglyPuff
   player1.player='Player1'
   player1.hp=player1.pokemon.hp
@@ -502,7 +520,7 @@ function jigglyPuffSelect() {
   //damians code end ============================================
 }
   if (currPlayer === 'Player2' && player1.pokemon!=jigglyPuff) {
-  player2Choice.innerText = `You chose ${jigglyPuff.name}`
+  player2Choice.innerText = `${player2.trainer} chose ${jigglyPuff.name}`
   //Player 2 object starter properties
   player2.pokemon = jigglyPuff
   player2.player = 'Player2'
