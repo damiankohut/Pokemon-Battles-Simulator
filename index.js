@@ -39,16 +39,20 @@ const player1 = {
 
 
   //Trainer Names
-const trainer1 = document.getElementById('trainer1');
-const trainer2= document.getElementById('trainer2');
+let trainer1 = document.getElementById('trainer1');
+let trainer2= document.getElementById('trainer2');
 trainer1.addEventListener('submit', trainer1Name())
 trainer2.addEventListener('submit', trainer2Name())
 
 function trainer1Name(){
-
+//trainer1.preventDefault()
+let input = trainer1.value;
+player1.trainer = input
 }
 function trainer2Name(){
-
+//trainer2.preventDefault()
+let input = trainer2.value;
+player2.trainer = input
 }
 
 
