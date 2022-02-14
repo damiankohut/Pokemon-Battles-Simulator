@@ -1,7 +1,4 @@
 document.getElementById("page2").style.display="none"
-//Theme song
-var theme = document.getElementById("theme");
-theme.volume = 0.25;
 //Bugs: 
 //1. Broken health bar - Health bar attack damage multiplies each reset
 //CSS Border for Characters: border: 2px dotted purple;
@@ -125,12 +122,8 @@ class Pokemon {
 
 //Player 1 Haunter 
 
-<<<<<<< HEAD
-//Doesn't affect original healthbar
-=======
 //Doesn't affect original healtbar
 
->>>>>>> 6ea8ebb94be3e42472bcc2efd0b65dfe838defa6
 shadowball(){
   let hitChance = Math.round(Math.random()*10)
   if (hitChance <= 7){
@@ -514,7 +507,7 @@ reset.style.display = "none"
  
 //CHARACTER SELECTION
 //Damians Code -----------------------------------------------
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //Box 1: Haunter
 function haunterSelect()  {
   if (currPlayer === 'Player1') {
@@ -533,10 +526,10 @@ function haunterSelect()  {
   p1Icon.src = player1.pokemon.icon;
   p1Icon.className = "leftSelectionChar"
   document.querySelector("#leftContainer").appendChild(p1Icon)
-  //Display Player 1 Fighter 1 in Page2
+  //Display Fighter in Page2
   let fieldFighter1 = document.createElement('img')
-  fieldFighter1.className = "battleIcons1"; //battleIcons1 is also mirrored // CSS: battleIcons1: transform: scaleX(-1);
-  fieldFighter1.src = player1.pokemon.icon; //backIcon you can call it here
+  fieldFighter1.className = "battleIcons1";
+  fieldFighter1.src = player1.pokemon.icon;
   document.querySelector("#page2").appendChild(fieldFighter1)
   //Player 2 Select Mode
   player2Choice.innerText = `Player 2 Select`
@@ -544,6 +537,29 @@ function haunterSelect()  {
 
   //Pain Function
 
+//Pain features --->
+function p1Pain(){
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+    p1Damage[0].classList.add("pain")
+    // const animation = document.querySelector('p.animation');
+    // animation.addEventListener('animationend', () => {
+    //   p1Damage[0].classList.remove('active');
+    // });
+}
+
+//Animation Work: For Pain
+document.body.addEventListener('animationend', () => {
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+  p1Damage[0].classList.remove("pain")
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+  p2Damage[0].classList.remove("pain")
+}
+)
+
+function p2Pain(){
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+    p2Damage[0].classList.add("pain")
+}
   //EVENT LISTENERS FOR ALL MOVES
   document.getElementById("moveset1").addEventListener("click", () =>{
   
@@ -637,7 +653,6 @@ function haunterSelect()  {
   moveset8.innerText = player2.move4.name
     document.getElementById("startButton").disabled=false;}
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Box 2: JigglyPuff
 function jigglyPuffSelect() {
   if (currPlayer === 'Player1') {
@@ -779,58 +794,10 @@ function p2Pain(){
   moveset8.innerText = player2.move4.name
     document.getElementById("startButton").disabled=false;}
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// //Sound Effects
-// var sound = new Audio();         // create the audio
-// sound.volume = 1;
-// sound.src = "hitHurt.wav";  // set the resource location 
-// sound.oncanplaythrough = function(){   // When the sound has completely loaded
-//     sound.readyToRock = true;    // flag sound is ready to play
-//                                  // I just made it up and can be anything
-// };
-// sound.onerror = function(){      // not required but if there are problems this will help debug the problem
-//     console.log("Sound file hitHurt.wav failed to load.")
-// };
-
-// function playSound(){
-//   if(sound && sound.readyToRock){  // check for the sound and if it has loaded
-//       sound.currentTime = 0;       // seek to the start
-//       sound.play();                // play it till it ends
-//   }
-// }
-//Pain features --->
-function p1Pain(){
-  let p1Damage = document.getElementsByClassName("battleIcons1")
-    p1Damage[0].classList.add("pain")
-    playSound()
-    // const animation = document.querySelector('p.animation');
-    // animation.addEventListener('animationend', () => {
-    //   p1Damage[0].classList.remove('active');
-    // });
-}
-
-function p2Pain(){
-  let p2Damage = document.getElementsByClassName("battleIcons2")
-    p2Damage[0].classList.add("pain")
-    playSound()
-}
-
-
-//Animation Work: For Pain
-document.body.addEventListener('animationend', () => {
-  let p1Damage = document.getElementsByClassName("battleIcons1")
-  p1Damage[0].classList.remove("pain")
-  let p2Damage = document.getElementsByClassName("battleIcons2")
-  p2Damage[0].classList.remove("pain")
-}
-)
-
-
 //NEW Pokemon instances
 const jigglyPuff = new Pokemon('Jigglypuff', 200, "images/Jiggs.gif", "images/jigglypuff-back-gif.png")
 const haunter = new Pokemon('Haunter', 200, "images/haunter-front-gif.png", "images/haunter-back-gif.png")
-//Event Listeners for player choice
-//Needed buttons to add for each Pokemon
+//Event Listeners for player chocie
 let player1Choice = document.getElementById("player1Choice")
 document.getElementById("char1").addEventListener("click", haunterSelect)
 let player2Choice = document.getElementById("player2Choice")
@@ -874,13 +841,9 @@ startGame.addEventListener("click", () => {
   resetHealth() //Resets Health
   document.getElementById("startButton").disabled=true;
   reset.style.display = "none"
-<<<<<<< HEAD
-  //Removes fighters off character selection screen
-=======
   //disable the moves in the begining for player2
   disableMoves5To8()
   //Removes fighters off battlefield
->>>>>>> 6ea8ebb94be3e42472bcc2efd0b65dfe838defa6
   let rightContainer = document.querySelector("#rightContainer")
   rightContainer.removeChild(rightContainer.lastElementChild)
   let leftContainer = document.querySelector("#leftContainer")
