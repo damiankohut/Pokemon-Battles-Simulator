@@ -40,12 +40,13 @@ position: fixed;
     animation-iteration-count: 4;
 }
 
-
-
-    
-
-
-  
+#title {
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: xxx-large;
+  font-weight:100;
+  color:rgb(234, 238, 27);
+  -webkit-text-stroke: 3px black;
+}
  
 #page1{
 display: flex;
@@ -86,6 +87,9 @@ animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   border-radius: 25px;
+  font-family: 'Pokemon Solid', sans-serif;
+  color:rgb(234, 238, 27);
+  -webkit-text-stroke: 1px black;
 }
 
 #start{
