@@ -1,6 +1,6 @@
 document.getElementById("page2").style.display="none"
-const theme = document.getElementById("theme");
-theme.volume = 0.20;
+var theme = document.getElementById("theme");
+theme.volume = 0.010;
 //Bugs: 
 //1. Broken health bar - Health bar attack damage multiplies each reset
 //CSS Border for Characters: border: 2px dotted purple;
@@ -521,6 +521,7 @@ function playSound(){
 function p1Pain(){
   let p1Damage = document.getElementsByClassName("battleIcons1")
     p1Damage[0].classList.add("pain")
+    playSound()
     // const animation = document.querySelector('p.animation');
     // animation.addEventListener('animationend', () => {
     //   p1Damage[0].classList.remove('active');
@@ -539,6 +540,7 @@ document.body.addEventListener('animationend', () => {
 function p2Pain(){
   let p2Damage = document.getElementsByClassName("battleIcons2")
     p2Damage[0].classList.add("pain")
+    playSound()
 }
   //EVENT LISTENERS FOR ALL MOVES
   document.getElementById("moveset1").addEventListener("click", () =>{
