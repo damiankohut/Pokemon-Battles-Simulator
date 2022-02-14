@@ -498,7 +498,6 @@ function haunterSelect()  {
 
 //Sound Effects
 var sound = new Audio();         // create the audio
-sound.volume = 1;
 sound.src = "sounds/hitHurt.wav";  // set the resource location 
 sound.oncanplaythrough = function(){   // When the sound has completely loaded
     sound.readyToRock = true;    // flag sound is ready to play
@@ -510,7 +509,8 @@ sound.onerror = function(){      // not required but if there are problems this 
 
 function playSound(){
   if(sound && sound.readyToRock){  // check for the sound and if it has loaded
-      sound.currentTime = 0;       // seek to the start
+    sound.volume = 0.050;
+    sound.currentTime = 0;       // seek to the start
       sound.play();                // play it till it ends
   }
 }
