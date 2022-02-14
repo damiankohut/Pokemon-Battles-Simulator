@@ -6,8 +6,8 @@ let bottomRow = document.getElementById("text")
 let megaStats = document.getElementById("stats")
 let megaManHp = document.getElementById("megaManHP")
 let veigHP = document.getElementById("veigHP")
-let unoplayer = 100;
-let dosplayer = 100;
+let unoplayer = player1.hp;
+let dosplayer = player2.hp;
 
 
 //See: Pokemon Class (Attack Library)

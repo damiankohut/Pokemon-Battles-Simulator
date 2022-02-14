@@ -50,12 +50,17 @@ document.getElementById("winner-message").style.display = 'none';
   function resetHealth(){
     // health1.max = 200
     // health2.max =200
-    let health2 = document.getElementById("health2")
-    let health1 = document.getElementById("health1")
+    // let health2 = document.getElementById("health2")
+    // let health1 = document.getElementById("health1")
     player1.hp=player1.pokemon.hp
     player2.hp=player2.pokemon.hp
-    health1.value = player1.hp
-    health2.value = player2.hp
+    unoplayer = player1.hp
+   dosplayer = player2.hp
+   veigHP.style.width = 200 + "px";
+   megaManHP.style.width = 200 + "px";
+// if (  document.getElementById('print').innerHTML === "Game Over") {
+//   veigHP.style.widthh = 200
+// }
 }
     
 
@@ -120,120 +125,374 @@ class Pokemon {
 
 //Player 1 Haunter 
 
+<<<<<<< HEAD
 //Doesn't affect original healthbar
+=======
+//Doesn't affect original healtbar
+
+>>>>>>> 6ea8ebb94be3e42472bcc2efd0b65dfe838defa6
 shadowball(){
   let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 9){
+  if (hitChance <= 7){
       let dmg = Math.round(Math.random()*10)+10
-  dosplayer -= dmg
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
   if (dosplayer < 0){
       dosplayer = 0
-  }
-  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
-let veigHPBarWidth = (dosplayer/100)*200;
-  veigHP.style.width = veigHPBarWidth + "px"
-  turnOfPlayer = 2
-  } else {
+  }} else {
 bottomRow.innerHTML = "you have missed"
 turnOfPlayer = 2
   }
+  changeOfTurn()
 }
 
 astonish(){
-    player2.hp -=15
-    health2.value = player2.hp
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
-    changeOfTurn()
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
+  changeOfTurn()
 }
+
 shadowsneak(){
-  player2.hp -=17
-  health2.value = player2.hp
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
-    changeOfTurn()
+  if (dosplayer < 0){
+      dosplayer = 0
+  } } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
+  changeOfTurn()
 }
 shadowclaw(){
-  player2.hp -=20
-  health2.value = player2.hp
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
-    changeOfTurn()
+  if (dosplayer < 0){
+      dosplayer = 0
+  } } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
+  changeOfTurn()
 }
 
 //Player 1 JigglyPuff 
-sing (){
-  player2.hp -=10
-    health2.value = player2.hp
-  turnOfPlayer = 2
+sing(){
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
   changeOfTurn()
 }
+
 strength(){
-  player2.hp -=14
-    health2.value = player2.hp
-  turnOfPlayer = 2
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
   changeOfTurn()
 }
+
 smack(){
-  player2.hp -=16
-    health2.value = player2.hp
-  turnOfPlayer = 2
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
   changeOfTurn()
 }
+
 bonk(){
-  player2.hp -=24
-    health2.value = player2.hp
-  turnOfPlayer = 2
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + dosplayer + "left"
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 2
+  }
   changeOfTurn()
 }
 
 // Player 2 Haunter
+
+// shadowball2(){
+//   player1.hp -=10
+//     health1.value = player1.hp
+//   turnOfPlayer = 1
+//   changeOfTurn()
+// }
+
 shadowball2(){
-  player1.hp -=10
-    health1.value = player1.hp
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + unoplayer + "left"
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
   changeOfTurn()
 }
+
+// astonish2(){
+//   player1.hp -=15
+//     health1.value = player1.hp
+//   turnOfPlayer = 1
+//   changeOfTurn()
+// }
+
 astonish2(){
-  player1.hp -=15
-    health1.value = player1.hp
-  turnOfPlayer = 1
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + unoplayer + "left"
+  let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+    megaManHP.style.width = megaManHPBarWidth + "px"
+    turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
   changeOfTurn()
 }
+
+// shadowsneak2(){
+//   player1.hp -=17
+//     health1.value = player1.hp
+//   turnOfPlayer = 1
+//   changeOfTurn()
+// }
+
 shadowsneak2(){
-  player1.hp -=17
-    health1.value = player1.hp
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + unoplayer + "left"
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
   changeOfTurn()
 }
+
+// shadowclaw2(){
+//   player1.hp -=20
+//     health1.value = player1.hp
+//   turnOfPlayer = 1
+//   changeOfTurn()
+// }
+
 shadowclaw2(){
-  player1.hp -=20
-    health1.value = player1.hp
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "you hit Jigglypuff with" + dmg + "damage. JigglyPuff now has" + unoplayer + "left"
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
   changeOfTurn()
 }
 
 //Player 2 JigglyPuff
 sing2(){
-  player1.hp -=10
-  health1.value = player1.hp
-    turnOfPlayer = 1
-    changeOfTurn()
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + unoplayer + "left"
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
+  changeOfTurn()
 }
+
+// strength2(){
+//   player1.hp -=14
+//   health1.value = player1.hp
+//     turnOfPlayer = 1
+//     changeOfTurn()
+// }
+
 strength2(){
-  player1.hp -=14
-  health1.value = player1.hp
-    turnOfPlayer = 1
-    changeOfTurn()
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + unoplayer + "left"
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
+  changeOfTurn()
 }
+
+// smack2(){
+//   player1.hp -=16
+//     health1.value = player1.hp
+//     turnOfPlayer = 1
+//     changeOfTurn()
+// }
+
 smack2(){
-  player1.hp -=16
-    health1.value = player1.hp
-    turnOfPlayer = 1
-    changeOfTurn()
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + unoplayer + "left"
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
+  changeOfTurn()
 }
+
+// bonk2(){
+//     player1.hp -=24
+//     health1.value = player1.hp
+//     turnOfPlayer = 1
+//     changeOfTurn()
+// }
+
 bonk2(){
-    player1.hp -=24
-    health1.value = player1.hp
-    turnOfPlayer = 1
-    changeOfTurn()
+  let hitChance = Math.round(Math.random()*10)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+10
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "you hit Haunter with" + dmg + "damage. Haunter now has" + unoplayer + "left"
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "you have missed"
+turnOfPlayer = 1
+  }
+  changeOfTurn()
 }
 
 }
@@ -283,31 +542,13 @@ function haunterSelect()  {
   player2Choice.innerText = `Player 2 Select`
   currPlayer = 'Player2'
 
-  
-  //Damians code================================================
-  // moveset1.innerText = "ShadowBall"
-  // moveset2.innerText = "astonish"
-  // moveset3.innerText = "shadowsneak"
-  // moveset4.innerText = "shadowclaw"
-  // moveset5.innerText = "sing"
-  // moveset6.innerText = "strength"
-  // moveset7.innerText = "smack"
-  // moveset8.innerText = "bonk"
-
-
   //Pain Function
 
   //EVENT LISTENERS FOR ALL MOVES
   document.getElementById("moveset1").addEventListener("click", () =>{
-    //shadowball()
+  
     player1.move1()
     p2Pain()
-    //Animation
-    // p2Damage.forEach(el => {el.classList.add("tookAHit")})
-  
-    // while(health1 !== 0)
-    // if(player1Turn) { //if it's player1's turn keep going with the if
-    // player1Turn = !player1Turn //after click event disable player1's turn
     disableMoves1To4()
     gameIsOver()
   })
@@ -328,7 +569,6 @@ function haunterSelect()  {
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
     p2Pain()
-   // shadowclaw()
     disableMoves1To4()
     gameIsOver()
   })
@@ -424,15 +664,32 @@ function jigglyPuffSelect() {
   //Player 2 selection mode
   player2Choice.innerText = `Player 2 Select`
   currPlayer='Player2'
-  //damians code start  ======================================
-  // moveset1.innerText = "sing"
-  // moveset2.innerText = "strength"
-  // moveset3.innerText = "smack"
-  // moveset4.innerText = "bonk"
-  // moveset5.innerText = "ShadowBall"
-  // moveset6.innerText = "astonish"
-  // moveset7.innerText = "shadowsneak"
-  // moveset8.innerText = "shadowclaw"
+
+  //pain function for jigglypuff also
+  //Pain features --->
+function p1Pain(){
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+    p1Damage[0].classList.add("pain")
+    // const animation = document.querySelector('p.animation');
+    // animation.addEventListener('animationend', () => {
+    //   p1Damage[0].classList.remove('active');
+    // });
+}
+
+//Animation Work: For Pain
+document.body.addEventListener('animationend', () => {
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+  p1Damage[0].classList.remove("pain")
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+  p2Damage[0].classList.remove("pain")
+}
+)
+
+function p2Pain(){
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+    p2Damage[0].classList.add("pain")
+}
+
   document.getElementById("moveset1").addEventListener("click", () =>{
     player1.move1()
     p2Pain()
@@ -612,12 +869,18 @@ document.getElementById("winner-message").style.display = "none";
 
 //Start Game Button Function
 startGame.addEventListener("click", () => {
-  turnOfPlayer = 1;
+  turnOfPlayer = 1
   changeOfTurn() //Resets Turn to Player 1
   resetHealth() //Resets Health
   document.getElementById("startButton").disabled=true;
   reset.style.display = "none"
+<<<<<<< HEAD
   //Removes fighters off character selection screen
+=======
+  //disable the moves in the begining for player2
+  disableMoves5To8()
+  //Removes fighters off battlefield
+>>>>>>> 6ea8ebb94be3e42472bcc2efd0b65dfe838defa6
   let rightContainer = document.querySelector("#rightContainer")
   rightContainer.removeChild(rightContainer.lastElementChild)
   let leftContainer = document.querySelector("#leftContainer")
@@ -629,15 +892,6 @@ startGame.addEventListener("click", () => {
   document.getElementById("title").style.display = "none";
   document.getElementById("page2").style.display = 'block';
   document.getElementById("movesets").style.display = 'block';
-  //Damian JS - disables movesets
-  document.getElementById("moveset1").disabled = false
-  document.getElementById("moveset2").disabled = false
-  document.getElementById("moveset3").disabled = false
-  document.getElementById("moveset4").disabled = false
-  document.getElementById("moveset5").disabled = false
-  document.getElementById("moveset6").disabled = false
-  document.getElementById("moveset7").disabled = false
-  document.getElementById("moveset8").disabled = false
 // document.getElementById("winner-message").style.display = 'block';  this is for PAGE 3
 })
 
@@ -669,7 +923,7 @@ function endOfBattle() {
 //Large nested If-Else statement, contains every game ending scenario/reset outcome
 function gameIsOver(){
 
-if (health2.value === 0 ) {
+if (dosplayer === 0 ) {
 // let replay = document.createElement("button")
 // replay.className = "replay"
 // replay.innerHTML="Player 1 won. Rematch?"
@@ -683,6 +937,7 @@ reset.style.height="40vh"
 reset.style.top="50vh"
 reset.style.left="50vh"
 reset.innerText="Player 1 has won! Rematch?"
+
 endOfBattle()
 //event listener for reset button
 reset.addEventListener("click", () => {
@@ -691,6 +946,7 @@ const removeFighter1 = document.getElementsByClassName("battleIcons1");
   while (removeFighter1.length > 0) removeFighter1[0].remove();
   const removeFighter2 = document.getElementsByClassName("battleIcons2");
   while (removeFighter2.length > 0) removeFighter2[0].remove();
+
 //REDISPLAY PAGE1
 document.getElementById("page2").style.display = "none"
 document.getElementById("title").style.display = "block"
@@ -715,11 +971,13 @@ document.getElementById("reset").style.display = "none"
 
 
 //SAME AS Before---reset functionality for if Player 2 wins
-
-//window.alert('Player 1 won'); 
-//location.reload();
-} else if (health1.value === 0) {
-  //window.alert('Player 2 won')
+//ADDED BACK RELOAD HERE
+window.alert('Player 1 won'); 
+location.reload();
+} else if (unoplayer === 0) {
+//ADDED BACK RELOAD HERE
+window.alert('Player 2 won'); 
+location.reload();
 reset.style.display="block"
 reset.style.position="absolute"
 reset.style.width="40vh"
