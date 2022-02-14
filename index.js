@@ -934,11 +934,13 @@ document.getElementById("reset").style.display = "none"
 
 
 //SAME AS Before---reset functionality for if Player 2 wins
-
-//window.alert('Player 1 won'); 
-//location.reload();
+//ADDED BACK RELOAD HERE
+window.alert('Player 1 won'); 
+location.reload();
 } else if (unoplayer === 0) {
-  //window.alert('Player 2 won')
+//ADDED BACK RELOAD HERE
+window.alert('Player 2 won'); 
+location.reload();
 reset.style.display="block"
 reset.style.position="absolute"
 reset.style.width="40vh"
