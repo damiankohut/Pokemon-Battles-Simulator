@@ -6,7 +6,7 @@
 
 >Music is an 8-Bit Cover of the Pokemon theme by "8 Bit Universe": https://www.youtube.com/watch?v=wR3gaYTqkDQ
 
->Background is from: https://gifer.com/en/ZjF8
+>Background is from: https://i.gifer.com/ZjF8.gif
 
 >Battlefield background is from: https://cutewallpaper.org/21/battle-backgrounds/Pokemon-background-battle-8-Background-Check-All.png
 
