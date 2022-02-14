@@ -80,8 +80,12 @@ animation: gradient 15s ease infinite;
 }
 
 #player1Choice, #player2Choice {
-    background-color: aliceblue;
-    width: fit-content;
+  /* background-color: aliceblue; */
+  width: fit-content;
+  background: linear-gradient(-45deg, #ee7752, #a5e73c, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border-radius: 25px;
 }
 
 #start{
@@ -259,10 +263,15 @@ PLAYER 2 JIGGLYPUFF */
 
 /* PLAYERS TURN INDICATOR */
 #print {
-    width:100px;
+    /* width:100px; */
     height: 20px;
-    background-color: orange;
+    /* background-color: orange; */
     margin-left: 1000px;
     position:relative; 
     bottom:270px;
+    width: fit-content;
+    background: linear-gradient(-45deg, #ee7752, #a5e73c, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    border-radius: 25px;
 }
