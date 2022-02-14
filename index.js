@@ -1,9 +1,17 @@
 document.getElementById("page2").style.display="none"
+const theme = document.getElementById("theme");
+theme.volume = 0.20;
 //Bugs: 
 //1. Broken health bar - Health bar attack damage multiplies each reset
 //CSS Border for Characters: border: 2px dotted purple;
-//2. Build out Pain animation
+//2. Build out Pain animation -- cant attack until animation finishes (disable all buttons)
+//
 //3. Blindspot: Consider a "draw" scenario
+//4. Fix missed animation--Pokemon shouldnt flinch when attack misses
+//5. Add sound effects
+//6. Change function names so that they are capitalized
+//7. Feature: trainer name
+
 
 //Styling for Selection Screen
 
@@ -487,6 +495,25 @@ function haunterSelect()  {
   //Player 2 Select Mode
   player2Choice.innerText = `Player 2 Select`
   currPlayer = 'Player2'
+
+//Sound Effects
+var sound = new Audio();         // create the audio
+sound.volume = 1;
+sound.src = "sounds/hitHurt.wav";  // set the resource location 
+sound.oncanplaythrough = function(){   // When the sound has completely loaded
+    sound.readyToRock = true;    // flag sound is ready to play
+                                 // I just made it up and can be anything
+};
+sound.onerror = function(){      // not required but if there are problems this will help debug the problem
+    console.log("Sound file hitHurt.wav failed to load.")
+};
+
+function playSound(){
+  if(sound && sound.readyToRock){  // check for the sound and if it has loaded
+      sound.currentTime = 0;       // seek to the start
+      sound.play();                // play it till it ends
+  }
+}
 
   //Pain Function
 
