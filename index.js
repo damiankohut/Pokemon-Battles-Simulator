@@ -76,12 +76,12 @@ let turnOfPlayer = 1
 function changeOfTurn(){
   if (turnOfPlayer === 1){
     document.getElementById('print')
-        .innerHTML = "Player 1 Turn";
+        .innerHTML = "Trainer 1 Turn";
         
 }
 else if (turnOfPlayer === 2){
     document.getElementById('print')
-        .innerHTML = "Player 2 Turn";
+        .innerHTML = "Trainer 2 Turn";
 }
 else {
   document.getElementById('print')
@@ -1050,7 +1050,7 @@ reset.style.width="40vh"
 reset.style.height="40vh"
 reset.style.top="50vh"
 reset.style.left="50vh"
-reset.innerText="Player 1 has won! Rematch?"
+reset.innerText="Trainer 1 has won! Rematch?"
 
 endOfBattle()
 //event listener for reset button
@@ -1086,11 +1086,11 @@ document.getElementById("reset").style.display = "none"
 
 //SAME AS Before---reset functionality for if Player 2 wins
 //ADDED BACK RELOAD HERE
-window.alert('Player 1 won'); 
+window.alert('Trainer 1 won'); 
 location.reload();
 } else if (unoplayer === 0) {
 //ADDED BACK RELOAD HERE
-window.alert('Player 2 won'); 
+window.alert('Trainer 2 won'); 
 location.reload();
 reset.style.display="block"
 reset.style.position="absolute"
@@ -1098,7 +1098,7 @@ reset.style.width="40vh"
 reset.style.height="40vh"
 reset.style.top="50vh"
 reset.style.left="50vh"
-reset.innerText="Player 2 has won! Rematch?"
+reset.innerText="Trainer 2 has won! Rematch?"
 endOfBattle()
 
 reset.addEventListener("click", () => {
