@@ -4,13 +4,12 @@ theme.volume = 0.010;
 //Bugs: 
 //Add 2 more pokemon?
 //CSS Border for Characters: border: 2px dotted purple;
-//2. Missing = a dodge
-//2. Build out Pain animation -- cant attack until animation finishes (disable all buttons)
-//3. Blindspot: Consider a "draw" scenarioemon)
+//2. Animations done, MAYBE better sound effects // missing = a dodge?
+//3. Blindspot: Consider a "draw" scenario
 //6. Feature: trainer name, level up for each pokemon if they win (remembers matches)
 //7. water pokemon
-//8. 2 legendarys
-//9. Finish attack names/states, fix images
+//8. hidden legendarys
+//9. Finish attack names/states, fix images, maybe types feature
 
 //Styling for Selection Screen
 
