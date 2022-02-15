@@ -26,6 +26,7 @@ document.getElementById("startButton").disabled=true;
 //PAGE 1
 //Empty Player 1 Object--Dependent on Pokemon Class
 const player1 = {
+  name: null,
   pokemon: null,
   move1: null,
   move2: null,
@@ -35,6 +36,7 @@ const player1 = {
   }
 //Empty Player 2 Object--Dependent on Pokemon Class
   const player2 = {
+  name: null,
   pokemon: null,
   move1: null,
   move2: null,
@@ -139,7 +141,7 @@ shadowball(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
-  bottomRow.innerHTML = "You hit Jigglypuff with " + dmg + " damage. Jigglypuff now has " + dosplayer + " left."
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
   let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
     veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
@@ -158,7 +160,7 @@ astonish(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
-  bottomRow.innerHTML = "You hit Jigglypuff with " + dmg + " damage. Jigglypuff now has " + dosplayer + " left."
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
   let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
     veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
@@ -177,7 +179,7 @@ shadowsneak(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
-  bottomRow.innerHTML = "You hit Jigglypuff with " + dmg + " damage. Jigglypuff now has " + dosplayer + " left."
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
   let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
     veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
@@ -195,7 +197,7 @@ shadowclaw(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
-  bottomRow.innerHTML = "You hit Jigglypuff with " + dmg + " damage. Jigglypuff now has " + dosplayer + " left."
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
   let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
     veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
@@ -215,7 +217,7 @@ sing(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
-  bottomRow.innerHTML =  "You hit Haunter with " + dmg +" damage. Haunter now has " + dosplayer + " left."
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
   let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
     veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
@@ -234,7 +236,7 @@ strength(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
-  bottomRow.innerHTML = "You hit Haunter with " + dmg +" damage. Haunter now has " + dosplayer + " left."
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
   let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
     veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
@@ -253,7 +255,7 @@ smack(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
-  bottomRow.innerHTML = "You hit Haunter with " + dmg +" damage. Haunter now has " + dosplayer + " left."
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
   let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
     veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
@@ -272,7 +274,7 @@ bonk(){
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
-  bottomRow.innerHTML = "You hit Haunter with " + dmg +" damage. Haunter now has " + dosplayer + " left."
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
   let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
     veigHP.style.width = veigHPBarWidth + "px"
     turnOfPlayer = 2
@@ -291,7 +293,7 @@ shadowball2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
-  bottomRow.innerHTML = "You hit Jigglypuff with " + dmg + " damage. Jigglypuff now has " + unoplayer + " left."
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
@@ -312,7 +314,7 @@ astonish2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
-  bottomRow.innerHTML = "You hit Jigglypuff with " + dmg + " damage. Jigglypuff now has " + unoplayer + " left."
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
   let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
     megaManHP.style.width = megaManHPBarWidth + "px"
     turnOfPlayer = 1
@@ -332,7 +334,7 @@ shadowsneak2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
-  bottomRow.innerHTML = "You hit Jigglypuff with " + dmg + " damage. Jigglypuff now has " + unoplayer + " left."
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
@@ -353,7 +355,7 @@ shadowclaw2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
-  bottomRow.innerHTML = "You hit Jigglypuff with " + dmg + " damage. Jigglypuff now has " + unoplayer + " left."
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
@@ -374,7 +376,7 @@ sing2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
-  bottomRow.innerHTML = "You hit Haunter with " + dmg + " damage. Haunter now has " + unoplayer + " left."
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
@@ -395,7 +397,7 @@ strength2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
-  bottomRow.innerHTML = "You hit Haunter with " + dmg + " damage. Haunter now has " + unoplayer + " left."
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
@@ -415,7 +417,7 @@ smack2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
-  bottomRow.innerHTML = "You hit Haunter with " + dmg + " damage. Haunter now has " + unoplayer + " left."
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
@@ -436,7 +438,7 @@ bonk2(){
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
-  bottomRow.innerHTML = "You hit Haunter with " + dmg + " damage. Haunter now has " + unoplayer + " left."
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
 let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
   megaManHP.style.width = megaManHPBarWidth + "px"
   turnOfPlayer = 1
@@ -477,6 +479,7 @@ function haunterSelect()  {
   //Starter properties for player 1 object
   player1.pokemon=haunter
   player1.player='Player1'
+  player1.name = player1.pokemon.name
   player1.hp=player1.pokemon.hp
   //Inheritance of moveset from Pokemon Class
   player1.move1=player1.pokemon.shadowball
@@ -603,6 +606,7 @@ function p2Pain(){
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = haunter
+  player2.name = player2.pokemon.name
   player2.hp=player2.pokemon.hp
   //Inheritance of moveset from Pokemon Class
   player2.move1=player2.pokemon.shadowball2
@@ -644,6 +648,7 @@ function jigglyPuffSelect() {
   player1Choice.innerText = `You chose ${jigglyPuff.name}`
   player1.pokemon=jigglyPuff
   player1.player='Player1'
+  player1.name = player1.pokemon.name
   player1.hp=player1.pokemon.hp
   //Class Moveset inheritance 
   player1.move1=player1.pokemon.sing
@@ -747,6 +752,7 @@ function p2Pain(){
   //Player 2 object starter properties
   player2.pokemon = jigglyPuff
   player2.player = 'Player2'
+  player2.name = player2.pokemon.name
   player2.hp=player2.pokemon.hp
   //Class moveset inheritance for player 2
   player2.move1=player2.pokemon.sing2
@@ -788,6 +794,7 @@ function gabiteSelect(){
   //Starter properties for player 1 object
   player1.pokemon= gabite
   player1.player='Player1'
+  player1.name = player1.pokemon.name
   player1.hp=player1.pokemon.hp
   //Inheritance of moveset from Pokemon Class
   player1.move1=player1.pokemon.shadowball
@@ -913,6 +920,7 @@ function p2Pain(){
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = gabite
+  player2.name = player2.pokemon.name
   player2.hp=player2.pokemon.hp
   //Inheritance of moveset from Pokemon Class
   player2.move1=player2.pokemon.shadowball2
@@ -954,6 +962,7 @@ function arcanineSelect() {
   //Starter properties for player 1 object
   player1.pokemon= arcanine
   player1.player='Player1'
+  player1.name = player1.pokemon.name
   player1.hp=player1.pokemon.hp
   //Inheritance of moveset from Pokemon Class
   player1.move1=player1.pokemon.shadowball
@@ -1080,6 +1089,7 @@ function p2Pain(){
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = arcanine
+  player2.name = player2.pokemon.name
   player2.hp=player2.pokemon.hp
   //Inheritance of moveset from Pokemon Class
   player2.move1=player2.pokemon.shadowball2
@@ -1122,6 +1132,7 @@ function venusaurSelect(){
   //Starter properties for player 1 object
   player1.pokemon= venusaur
   player1.player='Player1'
+  player1.name = player1.pokemon.name
   player1.hp=player1.pokemon.hp
   //Inheritance of moveset from Pokemon Class
   player1.move1=player1.pokemon.shadowball
@@ -1247,6 +1258,7 @@ function p2Pain(){
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = venusaur
+  player2.name = player2.pokemon.name
   player2.hp=player2.pokemon.hp
   //Inheritance of moveset from Pokemon Class
   player2.move1=player2.pokemon.shadowball2
