@@ -126,6 +126,7 @@ class Pokemon {
     this.hp = hp
     this.icon = icon
     this.backIcon = backIcon
+
   }
 
 //ATTACK LIBRARY
@@ -788,12 +789,12 @@ function p2Pain(){
     document.getElementById("startButton").disabled=false;}
 }
 
-function gabiteSelect(){
+function garchompSelect(){
   if (currPlayer === 'Player1') {
-  player1Choice.innerText = `You chose ${gabite.name}`
+  player1Choice.innerText = `You chose ${garchomp.name}`
   //Starter properties for player 1 object
-  player1.pokemon= gabite
-  player1.player='Player1'
+  player1.pokemon = garchomp
+  player1.player= 'Player1'
   player1.name = player1.pokemon.name
   player1.hp=player1.pokemon.hp
   //Inheritance of moveset from Pokemon Class
@@ -915,11 +916,11 @@ function p2Pain(){
   })
   //end of damians code===============================================
   }
-  if (currPlayer === 'Player2' && player1.pokemon!=gabite) {
-  player2Choice.innerText = `You chose ${gabite.name}`
+  if (currPlayer === 'Player2' && player1.pokemon!=garchomp) {
+  player2Choice.innerText = `You chose ${garchomp.name}`
   //Player 2 starter properties
   player2.player = 'Player2'
-  player2.pokemon = gabite
+  player2.pokemon = garchomp
   player2.name = player2.pokemon.name
   player2.hp=player2.pokemon.hp
   //Inheritance of moveset from Pokemon Class
@@ -1296,8 +1297,8 @@ function p2Pain(){
 
 //NEW Pokemon instances
 const venusaur = new Pokemon('Venusaur', 200, "images/venusaur.png", "images/venusaur.png")
-const arcanine = new Pokemon('Gabite', 200, "images/Arcanine1.png", "images/Arcanine1.png")
-const gabite = new Pokemon('Gabite', 200, "images/gabite.png", "images/gabite.png")
+const arcanine = new Pokemon('arcanine', 200, "images/Arcanine1.png", "images/Arcanine1.png")
+const garchomp = new Pokemon('garchomp', 200, "images/garchomp.png", "images/garchomp.png")
 const jigglyPuff = new Pokemon('Jigglypuff', 200, "images/Jiggs.gif", "images/jigglypuff-back-gif.png")
 const haunter = new Pokemon('Haunter', 200, "images/haunter-front-gif.png", "images/haunter-back-gif.png")
 //Event Listeners for player chocie
@@ -1306,7 +1307,7 @@ document.getElementById("char1").addEventListener("click", haunterSelect)
 let player2Choice = document.getElementById("player2Choice")
 document.getElementById("char2").addEventListener("click", jigglyPuffSelect)
 let player3Choice = document.getElementById("player3Choice")
-document.getElementById("char3").addEventListener("click", gabiteSelect)
+document.getElementById("char3").addEventListener("click", garchompSelect)
 let player4Choice = document.getElementById("player4Choice")
 document.getElementById("char4").addEventListener("click", arcanineSelect)
 let player5Choice = document.getElementById("player5Choice")
@@ -1387,7 +1388,7 @@ function endOfBattle() {
   player2.pokemon=null
   document.getElementById("char1").addEventListener("click", haunterSelect)
   document.getElementById("char2").addEventListener("click", jigglyPuffSelect)
-  document.getElementById("char3").addEventListener("click", gabiteSelect)
+  document.getElementById("char3").addEventListener("click", garchompSelect)
   document.getElementById("char4").addEventListener("click", arcanineSelect)
   document.getElementById("char5").addEventListener("click", venusaurSelect)
 }
