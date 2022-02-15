@@ -2,15 +2,16 @@ document.getElementById("page2").style.display="none"
 var theme = document.getElementById("theme");
 theme.volume = 0.010;
 //Bugs: 
+//Add 2 more pokemon?
+//FIX Function attack name buttons so they are capitalized
 //1. Broken health bar - Health bar attack damage multiplies each reset
 //CSS Border for Characters: border: 2px dotted purple;
 //2. Build out Pain animation -- cant attack until animation finishes (disable all buttons)
 //
 //3. Blindspot: Consider a "draw" scenario
 //4. Fix missed animation--Pokemon shouldnt flinch when attack misses
-//5. Add sound effects
-//6. Change function names so that they are capitalized
-//7. Feature: trainer name
+//5. Add sound effects----check (individual ones for each pokemon)
+//6. Feature: trainer name, level up for each pokemon if they win (remembers matches)
 
 
 //Styling for Selection Screen
@@ -530,6 +531,7 @@ function p1Pain(){
 
 //Animation Work: For Pain
 document.body.addEventListener('animationend', () => {
+
   let p1Damage = document.getElementsByClassName("battleIcons1")
   p1Damage[0].classList.remove("pain")
   let p2Damage = document.getElementsByClassName("battleIcons2")
@@ -667,6 +669,7 @@ function jigglyPuffSelect() {
 function p1Pain(){
   let p1Damage = document.getElementsByClassName("battleIcons1")
     p1Damage[0].classList.add("pain")
+    disableMoves1To4()
     // const animation = document.querySelector('p.animation');
     // animation.addEventListener('animationend', () => {
     //   p1Damage[0].classList.remove('active');
@@ -674,6 +677,7 @@ function p1Pain(){
 }
 
 //Animation Work: For Pain
+
 document.body.addEventListener('animationend', () => {
   let p1Damage = document.getElementsByClassName("battleIcons1")
   p1Damage[0].classList.remove("pain")
@@ -685,6 +689,7 @@ document.body.addEventListener('animationend', () => {
 function p2Pain(){
   let p2Damage = document.getElementsByClassName("battleIcons2")
     p2Damage[0].classList.add("pain")
+    disableMoves5To8()
 }
 
   document.getElementById("moveset1").addEventListener("click", () =>{
@@ -836,6 +841,7 @@ function p1Pain(){
 }
 
 //Animation Work: For Pain
+
 document.body.addEventListener('animationend', () => {
   let p1Damage = document.getElementsByClassName("battleIcons1")
   p1Damage[0].classList.remove("pain")
@@ -843,7 +849,6 @@ document.body.addEventListener('animationend', () => {
   p2Damage[0].classList.remove("pain")
 }
 )
-
 function p2Pain(){
   let p2Damage = document.getElementsByClassName("battleIcons2")
     p2Damage[0].classList.add("pain")
@@ -1002,14 +1007,15 @@ function p1Pain(){
 }
 
 //Animation Work: For Pain
+
 document.body.addEventListener('animationend', () => {
   let p1Damage = document.getElementsByClassName("battleIcons1")
   p1Damage[0].classList.remove("pain")
   let p2Damage = document.getElementsByClassName("battleIcons2")
   p2Damage[0].classList.remove("pain")
 }
-)
 
+)
 function p2Pain(){
   let p2Damage = document.getElementsByClassName("battleIcons2")
     p2Damage[0].classList.add("pain")
@@ -1224,6 +1230,7 @@ reset.innerText="Trainer 1 has won! Rematch?"
 endOfBattle()
 //event listener for reset button
 reset.addEventListener("click", () => {
+  location.reload();
 //removes fighters off of field
 const removeFighter1 = document.getElementsByClassName("battleIcons1");
   while (removeFighter1.length > 0) removeFighter1[0].remove();
@@ -1253,14 +1260,14 @@ document.getElementById("reset").style.display = "none"
 )
 
 
-//SAME AS Before---reset functionality for if Player 2 wins
-//ADDED BACK RELOAD HERE
-window.alert('Trainer 1 won'); 
-location.reload();
-} else if (unoplayer === 0) {
-//ADDED BACK RELOAD HERE
-window.alert('Trainer 2 won'); 
-location.reload();
+// //SAME AS Before---reset functionality for if Player 2 wins
+// //ADDED BACK RELOAD HERE
+// window.alert('Trainer 1 won'); 
+// location.reload();
+// } else if (unoplayer === 0) {
+// //ADDED BACK RELOAD HERE
+// window.alert('Trainer 2 won'); 
+// location.reload();
 reset.style.display="block"
 reset.style.position="absolute"
 reset.style.width="40vh"
@@ -1271,6 +1278,7 @@ reset.innerText="Trainer 2 has won! Rematch?"
 endOfBattle()
 
 reset.addEventListener("click", () => {
+  location.reload();
   const removeFighter1 = document.getElementsByClassName("battleIcons1");
   while (removeFighter1.length > 0) removeFighter1[0].remove();
   const removeFighter2 = document.getElementsByClassName("battleIcons2");
