@@ -1118,7 +1118,7 @@ function p2Pain(){
 //VENUSAUR SELECT FUNCTION
 function venusaurSelect(){
   if (currPlayer === 'Player1') {
-  player1Choice.innerText = `You chose ${venusaurSelect.name}`
+  player1Choice.innerText = `You chose ${venusaur.name}`
   //Starter properties for player 1 object
   player1.pokemon= venusaur
   player1.player='Player1'
