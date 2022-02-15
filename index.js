@@ -139,9 +139,9 @@ this.moves = moves
 //Doesn't affect original healtbar
 
 shadowball(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 3){
+    let dmg = Math.round(Math.random()*10)+35
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -158,9 +158,9 @@ turnOfPlayer = 2
 }
 
 astonish(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+      let dmg = Math.round(Math.random()*10)+30
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -177,9 +177,9 @@ turnOfPlayer = 2
 }
 
 shadowsneak(){
-  let hitChance = Math.round(Math.random()*10)
+  let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+      let dmg = Math.round(Math.random()*10)+25
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -195,9 +195,9 @@ turnOfPlayer = 2
   changeOfTurn()
 }
 shadowclaw(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 10){
+      let dmg = Math.round(Math.random()*10)+20
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -215,9 +215,9 @@ turnOfPlayer = 2
 
 //Player 1 JigglyPuff 
 sing(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 3){
+    let dmg = Math.round(Math.random()*10)+35
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -234,9 +234,9 @@ turnOfPlayer = 2
 }
 
 strength(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+      let dmg = Math.round(Math.random()*10)+30
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -253,9 +253,9 @@ turnOfPlayer = 2
 }
 
 smack(){
-  let hitChance = Math.round(Math.random()*10)
+  let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+      let dmg = Math.round(Math.random()*10)+25
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -264,7 +264,7 @@ smack(){
     turnOfPlayer = 2
   if (dosplayer < 0){
       dosplayer = 0
-  }} else {
+  } } else {
 bottomRow.innerHTML = "You have missed."
 turnOfPlayer = 2
   }
@@ -272,9 +272,9 @@ turnOfPlayer = 2
 }
 
 bonk(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 10){
+      let dmg = Math.round(Math.random()*10)+20
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -283,7 +283,7 @@ bonk(){
     turnOfPlayer = 2
   if (dosplayer < 0){
       dosplayer = 0
-  }} else {
+  } } else {
 bottomRow.innerHTML = "You have missed."
 turnOfPlayer = 2
   }
@@ -291,9 +291,9 @@ turnOfPlayer = 2
 }
 
 shadowball2(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 3){
+    let dmg = Math.round(Math.random()*10)+35
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
@@ -312,9 +312,9 @@ turnOfPlayer = 1
 
 
 astonish2(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+      let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
@@ -332,9 +332,9 @@ turnOfPlayer = 1
 }
 
 shadowsneak2(){
-  let hitChance = Math.round(Math.random()*10)
+  let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+      let dmg = Math.round(Math.random()*10)+25
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
@@ -353,9 +353,9 @@ turnOfPlayer = 1
 
 
 shadowclaw2(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 10){
+      let dmg = Math.round(Math.random()*10)+20
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
@@ -374,9 +374,9 @@ turnOfPlayer = 1
 
 //Player 2 JigglyPuff
 sing2(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 3){
+    let dmg = Math.round(Math.random()*10)+35
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
@@ -395,9 +395,9 @@ turnOfPlayer = 1
 
 
 strength2(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+      let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
@@ -415,9 +415,9 @@ turnOfPlayer = 1
 }
 
 smack2(){
-  let hitChance = Math.round(Math.random()*10)
+  let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+      let dmg = Math.round(Math.random()*10)+25
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
@@ -436,9 +436,9 @@ turnOfPlayer = 1
 
 
 bonk2(){
-  let hitChance = Math.round(Math.random()*10)
-  if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+10
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 10){
+      let dmg = Math.round(Math.random()*10)+20
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
@@ -489,7 +489,7 @@ function haunterSelect()  {
   player1.move2=player1.pokemon.astonish
   player1.move3=player1.pokemon.shadowsneak
   player1.move4=player1.pokemon.shadowclaw
-  document.getElementById("moveset1").innerText(`${player1.pokemon.player[2]}`)
+
   //Append Choice to Player Selection
   let p1Icon = document.createElement('img')
   p1Icon.src = player1.pokemon.icon;
@@ -1118,169 +1118,7 @@ function p2Pain(){
     document.getElementById("startButton").disabled=false;}
 }
 
-function arcanineSelect() {
-  if (currPlayer === 'Player1') {
-  player1Choice.innerText = `You chose ${arcanine.name}`
-  //Starter properties for player 1 object
-  player1.pokemon= arcanine
-  player1.player='Player1'
-  player1.name = player1.pokemon.name
-  player1.hp=player1.pokemon.hp
-  //Inheritance of moveset from Pokemon Class
-  player1.move1=player1.pokemon.shadowball
-  player1.move2=player1.pokemon.astonish
-  player1.move3=player1.pokemon.shadowsneak
-  player1.move4=player1.pokemon.shadowclaw
-  //Append Choice to Player Selection
-  let p1Icon = document.createElement('img')
-  p1Icon.src = player1.pokemon.icon;
-  p1Icon.className = "leftSelectionChar"
-  document.querySelector("#leftContainer").appendChild(p1Icon)
-  //Display Fighter in Page2
-  let fieldFighter1 = document.createElement('img')
-  fieldFighter1.className = "battleIcons1";
-  fieldFighter1.src = player1.pokemon.icon;
-  document.querySelector("#page2").appendChild(fieldFighter1)
-  //Player 2 Select Mode
-  player2Choice.innerText = `Player 2 Select`
-  currPlayer = 'Player2'
 
-//Sound Effects
-var sound = new Audio();         // create the audio
-sound.volume = 1;
-sound.src = "sounds/hitHurt.wav";  // set the resource location 
-sound.oncanplaythrough = function(){   // When the sound has completely loaded
-    sound.readyToRock = true;    // flag sound is ready to play
-                                 // I just made it up and can be anything
-};
-sound.onerror = function(){      // not required but if there are problems this will help debug the problem
-    console.log("Sound file hitHurt.wav failed to load.")
-};
-
-function playSound(){
-  if(sound && sound.readyToRock){  // check for the sound and if it has loaded
-      sound.currentTime = 0;       // seek to the start
-      sound.play();                // play it till it ends
-  }
-}
-
-  //Pain Function
-
-//Pain features --->
-function p1Pain(){
-  let p1Damage = document.getElementsByClassName("battleIcons1")
-    p1Damage[0].classList.add("pain")
-    playSound()
-    // const animation = document.querySelector('p.animation');
-    // animation.addEventListener('animationend', () => {
-    //   p1Damage[0].classList.remove('active');
-    // });
-}
-
-//Animation Work: For Pain
-
-document.body.addEventListener('animationend', () => {
-  let p1Damage = document.getElementsByClassName("battleIcons1")
-  p1Damage[0].classList.remove("pain")
-  let p2Damage = document.getElementsByClassName("battleIcons2")
-  p2Damage[0].classList.remove("pain")
-}
-
-)
-function p2Pain(){
-  let p2Damage = document.getElementsByClassName("battleIcons2")
-    p2Damage[0].classList.add("pain")
-    playSound()
-}
-  //EVENT LISTENERS FOR ALL MOVES
-  document.getElementById("moveset1").addEventListener("click", () =>{
-  
-    player1.move1()
-    p2Pain()
-    disableMoves1To4()
-    gameIsOver()
-  })
-  document.getElementById("moveset2").addEventListener("click", () =>{
-    //astonish()
-    player1.move2()
-    p2Pain()
-    disableMoves1To4()
-    gameIsOver()
-  })
-  document.getElementById("moveset3").addEventListener("click", () =>{
-    //shadowsneak()
-    player1.move3()
-    p2Pain()
-    disableMoves1To4()
-    gameIsOver()
-  })
-  document.getElementById("moveset4").addEventListener("click", () =>{
-    player1.move4()
-    p2Pain()
-    disableMoves1To4()
-    gameIsOver()
-  })
-  document.getElementById("moveset5").addEventListener("click", () =>{
-    player2.move1()
-    p1Pain()
-    disableMoves5To8()
-    gameIsOver()
-  })
-  document.getElementById("moveset6").addEventListener("click", () =>{
-    player2.move2()
-    p1Pain()
-    disableMoves5To8()
-    gameIsOver()
-  })
-  document.getElementById("moveset7").addEventListener("click", () =>{
-    player2.move3()
-    p1Pain()
-    disableMoves5To8()
-    gameIsOver()
-  })
-  document.getElementById("moveset8").addEventListener("click", () =>{
-    player2.move4()
-    p1Pain()
-    disableMoves5To8()
-    gameIsOver()
-  })
-  //end of damians code===============================================
-  }
-  if (currPlayer === 'Player2' && player1.pokemon!=arcanine) {
-  player2Choice.innerText = `You chose ${arcanine.name}`
-  //Player 2 starter properties
-  player2.player = 'Player2'
-  player2.pokemon = arcanine
-  player2.name = player2.pokemon.name
-  player2.hp=player2.pokemon.hp
-  //Inheritance of moveset from Pokemon Class
-  player2.move1=player2.pokemon.shadowball2
-  player2.move2=player2.pokemon.astonish2
-  player2.move3=player2.pokemon.shadowsneak2
-  player2.move4=player2.pokemon.shadowclaw2
-  //Append fighter to selection screen
-  var p2Icon = document.createElement('img')
-  p2Icon.src = player2.pokemon.icon;
-  p2Icon.className = "rightSelectionChar"
-  document.querySelector("#rightContainer").appendChild(p2Icon)
-  //Display fighter in Page2
-  let fieldFighter2 = document.createElement('img')
-  fieldFighter2.className = "battleIcons2";
-  fieldFighter2.src = player2.pokemon.icon;
-  document.querySelector("#page2").appendChild(fieldFighter2)
-  currPlayer = null 
-  ////Sets player selection to null until the next stage of game, prevents appending infinite Pokemon images
-  }
-  if (player1.pokemon === null || player2.pokemon === null) {
-    document.getElementById("startButton").disabled=true;
-  } else {
-  //Start Game is ENABLED
-  //Action Buttons inherit their names from player 1 and player
-
-  // convert()
-
-    document.getElementById("startButton").disabled=false;}
-}
 
 //VENUSAUR SELECT FUNCTION
 function venusaurSelect(){
