@@ -3,12 +3,14 @@ var theme = document.getElementById("theme");
 theme.volume = 0.010;
 //Bugs: 
 //Add 2 more pokemon?
-//1. Broken health bar fixed
 //CSS Border for Characters: border: 2px dotted purple;
 //2. Missing = a dodge
 //2. Build out Pain animation -- cant attack until animation finishes (disable all buttons)
 //3. Blindspot: Consider a "draw" scenarioemon)
 //6. Feature: trainer name, level up for each pokemon if they win (remembers matches)
+//7. water pokemon
+//8. 2 legendarys
+//9. Finish attack names/states, fix images
 
 //Styling for Selection Screen
 
@@ -16,6 +18,7 @@ theme.volume = 0.010;
 let currPlayer = 'Player1' 
 //Start Button Disabled
 document.getElementById("startButton").disabled=true;
+var missed = false;
 
 
 
@@ -141,6 +144,7 @@ this.moves = moves
 shadowball(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -151,7 +155,7 @@ shadowball(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -160,6 +164,7 @@ turnOfPlayer = 2
 astonish(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -170,7 +175,7 @@ astonish(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed.";  missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -179,6 +184,7 @@ turnOfPlayer = 2
 shadowsneak(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -189,7 +195,7 @@ shadowsneak(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -197,6 +203,7 @@ turnOfPlayer = 2
 shadowclaw(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+20
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -207,7 +214,7 @@ shadowclaw(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -217,6 +224,7 @@ turnOfPlayer = 2
 sing(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -227,7 +235,7 @@ sing(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -236,6 +244,7 @@ turnOfPlayer = 2
 strength(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+      missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -246,7 +255,7 @@ strength(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -255,7 +264,8 @@ turnOfPlayer = 2
 smack(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
-      let dmg = Math.round(Math.random()*10)+25
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+25
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
@@ -265,7 +275,7 @@ smack(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -274,6 +284,7 @@ turnOfPlayer = 2
 bonk(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+20
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -284,7 +295,7 @@ bonk(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -293,6 +304,7 @@ turnOfPlayer = 2
 shadowball2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -304,7 +316,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -314,6 +326,7 @@ turnOfPlayer = 1
 astonish2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = true;
       let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -325,7 +338,7 @@ astonish2(){
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -334,6 +347,7 @@ turnOfPlayer = 1
 shadowsneak2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -345,7 +359,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -355,6 +369,7 @@ turnOfPlayer = 1
 shadowclaw2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+20
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -366,7 +381,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -376,6 +391,7 @@ turnOfPlayer = 1
 sing2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -387,7 +403,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -397,6 +413,7 @@ turnOfPlayer = 1
 strength2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -408,7 +425,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -417,6 +434,7 @@ turnOfPlayer = 1
 smack2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -428,7 +446,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -438,6 +456,7 @@ turnOfPlayer = 1
 bonk2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+20
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -449,7 +468,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -557,51 +576,51 @@ function p2Pain(){
   document.getElementById("moveset1").addEventListener("click", () =>{
   
     player1.move1()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
     //astonish()
     player1.move2()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     //shadowsneak()
     player1.move3()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     player2.move1()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     player2.move2()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     player2.move3()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     player2.move4()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
@@ -701,49 +720,49 @@ function p2Pain(){
 
   document.getElementById("moveset1").addEventListener("click", () =>{
     player1.move1()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
     player1.move2()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     player1.move3()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     player2.move1()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     player2.move2()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     player2.move3()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     player2.move4()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
@@ -863,51 +882,51 @@ function p2Pain(){
   document.getElementById("moveset1").addEventListener("click", () =>{
   
     player1.move1()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
     //astonish()
     player1.move2()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     //shadowsneak()
     player1.move3()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     player2.move1()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     player2.move2()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     player2.move3()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     player2.move4()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
@@ -1033,51 +1052,51 @@ function p2Pain(){
   document.getElementById("moveset1").addEventListener("click", () =>{
   
     player1.move1()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
     //astonish()
     player1.move2()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     //shadowsneak()
     player1.move3()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     player2.move1()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     player2.move2()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     player2.move3()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     player2.move4()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
@@ -1198,51 +1217,51 @@ function p2Pain(){
   document.getElementById("moveset1").addEventListener("click", () =>{
   
     player1.move1()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset2").addEventListener("click", () =>{
     //astonish()
     player1.move2()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset3").addEventListener("click", () =>{
     //shadowsneak()
     player1.move3()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset4").addEventListener("click", () =>{
     player1.move4()
-    p2Pain()
+    if (missed === false) {p2Pain()}
     disableMoves1To4()
     gameIsOver()
   })
   document.getElementById("moveset5").addEventListener("click", () =>{
     player2.move1()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset6").addEventListener("click", () =>{
     player2.move2()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset7").addEventListener("click", () =>{
     player2.move3()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
   document.getElementById("moveset8").addEventListener("click", () =>{
     player2.move4()
-    p1Pain()
+    if (missed === false) {p1Pain()}
     disableMoves5To8()
     gameIsOver()
   })
