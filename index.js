@@ -777,7 +777,7 @@ function p2Pain(){
     document.getElementById("startButton").disabled=false;}
 }
 
-function gabiteSelect()  {
+function gabiteSelect(){
   if (currPlayer === 'Player1') {
   player1Choice.innerText = `You chose ${gabite.name}`
   //Starter properties for player 1 object
@@ -942,7 +942,174 @@ function p2Pain(){
   moveset8.innerText = player2.move4.name
     document.getElementById("startButton").disabled=false;}
 }
+
+function arcanineSelect() {
+  if (currPlayer === 'Player1') {
+  player1Choice.innerText = `You chose ${arcanine.name}`
+  //Starter properties for player 1 object
+  player1.pokemon= arcanine
+  player1.player='Player1'
+  player1.hp=player1.pokemon.hp
+  //Inheritance of moveset from Pokemon Class
+  player1.move1=player1.pokemon.shadowball
+  player1.move2=player1.pokemon.astonish
+  player1.move3=player1.pokemon.shadowsneak
+  player1.move4=player1.pokemon.shadowclaw
+  //Append Choice to Player Selection
+  let p1Icon = document.createElement('img')
+  p1Icon.src = player1.pokemon.icon;
+  p1Icon.className = "leftSelectionChar"
+  document.querySelector("#leftContainer").appendChild(p1Icon)
+  //Display Fighter in Page2
+  let fieldFighter1 = document.createElement('img')
+  fieldFighter1.className = "battleIcons1";
+  fieldFighter1.src = player1.pokemon.icon;
+  document.querySelector("#page2").appendChild(fieldFighter1)
+  //Player 2 Select Mode
+  player2Choice.innerText = `Player 2 Select`
+  currPlayer = 'Player2'
+
+//Sound Effects
+var sound = new Audio();         // create the audio
+sound.volume = 1;
+sound.src = "sounds/hitHurt.wav";  // set the resource location 
+sound.oncanplaythrough = function(){   // When the sound has completely loaded
+    sound.readyToRock = true;    // flag sound is ready to play
+                                 // I just made it up and can be anything
+};
+sound.onerror = function(){      // not required but if there are problems this will help debug the problem
+    console.log("Sound file hitHurt.wav failed to load.")
+};
+
+function playSound(){
+  if(sound && sound.readyToRock){  // check for the sound and if it has loaded
+      sound.currentTime = 0;       // seek to the start
+      sound.play();                // play it till it ends
+  }
+}
+
+  //Pain Function
+
+//Pain features --->
+function p1Pain(){
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+    p1Damage[0].classList.add("pain")
+    playSound()
+    // const animation = document.querySelector('p.animation');
+    // animation.addEventListener('animationend', () => {
+    //   p1Damage[0].classList.remove('active');
+    // });
+}
+
+//Animation Work: For Pain
+document.body.addEventListener('animationend', () => {
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+  p1Damage[0].classList.remove("pain")
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+  p2Damage[0].classList.remove("pain")
+}
+)
+
+function p2Pain(){
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+    p2Damage[0].classList.add("pain")
+    playSound()
+}
+  //EVENT LISTENERS FOR ALL MOVES
+  document.getElementById("moveset1").addEventListener("click", () =>{
+  
+    player1.move1()
+    p2Pain()
+    disableMoves1To4()
+    gameIsOver()
+  })
+  document.getElementById("moveset2").addEventListener("click", () =>{
+    //astonish()
+    player1.move2()
+    p2Pain()
+    disableMoves1To4()
+    gameIsOver()
+  })
+  document.getElementById("moveset3").addEventListener("click", () =>{
+    //shadowsneak()
+    player1.move3()
+    p2Pain()
+    disableMoves1To4()
+    gameIsOver()
+  })
+  document.getElementById("moveset4").addEventListener("click", () =>{
+    player1.move4()
+    p2Pain()
+    disableMoves1To4()
+    gameIsOver()
+  })
+  document.getElementById("moveset5").addEventListener("click", () =>{
+    player2.move1()
+    p1Pain()
+    disableMoves5To8()
+    gameIsOver()
+  })
+  document.getElementById("moveset6").addEventListener("click", () =>{
+    player2.move2()
+    p1Pain()
+    disableMoves5To8()
+    gameIsOver()
+  })
+  document.getElementById("moveset7").addEventListener("click", () =>{
+    player2.move3()
+    p1Pain()
+    disableMoves5To8()
+    gameIsOver()
+  })
+  document.getElementById("moveset8").addEventListener("click", () =>{
+    player2.move4()
+    p1Pain()
+    disableMoves5To8()
+    gameIsOver()
+  })
+  //end of damians code===============================================
+  }
+  if (currPlayer === 'Player2' && player1.pokemon!=arcanine) {
+  player2Choice.innerText = `You chose ${arcanine.name}`
+  //Player 2 starter properties
+  player2.player = 'Player2'
+  player2.pokemon = arcanine
+  player2.hp=player2.pokemon.hp
+  //Inheritance of moveset from Pokemon Class
+  player2.move1=player2.pokemon.shadowball2
+  player2.move2=player2.pokemon.astonish2
+  player2.move3=player2.pokemon.shadowsneak2
+  player2.move4=player2.pokemon.shadowclaw2
+  //Append fighter to selection screen
+  var p2Icon = document.createElement('img')
+  p2Icon.src = player2.pokemon.icon;
+  p2Icon.className = "rightSelectionChar"
+  document.querySelector("#rightContainer").appendChild(p2Icon)
+  //Display fighter in Page2
+  let fieldFighter2 = document.createElement('img')
+  fieldFighter2.className = "battleIcons2";
+  fieldFighter2.src = player2.pokemon.icon;
+  document.querySelector("#page2").appendChild(fieldFighter2)
+  currPlayer = null 
+  ////Sets player selection to null until the next stage of game, prevents appending infinite Pokemon images
+  }
+  if (player1.pokemon === null || player2.pokemon === null) {
+    document.getElementById("startButton").disabled=true;
+  } else {
+  //Start Game is ENABLED
+  //Action Buttons inherit their names from player 1 and player
+  moveset1.innerText = player1.move1.name
+  moveset2.innerText = player1.move2.name
+  moveset3.innerText = player1.move3.name
+  moveset4.innerText = player1.move4.name
+  moveset5.innerText = player2.move1.name
+  moveset6.innerText = player2.move2.name
+  moveset7.innerText = player2.move3.name
+  moveset8.innerText = player2.move4.name
+    document.getElementById("startButton").disabled=false;}
+}
 //NEW Pokemon instances
+const arcanine = new Pokemon('Gabite', 200, "images/Arcanine1.png", "images/Arcanine1.png")
 const gabite = new Pokemon('Gabite', 200, "images/gabite.png", "images/gabite.png")
 const jigglyPuff = new Pokemon('Jigglypuff', 200, "images/Jiggs.gif", "images/jigglypuff-back-gif.png")
 const haunter = new Pokemon('Haunter', 200, "images/haunter-front-gif.png", "images/haunter-back-gif.png")
@@ -953,6 +1120,8 @@ let player2Choice = document.getElementById("player2Choice")
 document.getElementById("char2").addEventListener("click", jigglyPuffSelect)
 let player3Choice = document.getElementById("player3Choice")
 document.getElementById("char3").addEventListener("click", gabiteSelect)
+let player4Choice = document.getElementById("player4Choice")
+document.getElementById("char4").addEventListener("click", arcanineSelect)
 // FUNTIONS TO DISABLE moveset1 to moveset4
 function disableMoves1To4() {
   document.getElementById("moveset1").disabled = true
