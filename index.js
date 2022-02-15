@@ -3,16 +3,12 @@ var theme = document.getElementById("theme");
 theme.volume = 0.010;
 //Bugs: 
 //Add 2 more pokemon?
-//FIX Function attack name buttons so they are capitalized
-//1. Broken health bar - Health bar attack damage multiplies each reset
+//1. Broken health bar fixed
 //CSS Border for Characters: border: 2px dotted purple;
+//2. Missing = a dodge
 //2. Build out Pain animation -- cant attack until animation finishes (disable all buttons)
-//
-//3. Blindspot: Consider a "draw" scenario
-//4. Fix missed animation--Pokemon shouldnt flinch when attack misses
-//5. Add sound effects----check (individual ones for each pokemon)
+//3. Blindspot: Consider a "draw" scenarioemon)
 //6. Feature: trainer name, level up for each pokemon if they win (remembers matches)
-
 
 //Styling for Selection Screen
 
@@ -32,7 +28,8 @@ const player1 = {
   move2: null,
   move3: null,
   move4: null,
-  hp: null
+  hp: null,
+  //Convert Attack Function Names to Strings
   }
 //Empty Player 2 Object--Dependent on Pokemon Class
   const player2 = {
@@ -127,6 +124,10 @@ class Pokemon {
     this.icon = icon
     this.backIcon = backIcon
   }
+
+
+
+
 
 //ATTACK LIBRARY
 //Damian's Attack Functions are now methods
@@ -532,6 +533,8 @@ function p1Pain(){
     // });
 }
 
+//4. Fix missed animation--Pokemon shouldnt flinch when attack misses
+//5. Add sound effects----check (individual ones for each pok
 //Animation Work: For Pain
 document.body.addEventListener('animationend', () => {
 
@@ -631,14 +634,10 @@ function p2Pain(){
   } else {
   //Start Game is ENABLED
   //Action Buttons inherit their names from player 1 and player
-  moveset1.innerText = player1.move1.name
-  moveset2.innerText = player1.move2.name
-  moveset3.innerText = player1.move3.name
-  moveset4.innerText = player1.move4.name
-  moveset5.innerText = player2.move1.name
-  moveset6.innerText = player2.move2.name
-  moveset7.innerText = player2.move3.name
-  moveset8.innerText = player2.move4.name
+
+// convert()
+  
+  
     document.getElementById("startButton").disabled=false;}
 }
 //Box 2: JigglyPuff
@@ -777,14 +776,10 @@ function p2Pain(){
   } else {
     //START GAME BUTTON ENABLED
   //Action Buttons inherit their names from player 1 and player
-  moveset1.innerText = player1.move1.name
-  moveset2.innerText = player1.move2.name
-  moveset3.innerText = player1.move3.name
-  moveset4.innerText = player1.move4.name
-  moveset5.innerText = player2.move1.name
-  moveset6.innerText = player2.move2.name
-  moveset7.innerText = player2.move3.name
-  moveset8.innerText = player2.move4.name
+
+// convert()
+  
+  
     document.getElementById("startButton").disabled=false;}
 }
 
@@ -945,14 +940,8 @@ function p2Pain(){
   } else {
   //Start Game is ENABLED
   //Action Buttons inherit their names from player 1 and player
-  moveset1.innerText = player1.move1.name
-  moveset2.innerText = player1.move2.name
-  moveset3.innerText = player1.move3.name
-  moveset4.innerText = player1.move4.name
-  moveset5.innerText = player2.move1.name
-  moveset6.innerText = player2.move2.name
-  moveset7.innerText = player2.move3.name
-  moveset8.innerText = player2.move4.name
+
+  // convert()
     document.getElementById("startButton").disabled=false;}
 }
 
@@ -1114,14 +1103,9 @@ function p2Pain(){
   } else {
   //Start Game is ENABLED
   //Action Buttons inherit their names from player 1 and player
-  moveset1.innerText = player1.move1.name
-  moveset2.innerText = player1.move2.name
-  moveset3.innerText = player1.move3.name
-  moveset4.innerText = player1.move4.name
-  moveset5.innerText = player2.move1.name
-  moveset6.innerText = player2.move2.name
-  moveset7.innerText = player2.move3.name
-  moveset8.innerText = player2.move4.name
+
+  // convert()
+
     document.getElementById("startButton").disabled=false;}
 }
 
@@ -1283,14 +1267,8 @@ function p2Pain(){
   } else {
   //Start Game is ENABLED
   //Action Buttons inherit their names from player 1 and player
-  moveset1.innerText = player1.move1.name
-  moveset2.innerText = player1.move2.name
-  moveset3.innerText = player1.move3.name
-  moveset4.innerText = player1.move4.name
-  moveset5.innerText = player2.move1.name
-  moveset6.innerText = player2.move2.name
-  moveset7.innerText = player2.move3.name
-  moveset8.innerText = player2.move4.name
+
+// convert()
     document.getElementById("startButton").disabled=false;}
 }
 
@@ -1344,6 +1322,53 @@ document.getElementById("winner-message").style.display = "none";
 
 //Start Game Button Function
 startGame.addEventListener("click", () => {
+//Convert Attack Button Names
+let firstChar = player1.move1.name.toString().substring(0, 1).toUpperCase()
+let player1move1 = player1.move1.name.toString().substring(1).toLowerCase()
+player1move1 = firstChar.concat(player1move1)
+moveset1.innerText = player1move1
+let secondChar = player1.move2.name.toString().substring(0, 1).toUpperCase()
+let player1move2 = player1.move2.name.toString().substring(1).toLowerCase()
+player1move2 = secondChar.concat(player1move2)
+moveset2.innerText = player1move2
+let thirdChar = player1.move3.name.toString().substring(0, 1).toUpperCase()
+let player1move3 = player1.move3.name.toString().substring(1).toLowerCase()
+player1move3 = thirdChar.concat(player1move3)
+moveset3.innerText = player1move3
+let fourthChar = player1.move4.name.toString().substring(0, 1).toUpperCase()
+let player1move4 = player1.move4.name.toString().substring(1).toLowerCase()
+player1move4 = fourthChar.concat(player1move4)
+moveset4.innerText = player1move4
+let fifthChar = player2.move1.name.toString().substring(0, 1).toUpperCase()
+let player2move1 = player2.move1.name.toString().substring(1).toLowerCase()
+player2move1 = fifthChar.concat(player2move1)
+player2move1 = player2move1.split('')
+player2move1.pop()
+player2move1 = player2move1.join('')
+moveset5.innerText = player2move1
+let sixthChar = player2.move2.name.toString().substring(0, 1).toUpperCase()
+let player2move2 = player2.move2.name.toString().substring(1).toLowerCase()
+player2move2 = sixthChar.concat(player2move2)
+player2move2 = player2move2.split('')
+player2move2.pop()
+player2move2 = player2move2.join('')
+moveset6.innerText = player2move2
+let seventhChar = player2.move3.name.toString().substring(0, 1).toUpperCase()
+let player2move3 = player2.move3.name.toString().substring(1).toLowerCase()
+player2move3 = seventhChar.concat(player2move3)
+player2move3 = player2move3.split('')
+player2move3.pop()
+player2move3 = player2move3.join('')
+moveset7.innerText = player2move3
+let eigthChar = player2.move4.name.toString().substring(0, 1).toUpperCase()
+let player2move4 = player2.move4.name.toString().substring(1).toLowerCase()
+player2move4 = eigthChar.concat(player2move4)
+player2move4 = player2move4.split('')
+player2move4.pop()
+player2move4 = player2move4.join('')
+moveset8.innerText = player2move4
+//moveset1.innertText = player1.move1.name //produce function name: shadowBall
+
   turnOfPlayer = 1
   changeOfTurn() //Resets Turn to Player 1
   resetHealth() //Resets Health
