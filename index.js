@@ -473,6 +473,171 @@ turnOfPlayer = 1
   changeOfTurn()
 }
 
+//VENUSAUR MOVESET
+bulletseed(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+bulletseed2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
+razorleaf(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+razorleaf2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
+petalblizzard(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+petalblizzard2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
+solarbeam(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+solarbeam2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
 }
 
 
@@ -1148,10 +1313,10 @@ function venusaurSelect(){
   player1.name = player1.pokemon.name
   player1.hp=player1.pokemon.hp
   //Inheritance of moveset from Pokemon Class
-  player1.move1=player1.pokemon.shadowball
-  player1.move2=player1.pokemon.astonish
-  player1.move3=player1.pokemon.shadowsneak
-  player1.move4=player1.pokemon.shadowclaw
+  player1.move1=player1.pokemon.bulletseed
+  player1.move2=player1.pokemon.razorleaf
+  player1.move3=player1.pokemon.petalblizzard
+  player1.move4=player1.pokemon.solarbeam
   //Append Choice to Player Selection
   let p1Icon = document.createElement('img')
   p1Icon.src = player1.pokemon.icon;
@@ -1274,10 +1439,10 @@ function p2Pain(){
   player2.name = player2.pokemon.name
   player2.hp=player2.pokemon.hp
   //Inheritance of moveset from Pokemon Class
-  player2.move1=player2.pokemon.shadowball2
-  player2.move2=player2.pokemon.astonish2
-  player2.move3=player2.pokemon.shadowsneak2
-  player2.move4=player2.pokemon.shadowclaw2
+  player2.move1=player2.pokemon.bulletseed2
+  player2.move2=player2.pokemon.razorleaf2
+  player2.move3=player2.pokemon.petalblizzard2
+  player2.move4=player2.pokemon.solarbeam2
   //Append fighter to selection screen
   var p2Icon = document.createElement('img')
   p2Icon.src = player2.pokemon.icon;
