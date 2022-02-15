@@ -1264,7 +1264,7 @@ document.getElementById("reset").style.display = "none"
 // //ADDED BACK RELOAD HERE
 // window.alert('Trainer 1 won'); 
 // location.reload();
-// } else if (unoplayer === 0) {
+} else if (unoplayer === 0) {
 // //ADDED BACK RELOAD HERE
 // window.alert('Trainer 2 won'); 
 // location.reload();
