@@ -478,7 +478,7 @@ reset.style.display = "none"
 //Box 1: Haunter
 function haunterSelect()  {
   if (currPlayer === 'Player1') {
-  player1Choice.innerText = `You chose ${haunter.name}`
+  player1Choice.innerText = `Trainer 1 chose ${haunter.name}`
   //Starter properties for player 1 object
   player1.pokemon=haunter
   player1.player='Player1'
@@ -608,7 +608,7 @@ function p2Pain(){
   //end of damians code===============================================
   }
   if (currPlayer === 'Player2' && player1.pokemon!=haunter) {
-  player2Choice.innerText = `You chose ${haunter.name}`
+  player2Choice.innerText = `Trainer 2 chose ${haunter.name}`
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = haunter
@@ -647,7 +647,7 @@ function p2Pain(){
 function jigglyPuffSelect() {
   if (currPlayer === 'Player1') {
   //Starter proprties for player 1 object
-  player1Choice.innerText = `You chose ${jigglyPuff.name}`
+  player1Choice.innerText = `Trainer 1 chose ${jigglyPuff.name}`
   player1.pokemon=jigglyPuff
   player1.player='Player1'
   player1.name = player1.pokemon.name
@@ -750,7 +750,7 @@ function p2Pain(){
   //damians code end ============================================
 }
   if (currPlayer === 'Player2' && player1.pokemon!=jigglyPuff) {
-  player2Choice.innerText = `You chose ${jigglyPuff.name}`
+  player2Choice.innerText = `Trainer 2 chose ${jigglyPuff.name}`
   //Player 2 object starter properties
   player2.pokemon = jigglyPuff
   player2.player = 'Player2'
@@ -788,7 +788,7 @@ function p2Pain(){
 
 function garchompSelect(){
   if (currPlayer === 'Player1') {
-  player1Choice.innerText = `You chose ${garchomp.name}`
+  player1Choice.innerText = `Trainer 1 chose ${garchomp.name}`
   //Starter properties for player 1 object
   player1.pokemon = garchomp
   player1.player= 'Player1'
@@ -914,7 +914,7 @@ function p2Pain(){
   //end of damians code===============================================
   }
   if (currPlayer === 'Player2' && player1.pokemon!=garchomp) {
-  player2Choice.innerText = `You chose ${garchomp.name}`
+  player2Choice.innerText = `Trainer 2 chose ${garchomp.name}`
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = garchomp
@@ -956,7 +956,7 @@ function p2Pain(){
 
 function arcanineSelect()  {
   if (currPlayer === 'Player1') {
-  player1Choice.innerText = `You chose ${arcanine.name}`
+  player1Choice.innerText = `Trainer 1 chose ${arcanine.name}`
   //Starter properties for player 1 object
   player1.pokemon=arcanine
   player1.player='Player1'
@@ -1084,7 +1084,7 @@ function p2Pain(){
   //end of damians code===============================================
   }
   if (currPlayer === 'Player2' && player1.pokemon!=arcanine) {
-  player2Choice.innerText = `You chose ${arcanine.name}`
+  player2Choice.innerText = `Trainer 2 chose ${arcanine.name}`
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = arcanine
@@ -1123,7 +1123,7 @@ function p2Pain(){
 //VENUSAUR SELECT FUNCTION
 function venusaurSelect(){
   if (currPlayer === 'Player1') {
-  player1Choice.innerText = `You chose ${venusaur.name}`
+  player1Choice.innerText = `Trainer 1 chose ${venusaur.name}`
   //Starter properties for player 1 object
   player1.pokemon= venusaur
   player1.player='Player1'
@@ -1249,7 +1249,7 @@ function p2Pain(){
   //end of damians code===============================================
   }
   if (currPlayer === 'Player2' && player1.pokemon!=venusaur) {
-  player2Choice.innerText = `You chose ${venusaur.name}`
+  player2Choice.innerText = `Trainer 2 chose ${venusaur.name}`
   //Player 2 starter properties
   player2.player = 'Player2'
   player2.pokemon = venusaur
