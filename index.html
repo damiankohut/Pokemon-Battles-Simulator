@@ -26,9 +26,9 @@
     <source src="sounds/8bituniversepokemon.mp3" type="audio/mp3">
     Your browser does not support the audio tag.
   </audio>
-  <form id = "form">
+  <form id = "form" onsubmit="return false">
     <label for="fname">Enter Optional Code Here:</label><br>
-    <input type="text" id="code" name="code" value=""><br>
+    <input type="text" id="code" name="code" value="" onsubmit="return false"><br>
     <!-- <input type="submit" value="Submit"> -->
   </form> 
   
@@ -87,7 +87,7 @@
 </div>
   </div>
     <!-- this holds the start button -->
-<div id = "start">
+<div id = "start" style = "margin:2% 0">
   <button id = "startButton">Start Game</button>
 </div>
 
@@ -141,5 +141,5 @@
 </body>
 <footer>
 Aldo Ortiz, Damian Kohut & Mohammad Islam's Project @Marcy Lab 2022
-</footer id = footer>
+</footer id = footer style = "margin:2% 0">>
 </html>
