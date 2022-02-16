@@ -599,7 +599,84 @@ turnOfPlayer = 2
   changeOfTurn()
 }
 
-  thunderweb2(){
+thunderweb2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 3){
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+thundershock2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+      let dmg = Math.round(Math.random()*10)+30
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+irontail2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 7){
+      let dmg = Math.round(Math.random()*10)+25
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+quickattack2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 10){
+      let dmg = Math.round(Math.random()*10)+20
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
+confusion(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 3){
       let dmg = Math.round(Math.random()*10)+35
@@ -618,7 +695,7 @@ turnOfPlayer = 2
     }
     changeOfTurn()
   }
-  thundershock2(){
+  psychic(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 5){
         let dmg = Math.round(Math.random()*10)+30
@@ -637,7 +714,7 @@ turnOfPlayer = 2
     }
     changeOfTurn()
   }
-  irontail2(){
+  futuresight(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 7){
         let dmg = Math.round(Math.random()*10)+25
@@ -656,7 +733,7 @@ turnOfPlayer = 2
     }
     changeOfTurn()
   }
-  quickattack2(){
+  Mindfreak(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 10){
         let dmg = Math.round(Math.random()*10)+20
@@ -676,6 +753,235 @@ turnOfPlayer = 2
     changeOfTurn()
   }
 
+  confusion2(){
+    let hitChance = Math.round(Math.random()*15)
+    if (hitChance <= 3){
+      let dmg = Math.round(Math.random()*10)+35
+    player1.hp -= dmg
+    unoplayer = player1.hp;
+    bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+  let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+    megaManHP.style.width = megaManHPBarWidth + "px"
+    turnOfPlayer = 1
+    if (unoplayer < 0){
+        unoplayer = 0
+    }
+    } else {
+  bottomRow.innerHTML = "You have missed."
+  turnOfPlayer = 1
+    }
+    changeOfTurn()
+  }
+  psychic2(){
+    let hitChance = Math.round(Math.random()*15)
+    if (hitChance <= 5){
+        let dmg = Math.round(Math.random()*10)+30
+    player1.hp -= dmg
+    unoplayer = player1.hp;
+    bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+  let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+    megaManHP.style.width = megaManHPBarWidth + "px"
+    turnOfPlayer = 1
+    if (unoplayer < 0){
+        unoplayer = 0
+    }
+    } else {
+  bottomRow.innerHTML = "You have missed."
+  turnOfPlayer = 1
+    }
+    changeOfTurn()
+  }
+  futuresight2(){
+    let hitChance = Math.round(Math.random()*15)
+    if (hitChance <= 7){
+        let dmg = Math.round(Math.random()*10)+25
+    player1.hp -= dmg
+    unoplayer = player1.hp;
+    bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+  let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+    megaManHP.style.width = megaManHPBarWidth + "px"
+    turnOfPlayer = 1
+    if (unoplayer < 0){
+        unoplayer = 0
+    }
+    } else {
+  bottomRow.innerHTML = "You have missed."
+  turnOfPlayer = 1
+    }
+    changeOfTurn()
+  }
+  Mindfreak2(){
+    let hitChance = Math.round(Math.random()*15)
+    if (hitChance <= 10){
+        let dmg = Math.round(Math.random()*10)+20
+    player1.hp -= dmg
+    unoplayer = player1.hp;
+    bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+  let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+    megaManHP.style.width = megaManHPBarWidth + "px"
+    turnOfPlayer = 1
+    if (unoplayer < 0){
+        unoplayer = 0
+    }
+    } else {
+  bottomRow.innerHTML = "You have missed."
+  turnOfPlayer = 1
+    }
+    changeOfTurn()
+  }
+
+
+  thunderweb(){
+    let hitChance = Math.round(Math.random()*15)
+    if (hitChance <= 3){
+      let dmg = Math.round(Math.random()*10)+35
+    player2.hp -= dmg
+    dosplayer = player2.hp
+    bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
+    let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+      veigHP.style.width = veigHPBarWidth + "px"
+      turnOfPlayer = 2
+    if (dosplayer < 0){
+        dosplayer = 0
+    }} else {
+  bottomRow.innerHTML = "You have missed."
+  turnOfPlayer = 2
+    }
+    changeOfTurn()
+  }
+  
+  thundershock(){
+    let hitChance = Math.round(Math.random()*15)
+    if (hitChance <= 5){
+        let dmg = Math.round(Math.random()*10)+30
+    player2.hp -= dmg
+    dosplayer = player2.hp
+    bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
+    let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+      veigHP.style.width = veigHPBarWidth + "px"
+      turnOfPlayer = 2
+    if (dosplayer < 0){
+        dosplayer = 0
+    }} else {
+  bottomRow.innerHTML = "You have missed."
+  turnOfPlayer = 2
+    }
+    changeOfTurn()
+  }
+  
+  irontail(){
+    let hitChance = Math.round(Math.random()*15)
+    if (hitChance <= 7){
+        let dmg = Math.round(Math.random()*10)+25
+    player2.hp -= dmg
+    dosplayer = player2.hp
+    bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
+    let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+      veigHP.style.width = veigHPBarWidth + "px"
+      turnOfPlayer = 2
+    if (dosplayer < 0){
+        dosplayer = 0
+    } } else {
+  bottomRow.innerHTML = "You have missed."
+  turnOfPlayer = 2
+    }
+    changeOfTurn()
+  }
+  quickattack(){
+    let hitChance = Math.round(Math.random()*15)
+    if (hitChance <= 7){
+        let dmg = Math.round(Math.random()*10)+25
+    player2.hp -= dmg
+    dosplayer = player2.hp
+    bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " left."
+    let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+      veigHP.style.width = veigHPBarWidth + "px"
+      turnOfPlayer = 2
+    if (dosplayer < 0){
+        dosplayer = 0
+    } } else {
+  bottomRow.innerHTML = "You have missed."
+  turnOfPlayer = 2
+    }
+    changeOfTurn()
+  }
+  
+    thunderweb2(){
+      let hitChance = Math.round(Math.random()*15)
+      if (hitChance <= 3){
+        let dmg = Math.round(Math.random()*10)+35
+      player1.hp -= dmg
+      unoplayer = player1.hp;
+      bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+    let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+      megaManHP.style.width = megaManHPBarWidth + "px"
+      turnOfPlayer = 1
+      if (unoplayer < 0){
+          unoplayer = 0
+      }
+      } else {
+    bottomRow.innerHTML = "You have missed."
+    turnOfPlayer = 1
+      }
+      changeOfTurn()
+    }
+    thundershock2(){
+      let hitChance = Math.round(Math.random()*15)
+      if (hitChance <= 5){
+          let dmg = Math.round(Math.random()*10)+30
+      player1.hp -= dmg
+      unoplayer = player1.hp;
+      bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+    let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+      megaManHP.style.width = megaManHPBarWidth + "px"
+      turnOfPlayer = 1
+      if (unoplayer < 0){
+          unoplayer = 0
+      }
+      } else {
+    bottomRow.innerHTML = "You have missed."
+    turnOfPlayer = 1
+      }
+      changeOfTurn()
+    }
+    irontail2(){
+      let hitChance = Math.round(Math.random()*15)
+      if (hitChance <= 7){
+          let dmg = Math.round(Math.random()*10)+25
+      player1.hp -= dmg
+      unoplayer = player1.hp;
+      bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+    let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+      megaManHP.style.width = megaManHPBarWidth + "px"
+      turnOfPlayer = 1
+      if (unoplayer < 0){
+          unoplayer = 0
+      }
+      } else {
+    bottomRow.innerHTML = "You have missed."
+    turnOfPlayer = 1
+      }
+      changeOfTurn()
+    }
+    quickattack2(){
+      let hitChance = Math.round(Math.random()*15)
+      if (hitChance <= 10){
+          let dmg = Math.round(Math.random()*10)+20
+      player1.hp -= dmg
+      unoplayer = player1.hp;
+      bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " left."
+    let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+      megaManHP.style.width = megaManHPBarWidth + "px"
+      turnOfPlayer = 1
+      if (unoplayer < 0){
+          unoplayer = 0
+      }
+      } else {
+    bottomRow.innerHTML = "You have missed."
+    turnOfPlayer = 1
+      }
+      changeOfTurn()
+    }
 // =================================================
 //Player 1 JigglyPuff 
 sing(){
@@ -2097,10 +2403,10 @@ function alakazamSelect(){
   player1.name = player1.pokemon.name
   player1.hp=player1.pokemon.hp
   //Inheritance of moveset from Pokemon Class
-  player1.move1=player1.pokemon.thunderweb
-  player1.move2=player1.pokemon.thundershock
-  player1.move3=player1.pokemon.irontail
-  player1.move4=player1.pokemon.quickattack
+  player1.move1=player1.pokemon.confusion
+  player1.move2=player1.pokemon.psychic
+  player1.move3=player1.pokemon.futuresight
+  player1.move4=player1.pokemon.Mindfreak
   //Append Choice to Player Selection
   let p1Icon = document.createElement('img')
   p1Icon.src = player1.pokemon.icon;
@@ -2223,10 +2529,10 @@ function p2Pain(){
   player2.name = player2.pokemon.name
   player2.hp=player2.pokemon.hp
   //Inheritance of moveset from Pokemon Class
-  player2.move1=player2.pokemon.thunderweb2
-  player2.move2=player2.pokemon.thundershock2
-  player2.move3=player2.pokemon.irontail2
-  player2.move4=player2.pokemon.quickattack2
+  player2.move1=player2.pokemon.confusion2
+  player2.move2=player2.pokemon.psychic2
+  player2.move3=player2.pokemon.futuresight2
+  player2.move4=player2.pokemon.Mindfreak2
   //Append fighter to selection screen
   var p2Icon = document.createElement('img')
   p2Icon.src = player2.pokemon.icon;
@@ -2249,7 +2555,9 @@ function p2Pain(){
 // convert()
     document.getElementById("startButton").disabled=false;}
 }
+
 //NEW Pokemon instances
+const alakazam = new Pokemon('Alakazam', 200, "images/alakazam.png", "images/alakazam.png")
 const pikachu = new Pokemon('Pikachu', 200, "images/pika.png", "images/pika.png")
 const venusaur = new Pokemon('Venusaur', 200, "images/venusaur.png", "images/venusaur.png")
 const arcanine = new Pokemon('arcanine', 200, "images/Arcanine1.png", "images/Arcanine1.png")
@@ -2269,6 +2577,8 @@ let player5Choice = document.getElementById("player5Choice")
 document.getElementById("char5").addEventListener("click", venusaurSelect)
 let player6Choice = document.getElementById("player6Choice")
 document.getElementById("char6").addEventListener("click", pikachuSelect)
+let player8Choice = document.getElementById("player8Choice")
+document.getElementById("char8").addEventListener("click", alakazamSelect)
 // FUNTIONS TO DISABLE moveset1 to moveset4
 function disableMoves1To4() {
   document.getElementById("moveset1").disabled = true
@@ -2395,7 +2705,8 @@ function endOfBattle() {
   document.getElementById("char3").addEventListener("click", garchompSelect)
   document.getElementById("char4").addEventListener("click", arcanineSelect)
   document.getElementById("char5").addEventListener("click", venusaurSelect)
-  document.getElementById("char6").addEventListener("click", venusaurSelect)
+  document.getElementById("char6").addEventListener("click", pikachuSelect)
+  document.getElementById("char8").addEventListener("click", alakazamSelect)
 }
 
 
