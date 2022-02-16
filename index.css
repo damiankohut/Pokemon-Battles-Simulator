@@ -5,6 +5,14 @@ background-repeat:no-repeat;
 background-size: cover;
 height: 900px;
 }
+
+@font-face {
+  font-family: 'Pokemon Solid';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pokemon Solid'), url('https://fonts.cdnfonts.com/s/17890/Pokemon Solid.woff') format('woff');
+}
+
 footer {
 /* width: 100%;
 height: 15vh;
