@@ -1566,6 +1566,7 @@ let moveset4 = document.getElementById("moveset4")
 
 //Invisble Reset Button - Revealed when Game Ends
 let reset = document.createElement("button")
+reset.classList.add("reset")
 document.getElementById("page2").appendChild(reset)
 reset.style.display = "none"
 //reset.disabled=true
@@ -3041,10 +3042,10 @@ if (dosplayer === 0 ) {
 reset.style.display="block"
 reset.style.position="absolute"
 reset.style.width="40vh"
-reset.style.height="40vh"
+reset.style.height="20vh"
 reset.style.top="50vh"
 reset.style.left="50vh"
-reset.innerText="Trainer 1 has won! Rematch?"
+reset.innerText="Trainer 1 Wins! Click to Rematch?"
 
 endOfBattle()
 //event listener for reset button
@@ -3090,10 +3091,10 @@ document.getElementById("reset").style.display = "none"
 reset.style.display="block"
 reset.style.position="absolute"
 reset.style.width="40vh"
-reset.style.height="40vh"
+reset.style.height="20vh"
 reset.style.top="50vh"
 reset.style.left="50vh"
-reset.innerText="Trainer 2 has won! Rematch?"
+reset.innerText="Trainer 2 Wins! Click to Rematch?"
 endOfBattle()
 
 reset.addEventListener("click", () => {
