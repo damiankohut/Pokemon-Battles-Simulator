@@ -1554,6 +1554,170 @@ turnOfPlayer = 1
   changeOfTurn()
 }
 
+weatherball(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " HP left."
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+weatherball2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " HP left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
+thunderbolt(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " HP left."
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+thunderbolt2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " HP left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
+thunder(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " HP left."
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+thunder2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " HP left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
+snarl(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player2.hp -= dmg
+  dosplayer = player2.hp
+  bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " HP left."
+  let veigHPBarWidth = (dosplayer/player2.hp)*player2.hp;
+    veigHP.style.width = veigHPBarWidth + "px"
+    turnOfPlayer = 2
+  if (dosplayer < 0){
+      dosplayer = 0
+  }} else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 2
+  }
+  changeOfTurn()
+}
+
+snarl2(){
+  let hitChance = Math.round(Math.random()*15)
+  if (hitChance <= 5){
+    missed = false;
+    let dmg = Math.round(Math.random()*10)+35
+  player1.hp -= dmg
+  unoplayer = player1.hp;
+  bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " HP left."
+let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
+  megaManHP.style.width = megaManHPBarWidth + "px"
+  turnOfPlayer = 1
+  if (unoplayer < 0){
+      unoplayer = 0
+  }
+  } else {
+bottomRow.innerHTML = "You have missed."; missed = true;
+turnOfPlayer = 1
+  }
+  changeOfTurn()
+}
+
 }
 
 
@@ -2896,6 +3060,8 @@ let player8Choice = document.getElementById("player8Choice")
 document.getElementById("char8").addEventListener("click", alakazamSelect)
 let player9Choice = document.getElementById("player9Choice")
 document.getElementById("char9").addEventListener("click", onyxSelect)
+let player10Choice = document.getElementById("player9Choice")
+document.getElementById("char10").addEventListener("click", raikouSelect)
 // FUNTIONS TO DISABLE moveset1 to moveset4
 function disableMoves1To4() {
   document.getElementById("moveset1").disabled = true
@@ -3025,6 +3191,7 @@ function endOfBattle() {
   document.getElementById("char6").addEventListener("click", pikachuSelect)
   document.getElementById("char8").addEventListener("click", alakazamSelect)
   document.getElementById("char9").addEventListener("click", onyxSelect)
+  document.getElementById("char10").addEventListener("click", raikouSelect)
 }
 
 
@@ -3144,3 +3311,181 @@ if health === 0 {
   display winner
 }
 */
+
+const raikou = new Pokemon('Raikou', 200, "images/shinyraikou.png", "images/shinyraikou.png")
+document.getElementById("char10").style.display = "none";
+
+
+function updateValue() {
+  document.getElementById("char10").style.display = "block";
+}
+const input = document.getElementById('code');
+const log = document.getElementById('values');
+
+code.addEventListener('input', updateValue); {
+  preventDefault();
+  if(document.getElementById("code") === "Legendary") {
+    updateValue()
+  }
+}
+
+function raikouSelect(){
+  if (currPlayer === 'Player1') {
+  player1Choice.innerText = `Trainer 1 chose ${raikou.name}`
+  //Starter properties for player 1 object
+  player1.pokemon= raikou
+  player1.player='Player1'
+  player1.name = player1.pokemon.name
+  player1.hp=player1.pokemon.hp
+  //Inheritance of moveset from Pokemon Class
+  player1.move1=player1.pokemon.weatherball
+  player1.move2=player1.pokemon.thunderbolt
+  player1.move3=player1.pokemon.thunder
+  player1.move4=player1.pokemon.snarl
+  //Append Choice to Player Selection
+  let p1Icon = document.createElement('img')
+  p1Icon.src = player1.pokemon.icon;
+  p1Icon.className = "leftSelectionChar"
+  document.querySelector("#leftContainer").appendChild(p1Icon)
+  //Display Fighter in Page2
+  let fieldFighter1 = document.createElement('img')
+  fieldFighter1.className = "battleIcons1";
+  fieldFighter1.src = player1.pokemon.icon;
+  document.querySelector("#page2").appendChild(fieldFighter1)
+  //Player 2 Select Mode
+  player2Choice.innerText = `Player 2 Select`
+  currPlayer = 'Player2'
+
+//Sound Effects
+var sound = new Audio();         // create the audio
+sound.volume = 1;
+sound.src = "sounds/hitHurt.wav";  // set the resource location 
+sound.oncanplaythrough = function(){   // When the sound has completely loaded
+    sound.readyToRock = true;    // flag sound is ready to play
+                                 // I just made it up and can be anything
+};
+sound.onerror = function(){      // not required but if there are problems this will help debug the problem
+    console.log("Sound file hitHurt.wav failed to load.")
+};
+
+function playSound(){
+  if(sound && sound.readyToRock){  // check for the sound and if it has loaded
+      sound.currentTime = 0;       // seek to the start
+      sound.play();                // play it till it ends
+  }
+}
+
+  //Pain Function
+
+//Pain features --->
+function p1Pain(){
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+    p1Damage[0].classList.add("pain")
+    playSound()
+    // const animation = document.querySelector('p.animation');
+    // animation.addEventListener('animationend', () => {
+    //   p1Damage[0].classList.remove('active');
+    // });
+}
+
+//Animation Work: For Pain
+
+document.body.addEventListener('animationend', () => {
+  let p1Damage = document.getElementsByClassName("battleIcons1")
+  p1Damage[0].classList.remove("pain")
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+  p2Damage[0].classList.remove("pain")
+}
+)
+function p2Pain(){
+  let p2Damage = document.getElementsByClassName("battleIcons2")
+    p2Damage[0].classList.add("pain")
+    playSound()
+}
+  //EVENT LISTENERS FOR ALL MOVES
+  document.getElementById("moveset1").addEventListener("click", () =>{
+  
+    player1.move1()
+    if (missed === false) {p2Pain()}
+    disableMoves1To4()
+    gameIsOver()
+  })
+  document.getElementById("moveset2").addEventListener("click", () =>{
+    //astonish()
+    player1.move2()
+    if (missed === false) {p2Pain()}
+    disableMoves1To4()
+    gameIsOver()
+  })
+  document.getElementById("moveset3").addEventListener("click", () =>{
+    //shadowsneak()
+    player1.move3()
+    if (missed === false) {p2Pain()}
+    disableMoves1To4()
+    gameIsOver()
+  })
+  document.getElementById("moveset4").addEventListener("click", () =>{
+    player1.move4()
+    if (missed === false) {p2Pain()}
+    disableMoves1To4()
+    gameIsOver()
+  })
+  document.getElementById("moveset5").addEventListener("click", () =>{
+    player2.move1()
+    if (missed === false) {p1Pain()}
+    disableMoves5To8()
+    gameIsOver()
+  })
+  document.getElementById("moveset6").addEventListener("click", () =>{
+    player2.move2()
+    if (missed === false) {p1Pain()}
+    disableMoves5To8()
+    gameIsOver()
+  })
+  document.getElementById("moveset7").addEventListener("click", () =>{
+    player2.move3()
+    if (missed === false) {p1Pain()}
+    disableMoves5To8()
+    gameIsOver()
+  })
+  document.getElementById("moveset8").addEventListener("click", () =>{
+    player2.move4()
+    if (missed === false) {p1Pain()}
+    disableMoves5To8()
+    gameIsOver()
+  })
+  }
+  if (currPlayer === 'Player2' && player1.pokemon!=raikou) {
+  player2Choice.innerText = `Trainer 2 chose ${raikou.name}`
+  //Player 2 starter properties
+  player2.player = 'Player2'
+  player2.pokemon = raikou
+  player2.name = player2.pokemon.name
+  player2.hp=player2.pokemon.hp
+  //Inheritance of moveset from Pokemon Class
+  player2.move1=player2.pokemon.weatherball2
+  player2.move2=player2.pokemon.thunderbolt2
+  player2.move3=player2.pokemon.thunder2
+  player2.move4=player2.pokemon.snarl2
+  //Append fighter to selection screen
+  var p2Icon = document.createElement('img')
+  p2Icon.src = player2.pokemon.icon;
+  p2Icon.className = "rightSelectionChar"
+  document.querySelector("#rightContainer").appendChild(p2Icon)
+  //Display fighter in Page2
+  let fieldFighter2 = document.createElement('img')
+  fieldFighter2.className = "battleIcons2";
+  fieldFighter2.src = player2.pokemon.icon;
+  document.querySelector("#page2").appendChild(fieldFighter2)
+  currPlayer = null 
+  ////Sets player selection to null until the next stage of game, prevents appending infinite Pokemon images
+  }
+  if (player1.pokemon === null || player2.pokemon === null) {
+    document.getElementById("startButton").disabled=true;
+  } else {
+  //Start Game is ENABLED
+  //Action Buttons inherit their names from player 1 and player
+
+// convert()
+    document.getElementById("startButton").disabled=false;}
+}
