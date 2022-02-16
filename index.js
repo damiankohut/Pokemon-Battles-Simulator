@@ -2,14 +2,13 @@ document.getElementById("page2").style.display="none"
 var theme = document.getElementById("theme");
 theme.volume = 0.010;
 //Bugs: 
-//Add 2 more pokemon?
-//CSS Border for Characters: border: 2px dotted purple;
+//1. If health bar negative, the health bar should be empty when winning
 //2. Animations done, MAYBE better sound effects // missing = a dodge?
 //3. Blindspot: Consider a "draw" scenario
-//6. Feature: trainer name, level up for each pokemon if they win (remembers matches)
-//7. water pokemon
-//8. hidden legendarys
-//9. Finish attack names/states, fix images, maybe types feature
+//4. Feature: trainer name, level up for each pokemon if they win (remembers matches)
+//5. fix legendary code
+//6. Finish attack names/states, fix images, maybe types feature
+//CSS Border for Characters: border: 2px dotted purple;
 
 //Styling for Selection Screen
 
