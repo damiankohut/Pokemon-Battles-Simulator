@@ -16,6 +16,12 @@
 </head>
 
 <body>
+  <div id = "introDiv"><img id = "introImage" src = "images/intro.gif"></div><br>
+  <script type = "text/javascript">
+      setTimeout(function() {
+          document.getElementById("introDiv").style.display="none";
+      }, 3700);  // 3.7 seconds is 3700
+  </script> 
   <audio id = "theme" controls loop autoplay>
     <source src="sounds/8bituniversepokemon.mp3" type="audio/mp3">
     Your browser does not support the audio tag.

@@ -1,9 +1,18 @@
+html {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
 body{
 /* background-color: #FE5F55; */
 background-image:url('images/background-pg1.gif');
 background-repeat:no-repeat;
 background-size: cover;
-height: 900px;
+height: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+width: 100%;
 }
 
 @font-face {
@@ -11,6 +20,14 @@ height: 900px;
   font-style: normal;
   font-weight: 400;
   src: local('Pokemon Solid'), url('https://fonts.cdnfonts.com/s/17890/Pokemon Solid.woff') format('woff');
+}
+
+#introImage {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding:0;
+  margin:0;
 }
 
 footer {
