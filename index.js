@@ -1807,7 +1807,7 @@ thunder(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
     missed = false;
-    let dmg = Math.round(Math.random()*10)+35
+    let dmg = Math.round(Math.random()*10)+50
   player2.hp -= dmg
   dosplayer = player2.hp
   bottomRow.innerHTML = "You hit " + player2.name + " with " + dmg + " damage. " + player2.name + " now has " + dosplayer + " HP left."
@@ -1827,7 +1827,7 @@ thunder2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
     missed = false;
-    let dmg = Math.round(Math.random()*10)+35
+    let dmg = Math.round(Math.random()*10)+50
   player1.hp -= dmg
   unoplayer = player1.hp;
   bottomRow.innerHTML = "You hit " + player1.name + " with " + dmg + " damage. " + player1.name + " now has " + unoplayer + " HP left."
