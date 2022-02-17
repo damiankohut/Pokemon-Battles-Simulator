@@ -3707,13 +3707,13 @@ function updateValue() {
 }
 const input = document.getElementById('code');
 const log = document.getElementById('values');
-
-code.addEventListener('input', updateValue); {
-  preventDefault();
-  if(document.getElementById("code") === "Legendary") {
+const submit1 = document.getElementById("submit1");
+submit1.addEventListener('click', () => {
+  event.preventDefault();
+  if(input.value === "Legendary" || input.value === "legendary") {
     updateValue()
   }
-}
+})
 
 function raikouSelect(){
   if (currPlayer === 'Player1') {
