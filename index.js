@@ -243,7 +243,7 @@ turnOfPlayer = 1
 aquaJet2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
-    missed = true;
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -388,6 +388,7 @@ turnOfPlayer = 2
 dragontail(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -398,7 +399,7 @@ dragontail(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -407,6 +408,7 @@ turnOfPlayer = 2
 outrage(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -417,7 +419,7 @@ outrage(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -426,6 +428,7 @@ turnOfPlayer = 2
 crunch(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -436,7 +439,7 @@ crunch(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -445,6 +448,7 @@ turnOfPlayer = 2
 earthquake(){
   let hitChance = Math.round(Math.random()*10)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -455,7 +459,7 @@ earthquake(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -464,6 +468,7 @@ turnOfPlayer = 2
 dragontail2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -475,7 +480,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -483,6 +488,7 @@ turnOfPlayer = 1
 outrage2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -494,7 +500,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -502,6 +508,7 @@ turnOfPlayer = 1
 crunch2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -513,7 +520,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -521,6 +528,7 @@ turnOfPlayer = 1
 earthquake2(){
   let hitChance = Math.round(Math.random()*10)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -532,7 +540,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -541,6 +549,7 @@ turnOfPlayer = 1
 FireFang(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -551,7 +560,7 @@ FireFang(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -560,6 +569,7 @@ turnOfPlayer = 2
 fireblast(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -570,7 +580,7 @@ fireblast(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -579,6 +589,7 @@ turnOfPlayer = 2
 flamethrower(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -589,7 +600,7 @@ flamethrower(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -597,6 +608,7 @@ turnOfPlayer = 2
 wildcharge(){
   let hitChance = Math.round(Math.random()*10)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -607,7 +619,7 @@ wildcharge(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -616,6 +628,7 @@ turnOfPlayer = 2
 FireFang2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -627,7 +640,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -635,6 +648,7 @@ turnOfPlayer = 1
 fireblast2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -646,7 +660,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -654,6 +668,7 @@ turnOfPlayer = 1
 flamethrower2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -665,7 +680,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -673,6 +688,7 @@ turnOfPlayer = 1
 wildcharge2(){
   let hitChance = Math.round(Math.random()*10)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -684,7 +700,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -693,6 +709,7 @@ turnOfPlayer = 1
 thunderweb(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -703,7 +720,7 @@ thunderweb(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -712,6 +729,7 @@ turnOfPlayer = 2
 thundershock(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -722,7 +740,7 @@ thundershock(){
   if (dosplayer < 0){
       dosplayer = 0
   }} else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -731,6 +749,7 @@ turnOfPlayer = 2
 irontail(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -741,7 +760,7 @@ irontail(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -749,6 +768,7 @@ turnOfPlayer = 2
 quickattack(){
   let hitChance = Math.round(Math.random()*10)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+10
   player2.hp -= dmg
   dosplayer = player2.hp
@@ -759,7 +779,7 @@ quickattack(){
   if (dosplayer < 0){
       dosplayer = 0
   } } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 2
   }
   changeOfTurn()
@@ -768,6 +788,7 @@ turnOfPlayer = 2
 thunderweb2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 3){
+    missed = false;
     let dmg = Math.round(Math.random()*10)+35
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -779,7 +800,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -787,6 +808,7 @@ turnOfPlayer = 1
 thundershock2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -798,7 +820,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -806,6 +828,7 @@ turnOfPlayer = 1
 irontail2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 7){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+25
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -817,7 +840,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -825,6 +848,7 @@ turnOfPlayer = 1
 quickattack2(){
   let hitChance = Math.round(Math.random()*10)
   if (hitChance <= 10){
+    missed = false;
       let dmg = Math.round(Math.random()*10)+10
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -836,7 +860,7 @@ let megaManHPBarWidth = (unoplayer/player1.hp)*player1.hp;
       unoplayer = 0
   }
   } else {
-bottomRow.innerHTML = "You have missed."
+bottomRow.innerHTML = "You have missed."; missed = true;
 turnOfPlayer = 1
   }
   changeOfTurn()
@@ -845,6 +869,7 @@ turnOfPlayer = 1
 confusion(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 3){
+      missed = false;
       let dmg = Math.round(Math.random()*10)+35
     player1.hp -= dmg
     unoplayer = player1.hp;
@@ -856,7 +881,7 @@ confusion(){
         unoplayer = 0
     }
     } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 1
     }
     changeOfTurn()
@@ -864,6 +889,7 @@ confusion(){
   psychic(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 5){
+      missed = false;
         let dmg = Math.round(Math.random()*10)+30
     player1.hp -= dmg
     unoplayer = player1.hp;
@@ -875,7 +901,7 @@ confusion(){
         unoplayer = 0
     }
     } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 1
     }
     changeOfTurn()
@@ -883,6 +909,7 @@ confusion(){
   futuresight(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 7){
+      missed = false;
         let dmg = Math.round(Math.random()*10)+25
     player1.hp -= dmg
     unoplayer = player1.hp;
@@ -894,7 +921,7 @@ confusion(){
         unoplayer = 0
     }
     } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 1
     }
     changeOfTurn()
@@ -922,6 +949,7 @@ turnOfPlayer = 2
   confusion2(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 3){
+      missed = false;
       let dmg = Math.round(Math.random()*10)+35
     player1.hp -= dmg
     unoplayer = player1.hp;
@@ -933,7 +961,7 @@ turnOfPlayer = 2
         unoplayer = 0
     }
     } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 1
     }
     changeOfTurn()
@@ -941,6 +969,7 @@ turnOfPlayer = 2
   psychic2(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 5){
+      missed = false;
         let dmg = Math.round(Math.random()*10)+30
     player1.hp -= dmg
     unoplayer = player1.hp;
@@ -952,7 +981,7 @@ turnOfPlayer = 2
         unoplayer = 0
     }
     } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 1
     }
     changeOfTurn()
@@ -960,6 +989,7 @@ turnOfPlayer = 2
   futuresight2(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 7){
+      missed = false;
         let dmg = Math.round(Math.random()*10)+25
     player1.hp -= dmg
     unoplayer = player1.hp;
@@ -971,7 +1001,7 @@ turnOfPlayer = 2
         unoplayer = 0
     }
     } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 1
     }
     changeOfTurn()
@@ -979,6 +1009,7 @@ turnOfPlayer = 2
   Mindfreak2(){
     let hitChance = Math.round(Math.random()*10)
     if (hitChance <= 10){
+      missed = false;
         let dmg = Math.round(Math.random()*10)+10
     player1.hp -= dmg
     unoplayer = player1.hp;
@@ -990,7 +1021,7 @@ turnOfPlayer = 2
         unoplayer = 0
     }
     } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 1
     }
     changeOfTurn()
@@ -1000,6 +1031,7 @@ turnOfPlayer = 2
   thunderweb(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 3){
+      missed = false;
       let dmg = Math.round(Math.random()*10)+35
     player2.hp -= dmg
     dosplayer = player2.hp
@@ -1010,7 +1042,7 @@ turnOfPlayer = 2
     if (dosplayer < 0){
         dosplayer = 0
     }} else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 2
     }
     changeOfTurn()
@@ -1019,6 +1051,7 @@ turnOfPlayer = 2
   thundershock(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 5){
+      missed = false;
         let dmg = Math.round(Math.random()*10)+30
     player2.hp -= dmg
     dosplayer = player2.hp
@@ -1029,7 +1062,7 @@ turnOfPlayer = 2
     if (dosplayer < 0){
         dosplayer = 0
     }} else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 2
     }
     changeOfTurn()
@@ -1038,6 +1071,7 @@ turnOfPlayer = 2
   irontail(){
     let hitChance = Math.round(Math.random()*15)
     if (hitChance <= 7){
+      missed = false;
         let dmg = Math.round(Math.random()*10)+25
     player2.hp -= dmg
     dosplayer = player2.hp
@@ -1048,7 +1082,7 @@ turnOfPlayer = 2
     if (dosplayer < 0){
         dosplayer = 0
     } } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 2
     }
     changeOfTurn()
@@ -1056,6 +1090,7 @@ turnOfPlayer = 2
   quickattack(){
     let hitChance = Math.round(Math.random()*10)
     if (hitChance <= 10){
+      missed = false;
         let dmg = Math.round(Math.random()*10)+10
     player2.hp -= dmg
     dosplayer = player2.hp
@@ -1066,7 +1101,7 @@ turnOfPlayer = 2
     if (dosplayer < 0){
         dosplayer = 0
     } } else {
-  bottomRow.innerHTML = "You have missed."
+  bottomRow.innerHTML = "You have missed."; missed = true;
   turnOfPlayer = 2
     }
     changeOfTurn()
@@ -1075,6 +1110,7 @@ turnOfPlayer = 2
     thunderweb2(){
       let hitChance = Math.round(Math.random()*15)
       if (hitChance <= 3){
+        missed = false;
         let dmg = Math.round(Math.random()*10)+35
       player1.hp -= dmg
       unoplayer = player1.hp;
@@ -1086,7 +1122,7 @@ turnOfPlayer = 2
           unoplayer = 0
       }
       } else {
-    bottomRow.innerHTML = "You have missed."
+    bottomRow.innerHTML = "You have missed."; missed = true;
     turnOfPlayer = 1
       }
       changeOfTurn()
@@ -1094,6 +1130,7 @@ turnOfPlayer = 2
     thundershock2(){
       let hitChance = Math.round(Math.random()*15)
       if (hitChance <= 5){
+        missed = false;
           let dmg = Math.round(Math.random()*10)+30
       player1.hp -= dmg
       unoplayer = player1.hp;
@@ -1105,7 +1142,7 @@ turnOfPlayer = 2
           unoplayer = 0
       }
       } else {
-    bottomRow.innerHTML = "You have missed."
+    bottomRow.innerHTML = "You have missed."; missed = true;
     turnOfPlayer = 1
       }
       changeOfTurn()
@@ -1113,6 +1150,7 @@ turnOfPlayer = 2
     irontail2(){
       let hitChance = Math.round(Math.random()*15)
       if (hitChance <= 7){
+        missed = false;
           let dmg = Math.round(Math.random()*10)+25
       player1.hp -= dmg
       unoplayer = player1.hp;
@@ -1124,7 +1162,7 @@ turnOfPlayer = 2
           unoplayer = 0
       }
       } else {
-    bottomRow.innerHTML = "You have missed."
+    bottomRow.innerHTML = "You have missed."; missed = true;
     turnOfPlayer = 1
       }
       changeOfTurn()
@@ -1132,6 +1170,7 @@ turnOfPlayer = 2
     quickattack2(){
       let hitChance = Math.round(Math.random()*10)
       if (hitChance <= 10){
+        missed = false;
           let dmg = Math.round(Math.random()*10)+10
       player1.hp -= dmg
       unoplayer = player1.hp;
@@ -1143,7 +1182,7 @@ turnOfPlayer = 2
           unoplayer = 0
       }
       } else {
-    bottomRow.innerHTML = "You have missed."
+    bottomRow.innerHTML = "You have missed."; missed = true;
     turnOfPlayer = 1
       }
       changeOfTurn()
@@ -1153,6 +1192,7 @@ turnOfPlayer = 2
     ancientpower(){
       let hitChance = Math.round(Math.random()*15)
       if (hitChance <= 3){
+        missed = false;
         let dmg = Math.round(Math.random()*10)+35
       player2.hp -= dmg
       dosplayer = player2.hp
@@ -1163,7 +1203,7 @@ turnOfPlayer = 2
       if (dosplayer < 0){
           dosplayer = 0
       }} else {
-    bottomRow.innerHTML = "You have missed."
+    bottomRow.innerHTML = "You have missed."; missed = true;
     turnOfPlayer = 2
       }
       changeOfTurn()
@@ -1172,6 +1212,7 @@ turnOfPlayer = 2
     headsmash(){
       let hitChance = Math.round(Math.random()*15)
       if (hitChance <= 5){
+        missed = false;
           let dmg = Math.round(Math.random()*10)+30
       player2.hp -= dmg
       dosplayer = player2.hp
@@ -1182,7 +1223,7 @@ turnOfPlayer = 2
       if (dosplayer < 0){
           dosplayer = 0
       }} else {
-    bottomRow.innerHTML = "You have missed."
+    bottomRow.innerHTML = "You have missed."; missed = true;
     turnOfPlayer = 2
       }
       changeOfTurn()
@@ -1191,6 +1232,7 @@ turnOfPlayer = 2
     meteorbeam(){
       let hitChance = Math.round(Math.random()*15)
       if (hitChance <= 7){
+        missed = false;
           let dmg = Math.round(Math.random()*10)+25
       player2.hp -= dmg
       dosplayer = player2.hp
@@ -1201,7 +1243,7 @@ turnOfPlayer = 2
       if (dosplayer < 0){
           dosplayer = 0
       } } else {
-    bottomRow.innerHTML = "You have missed."
+    bottomRow.innerHTML = "You have missed."; missed = true;
     turnOfPlayer = 2
       }
       changeOfTurn()
@@ -1209,6 +1251,7 @@ turnOfPlayer = 2
     smackdown(){
       let hitChance = Math.round(Math.random()*10)
       if (hitChance <= 10){
+        missed = false;
           let dmg = Math.round(Math.random()*10)+10
       player2.hp -= dmg
       dosplayer = player2.hp
@@ -1219,7 +1262,7 @@ turnOfPlayer = 2
       if (dosplayer < 0){
           dosplayer = 0
       } } else {
-    bottomRow.innerHTML = "You have missed."
+    bottomRow.innerHTML = "You have missed."; missed = true;
     turnOfPlayer = 2
       }
       changeOfTurn()
@@ -1228,6 +1271,7 @@ turnOfPlayer = 2
     ancientpower2(){
         let hitChance = Math.round(Math.random()*15)
         if (hitChance <= 3){
+          missed = false;
           let dmg = Math.round(Math.random()*10)+35
         player1.hp -= dmg
         unoplayer = player1.hp;
@@ -1239,7 +1283,7 @@ turnOfPlayer = 2
             unoplayer = 0
         }
         } else {
-      bottomRow.innerHTML = "You have missed."
+      bottomRow.innerHTML = "You have missed."; missed = true;
       turnOfPlayer = 1
         }
         changeOfTurn()
@@ -1247,6 +1291,7 @@ turnOfPlayer = 2
       headsmash2(){
         let hitChance = Math.round(Math.random()*15)
         if (hitChance <= 5){
+          missed = false;
             let dmg = Math.round(Math.random()*10)+30
         player1.hp -= dmg
         unoplayer = player1.hp;
@@ -1258,7 +1303,7 @@ turnOfPlayer = 2
             unoplayer = 0
         }
         } else {
-      bottomRow.innerHTML = "You have missed."
+      bottomRow.innerHTML = "You have missed."; missed = true;
       turnOfPlayer = 1
         }
         changeOfTurn()
@@ -1266,6 +1311,7 @@ turnOfPlayer = 2
       meteorbeam2(){
         let hitChance = Math.round(Math.random()*15)
         if (hitChance <= 7){
+          missed = false;
             let dmg = Math.round(Math.random()*10)+25
         player1.hp -= dmg
         unoplayer = player1.hp;
@@ -1277,7 +1323,7 @@ turnOfPlayer = 2
             unoplayer = 0
         }
         } else {
-      bottomRow.innerHTML = "You have missed."
+      bottomRow.innerHTML = "You have missed."; missed = true;
       turnOfPlayer = 1
         }
         changeOfTurn()
@@ -1285,6 +1331,7 @@ turnOfPlayer = 2
       smackdown2(){
         let hitChance = Math.round(Math.random()*10)
         if (hitChance <= 10){
+          missed = false;
             let dmg = Math.round(Math.random()*10)+10
         player1.hp -= dmg
         unoplayer = player1.hp;
@@ -1296,7 +1343,7 @@ turnOfPlayer = 2
             unoplayer = 0
         }
         } else {
-      bottomRow.innerHTML = "You have missed."
+      bottomRow.innerHTML = "You have missed."; missed = true;
       turnOfPlayer = 1
         }
         changeOfTurn()
@@ -1408,7 +1455,7 @@ turnOfPlayer = 1
 astonish2(){
   let hitChance = Math.round(Math.random()*15)
   if (hitChance <= 5){
-    missed = true;
+    missed = false;
       let dmg = Math.round(Math.random()*10)+30
   player1.hp -= dmg
   unoplayer = player1.hp;
@@ -2273,7 +2320,7 @@ function jigglyPuffSelect() {
 function p1Pain(){
   let p1Damage = document.getElementsByClassName("battleIcons1")
     p1Damage[0].classList.add("pain")
-    disableMoves1To4()
+    playSound()
     // const animation = document.querySelector('p.animation');
     // animation.addEventListener('animationend', () => {
     //   p1Damage[0].classList.remove('active');
