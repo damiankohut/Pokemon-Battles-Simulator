@@ -19,4 +19,4 @@
 Pokemon DOM Simulator programmed by Aldo Ortiz, Damian Kohut, and Mohammad Islam
 </td></tr></table>
 
-Check out our game at: https://mislam23.github.io/Pokemon-Battles-Simulator/
+Check out our game at: https://damiankohut.github.io/Pokemon-Battles-Simulator/
